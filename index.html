@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>한글 — Korean Alphabet & Stage 1</title>
+<style>
+  :root { --pink:#FCE4EE; --white:#fff; --black:#111; --muted:#5b5b5b; --cyan:#9BE9FB; --lilac:#FAE8FF; --ice:#DDF3FB; --yellow:#FDE68A; --green:#D9F99D; --rose:#F6BED5; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; background:var(--pink); color:var(--black); }
+  header { padding:20px 16px 8px; max-width:640px; margin:0 auto; }
+  .kicker { font-size:11px; font-weight:900; letter-spacing:1.1px; color:var(--muted); }
+  h1 { font-size:28px; margin:4px 0 12px; font-weight:900; }
+  nav { display:flex; gap:8px; }
+  nav button { flex:1; padding:10px; border:2px solid var(--black); border-radius:14px; background:var(--white); font-weight:900; cursor:pointer; font-size:13px; font-family:inherit; }
+  nav button.on { background:var(--black); color:var(--white); }
+  main { max-width:640px; margin:0 auto; padding:16px; display:grid; gap:16px; }
+  .card { background:var(--white); border:2px solid var(--black); border-radius:22px; padding:18px; box-shadow:5px 5px 0 var(--black); }
+  .eyebrow { font-size:10px; font-weight:900; letter-spacing:1px; color:var(--muted); }
+  .big { font-size:40px; font-weight:900; line-height:1.1; }
+  .glyph { font-size:120px; font-weight:900; line-height:1.05; text-align:center; margin-top:8px; }
+  .glyph.small { font-size:64px; line-height:1; text-align:left; margin-top:0; }
+  .sub { font-size:14px; color:var(--muted); font-weight:700; margin-top:6px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; }
+  .btn { border:2px solid var(--black); border-radius:14px; background:var(--cyan); padding:10px 14px; font-weight:900; cursor:pointer; font-size:14px; font-family:inherit; color:var(--black); }
+  .btn.alt { background:var(--white); }
+  .btn.ink { background:var(--black); color:var(--white); }
+  .btn.rose { background:var(--rose); }
+  .btn.yel { background:var(--yellow); }
+  .btn.grn { background:var(--green); }
+  .chips { display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; }
+  .chip { flex:0 0 auto; border:2px solid var(--black); border-radius:14px; background:var(--white); padding:8px 12px; font-weight:900; font-size:12px; cursor:pointer; font-family:inherit; }
+  .chip.on { background:var(--black); color:var(--white); }
+  .bar { height:12px; border:2px solid var(--black); border-radius:8px; background:var(--white); overflow:hidden; }
+  .bar.thin { height:8px; }
+  .bar > div { height:100%; background:var(--cyan); }
+  .letters { display:grid; grid-template-columns:repeat(auto-fill,minmax(92px,1fr)); gap:8px; }
+  .tile { border:2px solid var(--black); border-radius:14px; padding:10px 4px; text-align:center; background:var(--white); cursor:pointer; font-weight:900; font-size:14px; font-family:inherit; color:var(--black); }
+  .tile.done { background:var(--green); }
+  .tile.locked { opacity:.45; }
+  .tile .tg { display:block; font-size:28px; line-height:1.2; }
+  .tile small { display:block; font-size:10px; color:var(--muted); font-weight:800; }
+  .pron { font-size:17px; font-weight:800; color:var(--muted); margin-top:4px; }
+  .say { background:var(--lilac); border:2px solid var(--black); border-radius:14px; padding:10px; font-size:13px; font-weight:800; }
+  .sec { font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.8px; }
+  .line { display:flex; gap:10px; padding:6px 0; border-bottom:1px dashed #ccc; }
+  .line:last-child { border-bottom:0; }
+  .speaker { width:18px; font-weight:900; color:var(--muted); }
+  ul.check { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+  ul.check li { font-size:14px; font-weight:700; color:var(--muted); }
+  ul.check li::before { content:"☐ "; color:var(--black); font-weight:900; }
+  .choices { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px; }
+  .choice { border:2px solid var(--black); border-radius:14px; background:var(--white); padding:12px 6px; font-weight:900; cursor:pointer; font-size:13px; font-family:inherit; color:var(--black); }
+  .choice .cg { display:block; font-size:40px; line-height:1.1; }
+  .choice small { color:var(--muted); font-weight:800; font-size:10px; }
+  .choice.right { background:var(--green); }
+  .choice.wrong { background:var(--rose); }
+  .choice:disabled { cursor:default; }
+  footer { text-align:center; font-size:11px; color:var(--muted); padding:24px; }
+  button:focus-visible { outline:3px solid var(--black); outline-offset:2px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">HANGEUL</div>
+  <h1>Learn Korean, step by step</h1>
+  <nav>
+    <button data-tab="letters" class="on">Alphabet</button>
+    <button data-tab="stage">Stage 1</button>
+    <button data-tab="reading">Reading</button>
+  </nav>
+</header>
+<main id="app"></main>
+<footer>Progress is saved in this browser only.</footer>
+
+<script>
+const DATA = {
+  decks: {
+    familiar:  { title:"Looks familiar", eyebrow:"01 / START HERE", color:"#9BE9FB", description:"Shapes that sound like letters you already know." },
+    lookalikes:{ title:"Sneaky lookalikes", eyebrow:"02 / WATCH CLOSELY", color:"#FAE8FF", description:"Shapes that look alike but sound different." },
+    new:       { title:"New characters", eyebrow:"03 / BUILD IT UP", color:"#F6BED5", description:"A fresh set of shapes to add to your map." },
+    difficult: { title:"Tricky sounds", eyebrow:"04 / LISTEN IN", color:"#FDE68A", description:"Puffs of air, tight sounds, and the flat eu." },
+    combined:  { title:"Combined vowels", eyebrow:"05 / FINAL PIECES", color:"#D9F99D", description:"Two vowel strokes stacked into one shape." }
+  },
+  // [id, glyph, Hangul name, romanized name, sound, guide, example, romanization, meaning, tip, deck]
+  letters: [
+    ["m","ㅁ","미음","mieum","m","m, as in moon","마음","maeum","heart / mind","ㅁ is a square and says m, just like Latin M.","familiar"],
+    ["a","ㅏ","아","a","a","ah, as in father","아빠","appa","dad","ㅏ is an open a. Open your mouth wide.","familiar"],
+    ["o","ㅗ","오","o","o","o, as in more","오리","ori","duck","ㅗ is round: pull the lips into a small circle.","familiar"],
+    ["i","ㅣ","이","i","ee","ee, as in see","이름","ireum","name","ㅣ is one straight line. Smile and say ee.","familiar"],
+    ["s","ㅅ","시옷","siot","s","s, as in sun","사과","sagwa","apple","ㅅ looks like a little roof and says s.","familiar"],
+    ["n","ㄴ","니은","nieun","n","n, as in nose","나무","namu","tree","ㄴ is a corner with a tail. It says n.","familiar"],
+    ["eo","ㅓ","어","eo","eo","uh, as in fun","어머니","eomeoni","mother","ㅓ is ㅏ turned around. It says uh, with a relaxed jaw, not ah.","lookalikes"],
+    ["u","ㅜ","우","u","u","oo, as in boot","우유","uyu","milk","ㅜ is ㅗ turned upside down. Round the lips for oo.","lookalikes"],
+    ["ae","ㅐ","애","ae","ae","eh, as in bed","개","gae","dog","ㅐ looks like ㅏ with an extra stroke. It says eh.","lookalikes"],
+    ["e","ㅔ","에","e","e","eh, as in bed","네","ne","yes","ㅔ looks like ㅓ with an extra stroke. In everyday speech it sounds almost the same as ㅐ.","lookalikes"],
+    ["ng","ㅇ","이응","ieung","silent / ng","silent at the start, ng at the bottom","아이","ai","child","At the start of a syllable ㅇ is silent. At the bottom it says ng, as in sing.","lookalikes"],
+    ["ch","ㅊ","치읓","chieut","ch","ch, with a small puff of air","치마","chima","skirt","ㅊ is ㅈ with an extra stroke on top. Say ch with a little breath.","lookalikes"],
+    ["p","ㅍ","피읖","pieup","p","p, with a small puff","포도","podo","grape","ㅍ is ㅁ with a bar through the middle. It says p, not m.","lookalikes"],
+    ["g","ㄱ","기역","giyeok","g / k","g at the start, k at the end","고양이","goyangi","cat","ㄱ says g at the start of a word and k at the end.","new"],
+    ["d","ㄷ","디귿","digeut","d / t","d at the start, t at the end","도시","dosi","city","ㄷ says d at the start of a word and t at the end.","new"],
+    ["r","ㄹ","리을","rieul","r / l","one light tap, between r and l","라면","ramyeon","ramen noodles","ㄹ sounds like r at the start of a word and like l at the end. Tap the tongue once.","new"],
+    ["b","ㅂ","비읍","bieup","b / p","b at the start, p at the end","바다","bada","sea","ㅂ sounds like b at the start of a word, and softer than English p at the end.","new"],
+    ["j","ㅈ","지읒","jieut","j","j, as in jam","지금","jigeum","now","ㅈ is a soft j at the start, softer than ch.","new"],
+    ["h","ㅎ","히읗","hieut","h","h, as in hat","하나","hana","one","ㅎ is a soft h. Keep it light before vowels.","new"],
+    ["ya","ㅑ","야","ya","ya","ya, as in yacht","야구","yagu","baseball","ㅑ is ㅏ with an extra stroke. Add a y-glide before the a.","new"],
+    ["yo","ㅛ","요","yo","yo","yo, as in yoga","요리","yori","cooking","ㅛ is ㅗ with an extra stroke. Add a y-glide before the o.","new"],
+    ["yu","ㅠ","유","yu","yu","yoo, as in you","유리","yuri","glass","ㅠ is ㅜ with an extra stroke. A y-glide, then oo.","new"],
+    ["yeo","ㅕ","여","yeo","yeo","yuh, as in yonder","여자","yeoja","woman","ㅕ is ㅓ with an extra stroke. A y-glide, then uh.","new"],
+    ["k","ㅋ","키읔","kieuk","k (strong puff)","k with a strong puff, as in kite","커피","keopi","coffee","ㅋ is a k with a strong puff. Hold a hand to your mouth: you should feel air.","difficult"],
+    ["t","ㅌ","티읕","tieut","t (strong puff)","t with a strong puff, as in top","토끼","tokki","rabbit","ㅌ is a t with a strong puff of air.","difficult"],
+    ["kk","ㄲ","쌍기역","ssang-giyeok","kk (tense)","tight k with no puff, as in sky","꼬리","kkori","tail","Tense consonants sound tight: no puff of air, and the throat stays closed.","difficult"],
+    ["tt","ㄸ","쌍디귿","ssang-digeut","tt (tense)","tight t with no puff, as in stop","딸기","ttalgi","strawberry","ㄸ is a tight t. Let no breath out.","difficult"],
+    ["pp","ㅃ","쌍비읍","ssang-bieup","pp (tense)","tight p with no puff, as in spy","빵","ppang","bread","ㅃ is a tight p. Keep the lips firm and the breath in.","difficult"],
+    ["ss","ㅆ","쌍시옷","ssang-siot","ss (tense)","tight, sharp s","쌀","ssal","rice","ㅆ is a tight, sharp s.","difficult"],
+    ["jj","ㅉ","쌍지읒","ssang-jieut","jj (tense)","tight j with no puff","짜다","jjada","salty","ㅉ is a tight j. No breath comes out.","difficult"],
+    ["eu","ㅡ","으","eu","eu","uh with the lips spread wide, no English twin","그림","geurim","picture","Keep the lips flat, like a relaxed smile, and say uh.","difficult"],
+    ["yae","ㅒ","얘","yae","yae","yeh, as in yes","얘기","yaegi","talk / story","ㅒ is ㅐ with an extra stroke. Add a y-glide.","combined"],
+    ["ye","ㅖ","예","ye","ye","yeh, as in yes","예쁘다","yeppeuda","pretty","ㅖ is ㅔ with an extra stroke. Add a y-glide.","combined"],
+    ["wa","ㅘ","와","wa","wa","wa, as in wand","과자","gwaja","snack","ㅘ is ㅗ and ㅏ together: start round, then open to ah.","combined"],
+    ["wae","ㅙ","왜","wae","wae","way, as in wedge","왜","wae","why","ㅙ is ㅗ and ㅐ together. Say wa, then eh, fast.","combined"],
+    ["oe","ㅚ","외","oe","oe / we","we, as in wet","외국","oeguk","foreign country","ㅚ is ㅗ and ㅣ together. It often sounds like we.","combined"],
+    ["wo","ㅝ","워","wo","wo","wuh, as in wonder","월요일","woryoil","Monday","ㅝ is ㅜ and ㅓ together: oo, then uh.","combined"],
+    ["we","ㅞ","웨","we","we","weh, as in wet","웨이터","weiteo","waiter","ㅞ is ㅜ and ㅔ together. Say oo, then eh, quickly.","combined"],
+    ["wi","ㅟ","위","wi","wi","wee, as in weed","위","wi","top / stomach","ㅟ is ㅜ and ㅣ together. The lips start round, then smile into ee.","combined"],
+    ["ui","ㅢ","의","ui","ui","a quick glide from eu to ee","의사","uisa","doctor","ㅢ glides from eu to ee. When it is not the first sound, it often sounds like ee.","combined"]
+  ],
+  learnOrder: ["a","o","m","s","n","i","g","d","r","b","j","h","eo","u","ng","ae","e","ch","p","ya","yo","yu","yeo","k","t","eu","kk","tt","pp","ss","jj","yae","ye","wa","wae","oe","wo","we","wi","ui"],
+  reading: [
+    { word:"아빠", tr:"appa", meaning:"dad", parts:["아 · ㅇ+ㅏ","빠 · ㅃ+ㅏ"] },
+    { word:"고양이", tr:"goyangi", meaning:"cat", parts:["고 · ㄱ+ㅗ","양 · ㅇ+ㅑ+ㅇ","이 · ㅇ+ㅣ"] },
+    { word:"도시", tr:"dosi", meaning:"city", parts:["도 · ㄷ+ㅗ","시 · ㅅ+ㅣ"] },
+    { word:"사과", tr:"sagwa", meaning:"apple", parts:["사 · ㅅ+ㅏ","과 · ㄱ+ㅘ"] },
+    { word:"나무", tr:"namu", meaning:"tree", parts:["나 · ㄴ+ㅏ","무 · ㅁ+ㅜ"] },
+    { word:"바다", tr:"bada", meaning:"sea", parts:["바 · ㅂ+ㅏ","다 · ㄷ+ㅏ"] },
+    { word:"우유", tr:"uyu", meaning:"milk", parts:["우 · ㅇ+ㅜ","유 · ㅇ+ㅠ"] },
+    { word:"커피", tr:"keopi", meaning:"coffee", parts:["커 · ㅋ+ㅓ","피 · ㅍ+ㅣ"] }
+  ],
+  stage: {
+    groups: ["Greetings & Social Basics","Politeness & Conversation Survival","People & Pronouns","Essential Question Words","Core Everyday Verbs","Time & Frequency","Places & Directions","Food, Drink & Basic Needs","Useful Descriptions & Connectors","High-Value Everyday Expressions"],
+    days: [
+      { day:1, title:"Greetings & politeness", summary:"Items 1–20 · groups 1–2" },
+      { day:2, title:"People & question words", summary:"Items 21–40 · groups 3–4" },
+      { day:3, title:"Core verbs & time", summary:"Items 41–60 · verbs, time begins" },
+      { day:4, title:"Places & food", summary:"Items 61–80 · time, places, food begins" },
+      { day:5, title:"Needs & expressions", summary:"Items 81–100 · groups 8–10" },
+      { day:6, title:"Review + speak", summary:"All 100 · speaking drills" },
+      { day:7, title:"Self-test", summary:"All 100 · mini conversations + readiness check" }
+    ],
+    // [Korean, romanized pronunciation, English, group]
+    rows: [
+      ["안녕하세요","an-nyeong-ha-se-yo","hello (polite)",1],
+      ["안녕","an-nyeong","hi / bye (casual)",1],
+      ["좋은 아침이에요","jo-eun a-chi-mi-e-yo","good morning",1],
+      ["좋은 저녁이에요","jo-eun jeo-nyeo-gi-e-yo","good evening",1],
+      ["안녕히 주무세요","an-nyeong-hi ju-mu-se-yo","good night (to someone going to sleep)",1],
+      ["안녕히 가세요","an-nyeong-hi ga-se-yo","goodbye (said to someone leaving)",1],
+      ["안녕히 계세요","an-nyeong-hi gye-se-yo","goodbye (said by the one leaving)",1],
+      ["어떻게 지내세요?","eo-tteo-ke ji-nae-se-yo?","how are you? (formal)",1],
+      ["잘 지내요","jal ji-nae-yo","I'm doing well",1],
+      ["괜찮아요","gwaen-chan-a-yo","it's okay / I'm fine",1],
+      ["감사합니다","gam-sa-ham-ni-da","thank you (formal)",2],
+      ["고마워요","go-ma-wo-yo","thanks (polite)",2],
+      ["천만에요","cheon-man-e-yo","you're welcome",2],
+      ["죄송합니다","joe-song-ham-ni-da","I'm sorry (formal)",2],
+      ["미안해요","mi-an-hae-yo","sorry (polite)",2],
+      ["네","ne","yes",2],
+      ["아니요","a-ni-yo","no",2],
+      ["알겠어요","al-ges-seo-yo","got it / okay",2],
+      ["이해해요","i-hae-hae-yo","I understand",2],
+      ["이해가 안 돼요","i-hae-ga an dwae-yo","I don't understand",2],
+      ["나","na","I (casual)",3],
+      ["저","jeo","I (polite)",3],
+      ["너","neo","you (casual)",3],
+      ["그","geu","he",3],
+      ["그녀","geu-nyeo","she",3],
+      ["우리","u-ri","we",3],
+      ["그들","geu-deul","they",3],
+      ["친구","chin-gu","friend",3],
+      ["가족","ga-jok","family",3],
+      ["선생님","seon-saeng-nim","teacher",3],
+      ["누구","nu-gu","who",4],
+      ["뭐","mwo","what",4],
+      ["어디","eo-di","where",4],
+      ["언제","eon-je","when",4],
+      ["왜","wae","why",4],
+      ["어떻게","eo-tteo-ke","how",4],
+      ["어떤","eo-tteon","which / what kind",4],
+      ["얼마","eol-ma","how much / how many",4],
+      ["어디로","eo-di-ro","to where",4],
+      ["어디서","eo-di-seo","from where / where at",4],
+      ["있다","it-da","to have / there is",5],
+      ["없다","eop-da","to not have / there isn't",5],
+      ["먹다","meok-da","to eat",5],
+      ["마시다","ma-si-da","to drink",5],
+      ["원하다","won-ha-da","to want",5],
+      ["할 수 있다","hal su it-da","can / to be able to",5],
+      ["알다","al-da","to know",5],
+      ["이해하다","i-hae-ha-da","to understand",5],
+      ["말하다","mal-ha-da","to speak",5],
+      ["하다","ha-da","to do / to make",5],
+      ["가다","ga-da","to go",5],
+      ["타다","ta-da","to ride (transport)",5],
+      ["살다","sal-da","to live",5],
+      ["일하다","il-ha-da","to work",5],
+      ["보다","bo-da","to see / to watch",5],
+      ["지금","ji-geum","now",6],
+      ["오늘","o-neul","today",6],
+      ["내일","nae-il","tomorrow",6],
+      ["어제","eo-je","yesterday",6],
+      ["아침","a-chim","morning",6],
+      ["낮","nat","daytime / afternoon",6],
+      ["저녁","jeo-nyeok","evening",6],
+      ["밤","bam","night",6],
+      ["항상","hang-sang","always",6],
+      ["가끔","ga-kkeum","sometimes",6],
+      ["집","jip","home / house",7],
+      ["직장","jik-jang","workplace / work",7],
+      ["가게","ga-ge","store / shop",7],
+      ["식당","sik-dang","restaurant",7],
+      ["화장실","hwa-jang-sil","restroom",7],
+      ["여기","yeo-gi","here",7],
+      ["거기","geo-gi","there",7],
+      ["똑바로","ttok-ba-ro","straight ahead",7],
+      ["왼쪽","oen-jjok","to the left",7],
+      ["오른쪽","o-reun-jjok","to the right",7],
+      ["물","mul","water",8],
+      ["음식","eum-sik","food",8],
+      ["커피","keo-pi","coffee",8],
+      ["차","cha","tea",8],
+      ["빵","ppang","bread",8],
+      ["고기","go-gi","meat",8],
+      ["돈","don","money",8],
+      ["도움","do-um","help",8],
+      ["…이/가 필요해요","i/ga pil-yo-hae-yo","I need…",8],
+      ["…을/를 원해요","eul/reul won-hae-yo","I want…",8],
+      ["좋은","jo-eun","good (before a noun)",9],
+      ["나쁜","na-ppeun","bad (before a noun)",9],
+      ["큰","keun","big",9],
+      ["작은","ja-geun","small",9],
+      ["새로운","sae-ro-un","new",9],
+      ["오래된","o-rae-doen","old",9],
+      ["그리고","geu-ri-go","and",9],
+      ["하지만","ha-ji-man","but",9],
+      ["왜냐하면","wae-nya-ha-myeon","because",9],
+      ["아주","a-ju","very",9],
+      ["제 이름은 …예요","je i-reu-meun …-ye-yo","my name is…",10],
+      ["저는 …에서 왔어요","jeo-neun …-e-seo wa-sseo-yo","I'm from…",10],
+      ["영어 할 줄 아세요?","yeong-eo hal jul a-se-yo?","do you speak English?",10],
+      ["다시 한 번 말해 주세요","da-si han beon mal-hae ju-se-yo","please say it again",10],
+      ["이거 뭐예요?","i-geo mwo-ye-yo?","what is this?",10]
+    ],
+    patterns: [
+      { template:["…이/가 필요해요","i/ga pil-yo-hae-yo","I need…"], example:["물이 필요해요.","mu-ri pil-yo-hae-yo.","I need water."] },
+      { template:["…을/를 원해요","eul/reul won-hae-yo","I want…"], example:["커피를 원해요.","keo-pi-reul won-hae-yo.","I want coffee."] },
+      { template:["…어디예요?","…eo-di-ye-yo?","Where is…?"], example:["화장실이 어디예요?","hwa-jang-si-ri eo-di-ye-yo?","Where is the restroom?"] },
+      { template:["이거 뭐예요?","i-geo mwo-ye-yo?","What is this?"] },
+      { template:["이해가 안 돼요.","i-hae-ga an dwae-yo.","I don't understand."] },
+      { template:["…할 수 있어요?","…hal su i-sseo-yo?","Can you…?"], example:["영어 할 수 있어요?","yeong-eo hal su i-sseo-yo?","Can you speak English?"] },
+      { template:["저는 …에서 왔어요.","jeo-neun …-e-seo wa-sseo-yo.","I'm from…"], example:["저는 한국에서 왔어요.","jeo-neun han-guk-e-seo wa-sseo-yo.","I'm from Korea."] },
+      { template:["제 이름은 …예요.","je i-reu-meun …-ye-yo.","My name is…"], example:["제 이름은 민수예요.","je i-reu-meun min-su-ye-yo.","My name is Minsu."] },
+      { template:["…을/를 좋아해요.","eul/reul jo-a-hae-yo.","I like…"], example:["음악을 좋아해요.","eu-ma-geul jo-a-hae-yo.","I like music."] },
+      { template:["…주세요.","…ju-se-yo.","Please give me…"], example:["물 주세요.","mul ju-se-yo.","Water, please."] }
+    ],
+    conversations: [
+      { title:"Conversation 1 — Meeting someone", lines:[
+        {speaker:"A", ko:"제 이름은 알렉스예요.", pron:"je i-reu-meun al-lek-seu-ye-yo.", en:"My name is Alex."},
+        {speaker:"B", ko:"저는 민지예요.", pron:"jeo-neun min-ji-ye-yo.", en:"I'm Minji."},
+        {speaker:"A", ko:"어떻게 지내세요?", pron:"eo-tteo-ke ji-nae-se-yo?", en:"How are you?"},
+        {speaker:"B", ko:"잘 지내요, 감사합니다.", pron:"jal ji-nae-yo, gam-sa-ham-ni-da.", en:"I'm doing well, thank you."}
+      ]},
+      { title:"Conversation 2 — Asking for help", lines:[
+        {speaker:"A", ko:"실례합니다.", pron:"sil-lye-ham-ni-da.", en:"Excuse me."},
+        {speaker:"B", ko:"네?", pron:"ne?", en:"Yes?"},
+        {speaker:"A", ko:"화장실이 어디예요?", pron:"hwa-jang-si-ri eo-di-ye-yo?", en:"Where is the restroom?"},
+        {speaker:"B", ko:"저쪽, 오른쪽이에요.", pron:"jeo-jjok, o-reun-jjo-gi-e-yo.", en:"Over there, on the right."},
+        {speaker:"A", ko:"감사합니다!", pron:"gam-sa-ham-ni-da!", en:"Thank you!"}
+      ]},
+      { title:"Conversation 3 — When you don't understand", lines:[
+        {speaker:"A", ko:"영어 할 줄 아세요?", pron:"yeong-eo hal jul a-se-yo?", en:"Do you speak English?"},
+        {speaker:"B", ko:"조금요.", pron:"jo-geum-yo.", en:"A little."},
+        {speaker:"A", ko:"이해가 안 돼요. 다시 한 번 말해 주세요.", pron:"i-hae-ga an dwae-yo. da-si han beon mal-hae ju-se-yo.", en:"I don't understand. Please say it again."}
+      ]}
+    ],
+    pronKey: [
+      "Hyphens split syllables. Each Hangul block is one syllable, and Korean has no stress marks, so stay light and even.",
+      "ㅓ (eo) is an open uh, not o. ㅗ (o) is round. Keep them apart.",
+      "ㅡ (eu) has no English twin: lips spread, say uh.",
+      "ㄱ ㄷ ㅂ ㅈ sit between g/k, d/t, b/p, and j/ch. Their voice depends on position in the word.",
+      "Tense consonants ㄲ ㄸ ㅃ ㅆ ㅉ come with no puff of air. Aspirated ㅋ ㅌ ㅍ ㅊ come with one."
+    ],
+    pronNotes: [
+      { ko:"한국어", note:"hang-gu-geo. The ㄱ between two vowels softens toward g." },
+      { ko:"감사합니다", note:"gam-sa-ham-ni-da. ㅂ before ㄴ is said as m, so 합니다 sounds like ham-ni-da." },
+      { ko:"좋아요", note:"jo-a-yo. The ㅎ in 좋 goes silent before a vowel." },
+      { ko:"있어요", note:"i-sseo-yo. The final ㅆ carries into the next syllable." }
+    ],
+    checklist: [
+      "Recognize at least 80 of the 100 items from Korean → English.",
+      "Produce at least 70 of the 100 from English → Korean.",
+      "Say the 10 sentence patterns without looking.",
+      "Introduce yourself.",
+      "Ask where something is.",
+      "Ask someone to repeat themselves.",
+      "Say that you understand or do not understand.",
+      "Ask for something you want.",
+      "Ask for something you need.",
+      "Complete the three mini conversations with minimal help."
+    ],
+    threshold: "Once you can recall roughly 80% comfortably, begin Stage 2 while continuing to review weak Stage 1 words."
+  }
+};
+
+// ---------- Data prep ----------
+const LETTERS = DATA.letters.map(r => ({ id:r[0], glyph:r[1], hangulName:r[2], rrName:r[3], sound:r[4], guide:r[5], example:r[6], rr:r[7], meaning:r[8], tip:r[9], deck:r[10] }));
+const LETTER_BY_ID = Object.fromEntries(LETTERS.map(l => [l.id, l]));
+const STAGE_ITEMS = DATA.stage.rows.map((r, i) => ({
+  id: "stage-1-" + (i + 1), number: i + 1, ko: r[0], pron: r[1], en: r[2],
+  group: r[3], day: Math.floor(i / 20) + 1, section: DATA.stage.groups[r[3] - 1]
+}));
+
+// ---------- Persistence & learning state (ports the Expo store logic) ----------
+const KEY = "hangeul-web-v1";
+const DAY_MS = 24 * 60 * 60 * 1000;
+const pad = (n) => String(n).padStart(2, "0");
+const dateKey = (d = new Date()) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+const blankCard = () => ({ correct:0, incorrect:0, repetitions:0, mastery:0, nextReview:0, lastReviewed:null });
+function safeParse(raw) { try { return JSON.parse(raw) || {}; } catch (e) { return {}; } }
+function normalize(v) {
+  const cards = {};
+  LETTERS.forEach(l => { cards[l.id] = { ...blankCard(), ...((v.cards || {})[l.id] || {}) }; });
+  return { cards, dailyGoal: v.dailyGoal ?? 10, dailyCompleted: v.dailyCompleted ?? 0, streak: v.streak ?? 0,
+           lastPracticeDate: v.lastPracticeDate ?? null, reviewed: v.reviewed || {}, flip: v.flip || {} };
+}
+let state = normalize(safeParse(localStorage.getItem(KEY)));
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+const isMastered = (id) => state.cards[id].mastery >= 3;
+const masteredCount = () => LETTERS.filter(l => isMastered(l.id)).length;
+const unlockedCount = () => Math.min(6 + Math.floor(masteredCount() / 2) * 4, DATA.learnOrder.length);
+function unlockedLetters() {
+  const open = new Set(DATA.learnOrder.slice(0, unlockedCount()));
+  return LETTERS.filter(l => open.has(l.id));
+}
+function dueLetters(limit = 6) {
+  const now = Date.now();
+  return unlockedLetters()
+    .filter(l => state.cards[l.id].nextReview <= now)
+    .sort((a, b) => {
+      const A = state.cards[a.id], B = state.cards[b.id];
+      return A.mastery !== B.mastery ? A.mastery - B.mastery : A.nextReview - B.nextReview;
+    })
+    .slice(0, limit);
+}
+function pickSession(limit = 6) {
+  const due = dueLetters(limit);
+  if (due.length >= limit) return due;
+  const dueIds = new Set(due.map(l => l.id));
+  return [...due, ...unlockedLetters().filter(l => !dueIds.has(l.id))].slice(0, limit);
+}
+function nextReviewFor(rating, reps) {
+  const now = Date.now();
+  if (rating === "again") return now;
+  if (rating === "hard") return now + (reps <= 1 ? 0.25 : reps <= 3 ? 0.75 : 2) * DAY_MS;
+  return now + (reps <= 1 ? 0.5 : reps === 2 ? 1 : reps === 3 ? 3 : reps < 6 ? 7 : 21) * DAY_MS;
+}
+function applyReview(id, rating) {
+  const cur = state.cards[id];
+  const ok = rating !== "again";
+  const reps = ok ? cur.repetitions + 1 : 0;
+  const mastery = Math.max(0, Math.min(5, cur.mastery + (rating === "got-it" ? 2 : rating === "hard" ? 1 : -1)));
+  const today = dateKey();
+  const last = state.lastPracticeDate;
+  const y = new Date(); y.setDate(y.getDate() - 1);
+  state.dailyCompleted = last === today ? state.dailyCompleted + 1 : 1;
+  state.streak = last === today ? state.streak : last === dateKey(y) ? Math.max(1, state.streak + 1) : 1;
+  state.lastPracticeDate = today;
+  state.cards[id] = { correct: cur.correct + (ok ? 1 : 0), incorrect: cur.incorrect + (ok ? 0 : 1), repetitions: reps,
+                      mastery, nextReview: nextReviewFor(rating, reps), lastReviewed: Date.now() };
+  save();
+}
+
+// ---------- Audio ----------
+function speak(text) {
+  if (!("speechSynthesis" in window)) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "ko-KR";
+  u.rate = 0.8;
+  window.speechSynthesis.speak(u);
+}
+function hearBtn(text, label) {
+  return `<button class="btn alt" data-speak="${esc(text)}" aria-label="${esc(label)}">🔊 Hear it</button>`;
+}
+
+// ---------- UI state ----------
+const app = document.getElementById("app");
+let tab = "letters", deck = "familiar", letterId = null;
+let stageDay = 1, stageIndex = 0, stageRevealed = false, showPatterns = false, showConv = false;
+let session = null;
+
+function shuffle(a) { return a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(x => x[1]); }
+function makeChoices(id) {
+  const others = shuffle(unlockedLetters().filter(l => l.id !== id)).slice(0, 3);
+  return shuffle([LETTER_BY_ID[id], ...others]);
+}
+function startSession(mode) {
+  const ids = pickSession(6).map(l => l.id);
+  session = { mode, ids, i: 0, flipped: false, picked: null, done: false, choices: makeChoices(ids[0]) };
+}
+function advanceSession() {
+  session.i++; session.flipped = false; session.picked = null;
+  if (session.i >= session.ids.length) session.done = true;
+  else session.choices = makeChoices(session.ids[session.i]);
+}
+
+// ---------- Alphabet ----------
+function renderLetters() {
+  const mastered = masteredCount();
+  const pct = Math.round((mastered / LETTERS.length) * 100);
+  const open = new Set(DATA.learnOrder.slice(0, unlockedCount()));
+  const todayDone = state.lastPracticeDate === dateKey() ? state.dailyCompleted : 0;
+  const goalPct = Math.min(100, (todayDone / state.dailyGoal) * 100);
+  const deckLetters = LETTERS.filter(l => l.deck === deck);
+  const cur = letterId ? LETTER_BY_ID[letterId] : null;
+  let html = `
+    <div class="card"><div class="eyebrow">ALPHABET COMPLETION</div><div class="big">${pct}%</div>
+      <div class="bar"><div style="width:${pct}%"></div></div>
+      <div class="sub">${mastered} of ${LETTERS.length} letters mastered · ${open.size} open · streak ${state.streak} day${state.streak === 1 ? "" : "s"}</div>
+      <div class="row" style="margin-top:14px;align-items:center;justify-content:space-between">
+        <div><div class="eyebrow">TODAY'S GOAL</div><div class="sub" style="color:var(--black);margin-top:2px">${todayDone} / ${state.dailyGoal} practiced</div></div>
+        <div class="row"><button class="btn alt" data-goal="-1" aria-label="Lower daily goal">−</button><button class="btn alt" data-goal="1" aria-label="Raise daily goal">+</button></div>
+      </div>
+      <div class="bar thin" style="margin-top:8px"><div style="width:${goalPct}%"></div></div>
+      <div class="row" style="margin-top:14px"><button class="btn" data-start="cards">Start today's session</button><button class="btn alt" data-start="listen">Listen & choose</button></div>
+    </div>
+    <div class="chips">${Object.keys(DATA.decks).map(d => `<button class="chip ${d === deck ? "on" : ""}" data-deck="${d}">${esc(DATA.decks[d].title)}</button>`).join("")}</div>
+    <div class="sub">${esc(DATA.decks[deck].description)}</div>`;
+  if (cur) {
+    const flipped = !!state.flip[cur.id];
+    html += `<div class="card">
+      <div class="eyebrow">${esc(cur.hangulName)} · ${esc(cur.rrName)}</div>
+      ${flipped ? `
+        <div class="pron">/${esc(cur.sound)}/ — ${esc(cur.guide)}</div>
+        <div class="row" style="align-items:center"><div class="big">${esc(cur.example)}</div>${hearBtn(cur.example, "Hear " + cur.example)}</div>
+        <div class="sub">${esc(cur.rr)} · ${esc(cur.meaning)}</div>
+        <div class="say" style="margin-top:12px">${esc(cur.tip)}</div>` : `
+        <div class="glyph">${cur.glyph}</div>
+        <div class="sub" style="text-align:center">Say the sound aloud, then flip for the example.</div>`}
+      <div class="row" style="margin-top:14px">
+        <button class="btn alt" data-flip="${cur.id}">${flipped ? "Hide" : "Flip"}</button>
+        <button class="btn" data-know="${cur.id}">${isMastered(cur.id) ? "Marked known ✓" : "I know this"}</button>
+        <button class="btn alt" data-close="1">Back to deck</button>
+      </div></div>`;
+  }
+  html += `<div class="letters">${deckLetters.map(l => `<button class="tile ${isMastered(l.id) ? "done" : ""} ${open.has(l.id) ? "" : "locked"}" data-letter="${l.id}"><span class="tg">${l.glyph}</span><small>${esc(l.rrName)}</small></button>`).join("")}</div>`;
+  app.innerHTML = html;
+}
+
+function renderSession() {
+  const s = session;
+  if (s.done) {
+    app.innerHTML = `<div class="card"><div class="eyebrow">SESSION COMPLETE</div>
+      <div class="big" style="font-size:30px;margin-top:8px">A little more Korean is in your head now.</div>
+      <div class="sub">Trickier letters will come back sooner, and the calm wins will space out.</div>
+      <div class="row" style="margin-top:14px"><button class="btn" data-s-again="1">Do one more loop</button><button class="btn alt" data-s-close="1">Back to alphabet</button></div></div>`;
+    return;
+  }
+  const L = LETTER_BY_ID[s.ids[s.i]];
+  const head = `<div class="row" style="justify-content:space-between;align-items:center">
+      <div class="eyebrow">${s.mode === "cards" ? "CARDS" : "LISTEN & CHOOSE"} · ${s.i + 1} OF ${s.ids.length}</div>
+      <button class="btn alt" data-s-close="1">Close</button></div>
+    <div class="bar thin" style="margin-top:10px"><div style="width:${(s.i / s.ids.length) * 100}%"></div></div>`;
+  let body;
+  if (s.mode === "cards") {
+    body = !s.flipped ? `
+      <div class="eyebrow" style="margin-top:14px">TAP TO FLIP</div>
+      <div class="glyph">${L.glyph}</div>
+      <div class="sub" style="text-align:center">What sound does this make?</div>
+      <div class="row" style="margin-top:14px;justify-content:center"><button class="btn alt" data-s-flip="1">Flip</button></div>` : `
+      <div class="row" style="align-items:center;justify-content:space-between;margin-top:14px"><div class="glyph small">${L.glyph}</div>${hearBtn(L.example, "Hear " + L.example)}</div>
+      <div class="pron">/${esc(L.sound)}/ · ${esc(L.guide)}</div>
+      <div class="big" style="margin-top:12px">${esc(L.example)}</div>
+      <div class="sub">${esc(L.rr)} · ${esc(L.meaning)}</div>
+      <div class="say" style="margin-top:12px">${esc(L.tip)}</div>
+      <div class="sub" style="margin-top:14px">How did that one feel?</div>
+      <div class="row" style="margin-top:8px">
+        <button class="btn rose" data-rate="again">Again</button>
+        <button class="btn yel" data-rate="hard">Hard</button>
+        <button class="btn grn" data-rate="got-it">Got it</button>
+      </div>`;
+  } else {
+    const answered = s.picked !== null;
+    body = `<div class="eyebrow" style="margin-top:14px">FIND THE LETTER</div>
+      <div class="big" style="font-size:28px;margin-top:6px">${esc(L.guide)}</div>
+      <div class="row" style="align-items:center;margin-top:10px">${hearBtn(L.example, "Hear the sound")}<span class="sub">Listen, then choose.</span></div>
+      <div class="choices">${s.choices.map(c => {
+        const cls = !answered ? "" : c.id === L.id ? "right" : c.id === s.picked ? "wrong" : "";
+        return `<button class="choice ${cls}" data-pick="${c.id}" ${answered ? "disabled" : ""}><span class="cg">${c.glyph}</span><small>${esc(c.rrName)}</small></button>`;
+      }).join("")}</div>
+      ${answered ? `<div class="say" style="margin-top:12px">${s.picked === L.id ? "That's it." : `The answer is ${L.glyph}.`} ${esc(L.tip)}</div>
+        <div class="row" style="margin-top:12px"><button class="btn" data-s-next="1">Next</button></div>` : ""}`;
+  }
+  app.innerHTML = `<div class="card">${head}${body}</div>`;
+}
+
+// ---------- Stage 1 ----------
+function stageDayItems() {
+  if (stageDay <= 5) return STAGE_ITEMS.filter(i => i.day === stageDay);
+  return STAGE_ITEMS; // Days 6 & 7 review all 100 items
+}
+function renderStage() {
+  const reviewed = Object.keys(state.reviewed).length;
+  const pct = Math.round((reviewed / STAGE_ITEMS.length) * 100);
+  const items = stageDayItems();
+  const item = items[stageIndex % items.length];
+  const dayMeta = DATA.stage.days.find(d => d.day === stageDay);
+  let html = `
+    <div class="card"><div class="eyebrow">100 EVERYDAY WORDS & EXPRESSIONS</div>
+      <div class="big" style="font-size:26px">Speak first.</div>
+      <div class="sub">Meaning → pronunciation → say it aloud → recognize the Hangul → use a tiny sentence.</div>
+      <div class="bar" style="margin-top:12px"><div style="width:${pct}%"></div></div>
+      <div class="sub">${reviewed}/100 reviewed</div></div>
+    <div class="chips">${DATA.stage.days.map(d => `<button class="chip ${d.day === stageDay ? "on" : ""}" data-day="${d.day}">DAY ${d.day} · ${esc(d.title)}</button>`).join("")}</div>
+    <div class="sub">${esc(dayMeta.summary)}</div>
+    <div class="card">
+      <div class="eyebrow">${esc(item.section.toUpperCase())} · ITEM ${item.number}</div>
+      ${!stageRevealed ? `
+        <div class="big" style="margin-top:10px">${esc(item.en)}</div>
+        <div class="sub">Say the Korean aloud, then reveal.</div>
+        <div class="row" style="margin-top:14px"><button class="btn alt" data-reveal="1">Reveal Korean</button></div>` : `
+        <div class="row" style="align-items:center;margin-top:10px"><div class="big">${esc(item.ko)}</div>${hearBtn(item.ko, "Hear " + item.ko)}</div>
+        <div class="pron">${esc(item.pron)}</div>
+        <div class="sub">${esc(item.en)}</div>
+        <div class="say" style="margin-top:12px">Say it aloud once. Recognition comes after the sound.</div>
+        <div class="row" style="margin-top:14px">
+          <button class="btn" data-next="1">I can say it</button>
+          <button class="btn alt" data-again="1">Review again later</button>
+        </div>`}
+    </div>
+    <div class="card"><div class="eyebrow">TINY SENTENCE LAB</div>
+      <div class="row" style="margin-top:8px">
+        <button class="btn alt" data-toggle="patterns">${showPatterns ? "Hide" : "Open"} sentence patterns</button>
+        <button class="btn alt" data-toggle="conv">${showConv ? "Hide" : "Open"} mini conversations</button>
+      </div>
+      ${showPatterns ? `<div style="margin-top:12px;display:grid;gap:8px">${DATA.stage.patterns.map(p => `
+        <div class="card" style="box-shadow:none;padding:12px;border-radius:14px">
+          <div style="font-weight:900;font-size:17px">${esc(p.template[0])}</div>
+          <div class="pron" style="font-size:13px">${esc(p.template[1])}</div>
+          <div class="sub" style="margin-top:2px">${esc(p.template[2])}</div>
+          ${p.example ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid #111"><div style="font-weight:800">${esc(p.example[0])}</div><div class="pron" style="font-size:13px">${esc(p.example[1])}</div><div class="sub" style="margin-top:2px">${esc(p.example[2])}</div></div>` : ""}
+        </div>`).join("")}</div>` : ""}
+      ${showConv ? `<div style="margin-top:12px;display:grid;gap:16px">${DATA.stage.conversations.map(c => `
+        <div><div class="sec">${esc(c.title)}</div>${c.lines.map(l => `
+          <div class="line"><div class="speaker">${l.speaker}</div><div><div class="row" style="align-items:center"><span style="font-weight:900">${esc(l.ko)}</span>${hearBtn(l.ko, "Hear " + l.ko)}</div><div class="pron" style="font-size:13px">${esc(l.pron)}</div><div class="sub" style="margin-top:2px">${esc(l.en)}</div></div></div>`).join("")}</div>`).join("")}</div>` : ""}
+    </div>
+    <div class="card"><div class="eyebrow">PRONUNCIATION KEY</div>
+      <ul class="check" style="margin-top:8px">${DATA.stage.pronKey.map(k => `<li>${esc(k)}</li>`).join("")}</ul>
+      <div style="margin-top:14px;display:grid;gap:8px">${DATA.stage.pronNotes.map(n => `<div class="say" style="background:#fff;font-weight:700"><b style="font-size:15px">${esc(n.ko)}</b><div class="sub" style="margin-top:2px">${esc(n.note)}</div></div>`).join("")}</div>
+    </div>
+    <div class="card"><div class="eyebrow">READY FOR STAGE 2?</div>
+      <div class="sub" style="margin-top:6px;color:var(--black)">Move on when these feel comfortable.</div>
+      <ul class="check" style="margin-top:10px">${DATA.stage.checklist.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+      <div class="sub" style="margin-top:12px">${esc(DATA.stage.threshold)}</div>
+    </div>`;
+  app.innerHTML = html;
+}
+
+// ---------- Reading ----------
+function renderReading() {
+  app.innerHTML = `<div class="card"><div class="eyebrow">READ SIMPLE WORDS</div>
+    <div class="sub" style="margin-top:6px">Sound out each syllable block from the letters you know.</div></div>
+    ${DATA.reading.map(r => `<div class="card">
+      <div class="row" style="align-items:center"><div class="big">${esc(r.word)}</div>${hearBtn(r.word, "Hear " + r.word)}</div>
+      <div class="pron">${esc(r.tr)}</div>
+      <div class="sub">${esc(r.meaning)}</div>
+      <div class="row" style="margin-top:10px">${r.parts.map(p => `<span class="chip" style="cursor:default">${esc(p)}</span>`).join("")}</div>
+    </div>`).join("")}`;
+}
+
+// ---------- Events ----------
+function render() {
+  document.querySelectorAll("nav button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
+  if (tab === "letters") session ? renderSession() : renderLetters();
+  else if (tab === "stage") renderStage();
+  else renderReading();
+}
+document.querySelector("nav").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-tab]");
+  if (!b) return;
+  tab = b.dataset.tab; letterId = null; session = null; render(); window.scrollTo(0, 0);
+});
+app.addEventListener("click", (e) => {
+  const t = e.target.closest("button");
+  if (!t) return;
+  const d = t.dataset;
+  if (d.speak) { speak(d.speak); return; }
+  if (session) handleSession(d);
+  else handleMain(d);
+  save(); render();
+});
+function handleSession(d) {
+  const s = session;
+  if (d.sClose) { session = null; return; }
+  if (s.done) { if (d.sAgain) startSession(s.mode); return; }
+  const L = LETTER_BY_ID[s.ids[s.i]];
+  if (d.sFlip) s.flipped = true;
+  else if (d.rate) { applyReview(L.id, d.rate); advanceSession(); }
+  else if (d.pick) { if (s.picked === null) { s.picked = d.pick; applyReview(L.id, d.pick === L.id ? "got-it" : "again"); } }
+  else if (d.sNext) advanceSession();
+  else if (d.sAgain) startSession(s.mode);
+}
+function handleMain(d) {
+  if (d.start) startSession(d.start);
+  else if (d.goal) state.dailyGoal = Math.max(5, Math.min(30, state.dailyGoal + Number(d.goal)));
+  else if (d.deck) { deck = d.deck; letterId = null; }
+  else if (d.letter) letterId = d.letter;
+  else if (d.close) letterId = null;
+  else if (d.flip) state.flip[d.flip] = !state.flip[d.flip];
+  else if (d.know) { const c = state.cards[d.know]; c.mastery = c.mastery >= 3 ? 0 : 3; }
+  else if (d.day) { stageDay = Number(d.day); stageIndex = 0; stageRevealed = false; }
+  else if (d.reveal) stageRevealed = true;
+  else if (d.next) { const items = stageDayItems(); const it = items[stageIndex % items.length]; state.reviewed[it.id] = true; stageIndex++; stageRevealed = false; }
+  else if (d.again) { stageIndex++; stageRevealed = false; }
+  else if (d.toggle === "patterns") showPatterns = !showPatterns;
+  else if (d.toggle === "conv") showConv = !showConv;
+}
+render();
+</script>
+</body>
+</html>
