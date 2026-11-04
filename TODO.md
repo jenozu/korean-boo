@@ -35,5 +35,5 @@
 - [x] Single static `index.html`, no dependencies.
 - [x] Learning logic checked with scripted renders of every screen (no browser run).
 - [ ] Open in a real browser and confirm audio and touch interaction on a phone.
-- [ ] Deploy to Vercel as `korean-boo`.
+- [x] Deploy to Vercel as `korean-boo` (production deployment READY; SSO protection is on, so check public access).
 - [ ] Port the Expo / React Native app (not included: the app shell was missing from the source upload).
