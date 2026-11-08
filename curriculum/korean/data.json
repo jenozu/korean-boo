@@ -1,0 +1,1726 @@
+{
+ "letters": [
+  {
+   "id": "m",
+   "glyph": "ㅁ",
+   "name": "미음",
+   "rr": "mieum",
+   "sound": "m",
+   "guide": "m, as in moon",
+   "example": "마음",
+   "exampleRr": "maeum",
+   "meaning": "heart / mind",
+   "tip": "ㅁ is a square and says m, just like Latin M.",
+   "deck": "familiar"
+  },
+  {
+   "id": "a",
+   "glyph": "ㅏ",
+   "name": "아",
+   "rr": "a",
+   "sound": "a",
+   "guide": "ah, as in father",
+   "example": "아빠",
+   "exampleRr": "appa",
+   "meaning": "dad",
+   "tip": "ㅏ is an open a. Open your mouth wide.",
+   "deck": "familiar"
+  },
+  {
+   "id": "o",
+   "glyph": "ㅗ",
+   "name": "오",
+   "rr": "o",
+   "sound": "o",
+   "guide": "o, as in more",
+   "example": "오리",
+   "exampleRr": "ori",
+   "meaning": "duck",
+   "tip": "ㅗ is round: pull the lips into a small circle.",
+   "deck": "familiar"
+  },
+  {
+   "id": "i",
+   "glyph": "ㅣ",
+   "name": "이",
+   "rr": "i",
+   "sound": "ee",
+   "guide": "ee, as in see",
+   "example": "이름",
+   "exampleRr": "ireum",
+   "meaning": "name",
+   "tip": "ㅣ is one straight line. Smile and say ee.",
+   "deck": "familiar"
+  },
+  {
+   "id": "s",
+   "glyph": "ㅅ",
+   "name": "시옷",
+   "rr": "siot",
+   "sound": "s",
+   "guide": "s, as in sun",
+   "example": "사과",
+   "exampleRr": "sagwa",
+   "meaning": "apple",
+   "tip": "ㅅ looks like a little roof and says s.",
+   "deck": "familiar"
+  },
+  {
+   "id": "n",
+   "glyph": "ㄴ",
+   "name": "니은",
+   "rr": "nieun",
+   "sound": "n",
+   "guide": "n, as in nose",
+   "example": "나무",
+   "exampleRr": "namu",
+   "meaning": "tree",
+   "tip": "ㄴ is a corner with a tail. It says n.",
+   "deck": "familiar"
+  },
+  {
+   "id": "eo",
+   "glyph": "ㅓ",
+   "name": "어",
+   "rr": "eo",
+   "sound": "eo",
+   "guide": "uh, as in fun",
+   "example": "어머니",
+   "exampleRr": "eomeoni",
+   "meaning": "mother",
+   "tip": "ㅓ is ㅏ turned around. It says uh, with a relaxed jaw, not ah.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "u",
+   "glyph": "ㅜ",
+   "name": "우",
+   "rr": "u",
+   "sound": "u",
+   "guide": "oo, as in boot",
+   "example": "우유",
+   "exampleRr": "uyu",
+   "meaning": "milk",
+   "tip": "ㅜ is ㅗ turned upside down. Round the lips for oo.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "ae",
+   "glyph": "ㅐ",
+   "name": "애",
+   "rr": "ae",
+   "sound": "ae",
+   "guide": "eh, as in bed",
+   "example": "개",
+   "exampleRr": "gae",
+   "meaning": "dog",
+   "tip": "ㅐ looks like ㅏ with an extra stroke. It says eh.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "e",
+   "glyph": "ㅔ",
+   "name": "에",
+   "rr": "e",
+   "sound": "e",
+   "guide": "eh, as in bed",
+   "example": "네",
+   "exampleRr": "ne",
+   "meaning": "yes",
+   "tip": "ㅔ looks like ㅓ with an extra stroke. In everyday speech it sounds almost the same as ㅐ.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "ng",
+   "glyph": "ㅇ",
+   "name": "이응",
+   "rr": "ieung",
+   "sound": "silent / ng",
+   "guide": "silent at the start, ng at the bottom",
+   "example": "아이",
+   "exampleRr": "ai",
+   "meaning": "child",
+   "tip": "At the start of a syllable ㅇ is silent. At the bottom it says ng, as in sing.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "ch",
+   "glyph": "ㅊ",
+   "name": "치읓",
+   "rr": "chieut",
+   "sound": "ch",
+   "guide": "ch, with a small puff of air",
+   "example": "치마",
+   "exampleRr": "chima",
+   "meaning": "skirt",
+   "tip": "ㅊ is ㅈ with an extra stroke on top. Say ch with a little breath.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "p",
+   "glyph": "ㅍ",
+   "name": "피읖",
+   "rr": "pieup",
+   "sound": "p",
+   "guide": "p, with a small puff",
+   "example": "포도",
+   "exampleRr": "podo",
+   "meaning": "grape",
+   "tip": "ㅍ is ㅁ with a bar through the middle. It says p, not m.",
+   "deck": "lookalikes"
+  },
+  {
+   "id": "g",
+   "glyph": "ㄱ",
+   "name": "기역",
+   "rr": "giyeok",
+   "sound": "g / k",
+   "guide": "g at the start, k at the end",
+   "example": "고양이",
+   "exampleRr": "goyangi",
+   "meaning": "cat",
+   "tip": "ㄱ says g at the start of a word and k at the end.",
+   "deck": "new"
+  },
+  {
+   "id": "d",
+   "glyph": "ㄷ",
+   "name": "디귿",
+   "rr": "digeut",
+   "sound": "d / t",
+   "guide": "d at the start, t at the end",
+   "example": "도시",
+   "exampleRr": "dosi",
+   "meaning": "city",
+   "tip": "ㄷ says d at the start of a word and t at the end.",
+   "deck": "new"
+  },
+  {
+   "id": "r",
+   "glyph": "ㄹ",
+   "name": "리을",
+   "rr": "rieul",
+   "sound": "r / l",
+   "guide": "one light tap, between r and l",
+   "example": "라면",
+   "exampleRr": "ramyeon",
+   "meaning": "ramen noodles",
+   "tip": "ㄹ sounds like r at the start of a word and like l at the end. Tap the tongue once.",
+   "deck": "new"
+  },
+  {
+   "id": "b",
+   "glyph": "ㅂ",
+   "name": "비읍",
+   "rr": "bieup",
+   "sound": "b / p",
+   "guide": "b at the start, p at the end",
+   "example": "바다",
+   "exampleRr": "bada",
+   "meaning": "sea",
+   "tip": "ㅂ sounds like b at the start of a word, and softer than English p at the end.",
+   "deck": "new"
+  },
+  {
+   "id": "j",
+   "glyph": "ㅈ",
+   "name": "지읒",
+   "rr": "jieut",
+   "sound": "j",
+   "guide": "j, as in jam",
+   "example": "지금",
+   "exampleRr": "jigeum",
+   "meaning": "now",
+   "tip": "ㅈ is a soft j at the start, softer than ch.",
+   "deck": "new"
+  },
+  {
+   "id": "h",
+   "glyph": "ㅎ",
+   "name": "히읗",
+   "rr": "hieut",
+   "sound": "h",
+   "guide": "h, as in hat",
+   "example": "하나",
+   "exampleRr": "hana",
+   "meaning": "one",
+   "tip": "ㅎ is a soft h. Keep it light before vowels.",
+   "deck": "new"
+  },
+  {
+   "id": "ya",
+   "glyph": "ㅑ",
+   "name": "야",
+   "rr": "ya",
+   "sound": "ya",
+   "guide": "ya, as in yacht",
+   "example": "야구",
+   "exampleRr": "yagu",
+   "meaning": "baseball",
+   "tip": "ㅑ is ㅏ with an extra stroke. Add a y-glide before the a.",
+   "deck": "new"
+  },
+  {
+   "id": "yo",
+   "glyph": "ㅛ",
+   "name": "요",
+   "rr": "yo",
+   "sound": "yo",
+   "guide": "yo, as in yoga",
+   "example": "요리",
+   "exampleRr": "yori",
+   "meaning": "cooking",
+   "tip": "ㅛ is ㅗ with an extra stroke. Add a y-glide before the o.",
+   "deck": "new"
+  },
+  {
+   "id": "yu",
+   "glyph": "ㅠ",
+   "name": "유",
+   "rr": "yu",
+   "sound": "yu",
+   "guide": "yoo, as in you",
+   "example": "유리",
+   "exampleRr": "yuri",
+   "meaning": "glass",
+   "tip": "ㅠ is ㅜ with an extra stroke. A y-glide, then oo.",
+   "deck": "new"
+  },
+  {
+   "id": "yeo",
+   "glyph": "ㅕ",
+   "name": "여",
+   "rr": "yeo",
+   "sound": "yeo",
+   "guide": "yuh, as in yonder",
+   "example": "여자",
+   "exampleRr": "yeoja",
+   "meaning": "woman",
+   "tip": "ㅕ is ㅓ with an extra stroke. A y-glide, then uh.",
+   "deck": "new"
+  },
+  {
+   "id": "k",
+   "glyph": "ㅋ",
+   "name": "키읔",
+   "rr": "kieuk",
+   "sound": "k (strong puff)",
+   "guide": "k with a strong puff, as in kite",
+   "example": "커피",
+   "exampleRr": "keopi",
+   "meaning": "coffee",
+   "tip": "ㅋ is a k with a strong puff. Hold a hand to your mouth: you should feel air.",
+   "deck": "difficult"
+  },
+  {
+   "id": "t",
+   "glyph": "ㅌ",
+   "name": "티읕",
+   "rr": "tieut",
+   "sound": "t (strong puff)",
+   "guide": "t with a strong puff, as in top",
+   "example": "토끼",
+   "exampleRr": "tokki",
+   "meaning": "rabbit",
+   "tip": "ㅌ is a t with a strong puff of air.",
+   "deck": "difficult"
+  },
+  {
+   "id": "kk",
+   "glyph": "ㄲ",
+   "name": "쌍기역",
+   "rr": "ssang-giyeok",
+   "sound": "kk (tense)",
+   "guide": "tight k with no puff, as in sky",
+   "example": "꼬리",
+   "exampleRr": "kkori",
+   "meaning": "tail",
+   "tip": "Tense consonants sound tight: no puff of air, and the throat stays closed.",
+   "deck": "difficult"
+  },
+  {
+   "id": "tt",
+   "glyph": "ㄸ",
+   "name": "쌍디귿",
+   "rr": "ssang-digeut",
+   "sound": "tt (tense)",
+   "guide": "tight t with no puff, as in stop",
+   "example": "딸기",
+   "exampleRr": "ttalgi",
+   "meaning": "strawberry",
+   "tip": "ㄸ is a tight t. Let no breath out.",
+   "deck": "difficult"
+  },
+  {
+   "id": "pp",
+   "glyph": "ㅃ",
+   "name": "쌍비읍",
+   "rr": "ssang-bieup",
+   "sound": "pp (tense)",
+   "guide": "tight p with no puff, as in spy",
+   "example": "빵",
+   "exampleRr": "ppang",
+   "meaning": "bread",
+   "tip": "ㅃ is a tight p. Keep the lips firm and the breath in.",
+   "deck": "difficult"
+  },
+  {
+   "id": "ss",
+   "glyph": "ㅆ",
+   "name": "쌍시옷",
+   "rr": "ssang-siot",
+   "sound": "ss (tense)",
+   "guide": "tight, sharp s",
+   "example": "쌀",
+   "exampleRr": "ssal",
+   "meaning": "rice",
+   "tip": "ㅆ is a tight, sharp s.",
+   "deck": "difficult"
+  },
+  {
+   "id": "jj",
+   "glyph": "ㅉ",
+   "name": "쌍지읒",
+   "rr": "ssang-jieut",
+   "sound": "jj (tense)",
+   "guide": "tight j with no puff",
+   "example": "짜다",
+   "exampleRr": "jjada",
+   "meaning": "salty",
+   "tip": "ㅉ is a tight j. No breath comes out.",
+   "deck": "difficult"
+  },
+  {
+   "id": "eu",
+   "glyph": "ㅡ",
+   "name": "으",
+   "rr": "eu",
+   "sound": "eu",
+   "guide": "uh with the lips spread wide, no English twin",
+   "example": "그림",
+   "exampleRr": "geurim",
+   "meaning": "picture",
+   "tip": "Keep the lips flat, like a relaxed smile, and say uh.",
+   "deck": "difficult"
+  },
+  {
+   "id": "yae",
+   "glyph": "ㅒ",
+   "name": "얘",
+   "rr": "yae",
+   "sound": "yae",
+   "guide": "yeh, as in yes",
+   "example": "얘기",
+   "exampleRr": "yaegi",
+   "meaning": "talk / story",
+   "tip": "ㅒ is ㅐ with an extra stroke. Add a y-glide.",
+   "deck": "combined"
+  },
+  {
+   "id": "ye",
+   "glyph": "ㅖ",
+   "name": "예",
+   "rr": "ye",
+   "sound": "ye",
+   "guide": "yeh, as in yes",
+   "example": "예쁘다",
+   "exampleRr": "yeppeuda",
+   "meaning": "pretty",
+   "tip": "ㅖ is ㅔ with an extra stroke. Add a y-glide.",
+   "deck": "combined"
+  },
+  {
+   "id": "wa",
+   "glyph": "ㅘ",
+   "name": "와",
+   "rr": "wa",
+   "sound": "wa",
+   "guide": "wa, as in wand",
+   "example": "과자",
+   "exampleRr": "gwaja",
+   "meaning": "snack",
+   "tip": "ㅘ is ㅗ and ㅏ together: start round, then open to ah.",
+   "deck": "combined"
+  },
+  {
+   "id": "wae",
+   "glyph": "ㅙ",
+   "name": "왜",
+   "rr": "wae",
+   "sound": "wae",
+   "guide": "way, as in wedge",
+   "example": "왜",
+   "exampleRr": "wae",
+   "meaning": "why",
+   "tip": "ㅙ is ㅗ and ㅐ together. Say wa, then eh, fast.",
+   "deck": "combined"
+  },
+  {
+   "id": "oe",
+   "glyph": "ㅚ",
+   "name": "외",
+   "rr": "oe",
+   "sound": "oe / we",
+   "guide": "we, as in wet",
+   "example": "외국",
+   "exampleRr": "oeguk",
+   "meaning": "foreign country",
+   "tip": "ㅚ is ㅗ and ㅣ together. It often sounds like we.",
+   "deck": "combined"
+  },
+  {
+   "id": "wo",
+   "glyph": "ㅝ",
+   "name": "워",
+   "rr": "wo",
+   "sound": "wo",
+   "guide": "wuh, as in wonder",
+   "example": "월요일",
+   "exampleRr": "woryoil",
+   "meaning": "Monday",
+   "tip": "ㅝ is ㅜ and ㅓ together: oo, then uh.",
+   "deck": "combined"
+  },
+  {
+   "id": "we",
+   "glyph": "ㅞ",
+   "name": "웨",
+   "rr": "we",
+   "sound": "we",
+   "guide": "weh, as in wet",
+   "example": "웨이터",
+   "exampleRr": "weiteo",
+   "meaning": "waiter",
+   "tip": "ㅞ is ㅜ and ㅔ together. Say oo, then eh, quickly.",
+   "deck": "combined"
+  },
+  {
+   "id": "wi",
+   "glyph": "ㅟ",
+   "name": "위",
+   "rr": "wi",
+   "sound": "wi",
+   "guide": "wee, as in weed",
+   "example": "위",
+   "exampleRr": "wi",
+   "meaning": "top / stomach",
+   "tip": "ㅟ is ㅜ and ㅣ together. The lips start round, then smile into ee.",
+   "deck": "combined"
+  },
+  {
+   "id": "ui",
+   "glyph": "ㅢ",
+   "name": "의",
+   "rr": "ui",
+   "sound": "ui",
+   "guide": "a quick glide from eu to ee",
+   "example": "의사",
+   "exampleRr": "uisa",
+   "meaning": "doctor",
+   "tip": "ㅢ glides from eu to ee. When it is not the first sound, it often sounds like ee.",
+   "deck": "combined"
+  }
+ ],
+ "learnOrder": [
+  "a",
+  "o",
+  "m",
+  "s",
+  "n",
+  "i",
+  "g",
+  "d",
+  "r",
+  "b",
+  "j",
+  "h",
+  "eo",
+  "u",
+  "ng",
+  "ae",
+  "e",
+  "ch",
+  "p",
+  "ya",
+  "yo",
+  "yu",
+  "yeo",
+  "k",
+  "t",
+  "eu",
+  "kk",
+  "tt",
+  "pp",
+  "ss",
+  "jj",
+  "yae",
+  "ye",
+  "wa",
+  "wae",
+  "oe",
+  "wo",
+  "we",
+  "wi",
+  "ui"
+ ],
+ "decks": {
+  "familiar": {
+   "title": "Looks familiar",
+   "eyebrow": "01 / START HERE",
+   "color": "#9BE9FB",
+   "description": "Shapes that sound like letters you already know."
+  },
+  "lookalikes": {
+   "title": "Sneaky lookalikes",
+   "eyebrow": "02 / WATCH CLOSELY",
+   "color": "#FAE8FF",
+   "description": "Shapes that look alike but sound different."
+  },
+  "new": {
+   "title": "New characters",
+   "eyebrow": "03 / BUILD IT UP",
+   "color": "#F6BED5",
+   "description": "A fresh set of shapes to add to your map."
+  },
+  "difficult": {
+   "title": "Tricky sounds",
+   "eyebrow": "04 / LISTEN IN",
+   "color": "#FDE68A",
+   "description": "Puffs of air, tight sounds, and the flat eu."
+  },
+  "combined": {
+   "title": "Combined vowels",
+   "eyebrow": "05 / FINAL PIECES",
+   "color": "#D9F99D",
+   "description": "Two vowel strokes stacked into one shape."
+  }
+ },
+ "items": [
+  {
+   "n": 1,
+   "ko": "안녕하세요",
+   "pron": "an-nyeong-ha-se-yo",
+   "en": "hello (polite)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 2,
+   "ko": "안녕",
+   "pron": "an-nyeong",
+   "en": "hi / bye (casual)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 3,
+   "ko": "좋은 아침이에요",
+   "pron": "jo-eun a-chi-mi-e-yo",
+   "en": "good morning",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 4,
+   "ko": "좋은 저녁이에요",
+   "pron": "jo-eun jeo-nyeo-gi-e-yo",
+   "en": "good evening",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 5,
+   "ko": "안녕히 주무세요",
+   "pron": "an-nyeong-hi ju-mu-se-yo",
+   "en": "good night (to someone going to sleep)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 6,
+   "ko": "안녕히 가세요",
+   "pron": "an-nyeong-hi ga-se-yo",
+   "en": "goodbye (said to someone leaving)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 7,
+   "ko": "안녕히 계세요",
+   "pron": "an-nyeong-hi gye-se-yo",
+   "en": "goodbye (said by the one leaving)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 8,
+   "ko": "어떻게 지내세요?",
+   "pron": "eo-tteo-ke ji-nae-se-yo?",
+   "en": "how are you? (formal)",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 9,
+   "ko": "잘 지내요",
+   "pron": "jal ji-nae-yo",
+   "en": "I'm doing well",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 10,
+   "ko": "괜찮아요",
+   "pron": "gwaen-chan-a-yo",
+   "en": "it's okay / I'm fine",
+   "group": 1,
+   "day": 1
+  },
+  {
+   "n": 11,
+   "ko": "감사합니다",
+   "pron": "gam-sa-ham-ni-da",
+   "en": "thank you (formal)",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 12,
+   "ko": "고마워요",
+   "pron": "go-ma-wo-yo",
+   "en": "thanks (polite)",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 13,
+   "ko": "천만에요",
+   "pron": "cheon-man-e-yo",
+   "en": "you're welcome",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 14,
+   "ko": "죄송합니다",
+   "pron": "joe-song-ham-ni-da",
+   "en": "I'm sorry (formal)",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 15,
+   "ko": "미안해요",
+   "pron": "mi-an-hae-yo",
+   "en": "sorry (polite)",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 16,
+   "ko": "네",
+   "pron": "ne",
+   "en": "yes",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 17,
+   "ko": "아니요",
+   "pron": "a-ni-yo",
+   "en": "no",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 18,
+   "ko": "알겠어요",
+   "pron": "al-ges-seo-yo",
+   "en": "got it / okay",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 19,
+   "ko": "이해해요",
+   "pron": "i-hae-hae-yo",
+   "en": "I understand",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 20,
+   "ko": "이해가 안 돼요",
+   "pron": "i-hae-ga an dwae-yo",
+   "en": "I don't understand",
+   "group": 2,
+   "day": 1
+  },
+  {
+   "n": 21,
+   "ko": "나",
+   "pron": "na",
+   "en": "I (casual)",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 22,
+   "ko": "저",
+   "pron": "jeo",
+   "en": "I (polite)",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 23,
+   "ko": "너",
+   "pron": "neo",
+   "en": "you (casual)",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 24,
+   "ko": "그",
+   "pron": "geu",
+   "en": "he",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 25,
+   "ko": "그녀",
+   "pron": "geu-nyeo",
+   "en": "she",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 26,
+   "ko": "우리",
+   "pron": "u-ri",
+   "en": "we",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 27,
+   "ko": "그들",
+   "pron": "geu-deul",
+   "en": "they",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 28,
+   "ko": "친구",
+   "pron": "chin-gu",
+   "en": "friend",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 29,
+   "ko": "가족",
+   "pron": "ga-jok",
+   "en": "family",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 30,
+   "ko": "선생님",
+   "pron": "seon-saeng-nim",
+   "en": "teacher",
+   "group": 3,
+   "day": 2
+  },
+  {
+   "n": 31,
+   "ko": "누구",
+   "pron": "nu-gu",
+   "en": "who",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 32,
+   "ko": "뭐",
+   "pron": "mwo",
+   "en": "what",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 33,
+   "ko": "어디",
+   "pron": "eo-di",
+   "en": "where",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 34,
+   "ko": "언제",
+   "pron": "eon-je",
+   "en": "when",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 35,
+   "ko": "왜",
+   "pron": "wae",
+   "en": "why",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 36,
+   "ko": "어떻게",
+   "pron": "eo-tteo-ke",
+   "en": "how",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 37,
+   "ko": "어떤",
+   "pron": "eo-tteon",
+   "en": "which / what kind",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 38,
+   "ko": "얼마",
+   "pron": "eol-ma",
+   "en": "how much / how many",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 39,
+   "ko": "어디로",
+   "pron": "eo-di-ro",
+   "en": "to where",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 40,
+   "ko": "어디서",
+   "pron": "eo-di-seo",
+   "en": "from where / where at",
+   "group": 4,
+   "day": 2
+  },
+  {
+   "n": 41,
+   "ko": "있다",
+   "pron": "it-da",
+   "en": "to have / there is",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 42,
+   "ko": "없다",
+   "pron": "eop-da",
+   "en": "to not have / there isn't",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 43,
+   "ko": "먹다",
+   "pron": "meok-da",
+   "en": "to eat",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 44,
+   "ko": "마시다",
+   "pron": "ma-si-da",
+   "en": "to drink",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 45,
+   "ko": "원하다",
+   "pron": "won-ha-da",
+   "en": "to want",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 46,
+   "ko": "할 수 있다",
+   "pron": "hal su it-da",
+   "en": "can / to be able to",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 47,
+   "ko": "알다",
+   "pron": "al-da",
+   "en": "to know",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 48,
+   "ko": "이해하다",
+   "pron": "i-hae-ha-da",
+   "en": "to understand",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 49,
+   "ko": "말하다",
+   "pron": "mal-ha-da",
+   "en": "to speak",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 50,
+   "ko": "하다",
+   "pron": "ha-da",
+   "en": "to do / to make",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 51,
+   "ko": "가다",
+   "pron": "ga-da",
+   "en": "to go",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 52,
+   "ko": "타다",
+   "pron": "ta-da",
+   "en": "to ride (transport)",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 53,
+   "ko": "살다",
+   "pron": "sal-da",
+   "en": "to live",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 54,
+   "ko": "일하다",
+   "pron": "il-ha-da",
+   "en": "to work",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 55,
+   "ko": "보다",
+   "pron": "bo-da",
+   "en": "to see / to watch",
+   "group": 5,
+   "day": 3
+  },
+  {
+   "n": 56,
+   "ko": "지금",
+   "pron": "ji-geum",
+   "en": "now",
+   "group": 6,
+   "day": 3
+  },
+  {
+   "n": 57,
+   "ko": "오늘",
+   "pron": "o-neul",
+   "en": "today",
+   "group": 6,
+   "day": 3
+  },
+  {
+   "n": 58,
+   "ko": "내일",
+   "pron": "nae-il",
+   "en": "tomorrow",
+   "group": 6,
+   "day": 3
+  },
+  {
+   "n": 59,
+   "ko": "어제",
+   "pron": "eo-je",
+   "en": "yesterday",
+   "group": 6,
+   "day": 3
+  },
+  {
+   "n": 60,
+   "ko": "아침",
+   "pron": "a-chim",
+   "en": "morning",
+   "group": 6,
+   "day": 3
+  },
+  {
+   "n": 61,
+   "ko": "낮",
+   "pron": "nat",
+   "en": "daytime / afternoon",
+   "group": 6,
+   "day": 4
+  },
+  {
+   "n": 62,
+   "ko": "저녁",
+   "pron": "jeo-nyeok",
+   "en": "evening",
+   "group": 6,
+   "day": 4
+  },
+  {
+   "n": 63,
+   "ko": "밤",
+   "pron": "bam",
+   "en": "night",
+   "group": 6,
+   "day": 4
+  },
+  {
+   "n": 64,
+   "ko": "항상",
+   "pron": "hang-sang",
+   "en": "always",
+   "group": 6,
+   "day": 4
+  },
+  {
+   "n": 65,
+   "ko": "가끔",
+   "pron": "ga-kkeum",
+   "en": "sometimes",
+   "group": 6,
+   "day": 4
+  },
+  {
+   "n": 66,
+   "ko": "집",
+   "pron": "jip",
+   "en": "home / house",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 67,
+   "ko": "직장",
+   "pron": "jik-jang",
+   "en": "workplace / work",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 68,
+   "ko": "가게",
+   "pron": "ga-ge",
+   "en": "store / shop",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 69,
+   "ko": "식당",
+   "pron": "sik-dang",
+   "en": "restaurant",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 70,
+   "ko": "화장실",
+   "pron": "hwa-jang-sil",
+   "en": "restroom",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 71,
+   "ko": "여기",
+   "pron": "yeo-gi",
+   "en": "here",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 72,
+   "ko": "거기",
+   "pron": "geo-gi",
+   "en": "there",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 73,
+   "ko": "똑바로",
+   "pron": "ttok-ba-ro",
+   "en": "straight ahead",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 74,
+   "ko": "왼쪽",
+   "pron": "oen-jjok",
+   "en": "to the left",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 75,
+   "ko": "오른쪽",
+   "pron": "o-reun-jjok",
+   "en": "to the right",
+   "group": 7,
+   "day": 4
+  },
+  {
+   "n": 76,
+   "ko": "물",
+   "pron": "mul",
+   "en": "water",
+   "group": 8,
+   "day": 4
+  },
+  {
+   "n": 77,
+   "ko": "음식",
+   "pron": "eum-sik",
+   "en": "food",
+   "group": 8,
+   "day": 4
+  },
+  {
+   "n": 78,
+   "ko": "커피",
+   "pron": "keo-pi",
+   "en": "coffee",
+   "group": 8,
+   "day": 4
+  },
+  {
+   "n": 79,
+   "ko": "차",
+   "pron": "cha",
+   "en": "tea",
+   "group": 8,
+   "day": 4
+  },
+  {
+   "n": 80,
+   "ko": "빵",
+   "pron": "ppang",
+   "en": "bread",
+   "group": 8,
+   "day": 4
+  },
+  {
+   "n": 81,
+   "ko": "고기",
+   "pron": "go-gi",
+   "en": "meat",
+   "group": 8,
+   "day": 5
+  },
+  {
+   "n": 82,
+   "ko": "돈",
+   "pron": "don",
+   "en": "money",
+   "group": 8,
+   "day": 5
+  },
+  {
+   "n": 83,
+   "ko": "도움",
+   "pron": "do-um",
+   "en": "help",
+   "group": 8,
+   "day": 5
+  },
+  {
+   "n": 84,
+   "ko": "…이/가 필요해요",
+   "pron": "i/ga pil-yo-hae-yo",
+   "en": "I need…",
+   "group": 8,
+   "day": 5
+  },
+  {
+   "n": 85,
+   "ko": "…을/를 원해요",
+   "pron": "eul/reul won-hae-yo",
+   "en": "I want…",
+   "group": 8,
+   "day": 5
+  },
+  {
+   "n": 86,
+   "ko": "좋은",
+   "pron": "jo-eun",
+   "en": "good (before a noun)",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 87,
+   "ko": "나쁜",
+   "pron": "na-ppeun",
+   "en": "bad (before a noun)",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 88,
+   "ko": "큰",
+   "pron": "keun",
+   "en": "big",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 89,
+   "ko": "작은",
+   "pron": "ja-geun",
+   "en": "small",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 90,
+   "ko": "새로운",
+   "pron": "sae-ro-un",
+   "en": "new",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 91,
+   "ko": "오래된",
+   "pron": "o-rae-doen",
+   "en": "old",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 92,
+   "ko": "그리고",
+   "pron": "geu-ri-go",
+   "en": "and",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 93,
+   "ko": "하지만",
+   "pron": "ha-ji-man",
+   "en": "but",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 94,
+   "ko": "왜냐하면",
+   "pron": "wae-nya-ha-myeon",
+   "en": "because",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 95,
+   "ko": "아주",
+   "pron": "a-ju",
+   "en": "very",
+   "group": 9,
+   "day": 5
+  },
+  {
+   "n": 96,
+   "ko": "제 이름은 …예요",
+   "pron": "je i-reu-meun …-ye-yo",
+   "en": "my name is…",
+   "group": 10,
+   "day": 5
+  },
+  {
+   "n": 97,
+   "ko": "저는 …에서 왔어요",
+   "pron": "jeo-neun …-e-seo wa-sseo-yo",
+   "en": "I'm from…",
+   "group": 10,
+   "day": 5
+  },
+  {
+   "n": 98,
+   "ko": "영어 할 줄 아세요?",
+   "pron": "yeong-eo hal jul a-se-yo?",
+   "en": "do you speak English?",
+   "group": 10,
+   "day": 5
+  },
+  {
+   "n": 99,
+   "ko": "다시 한 번 말해 주세요",
+   "pron": "da-si han beon mal-hae ju-se-yo",
+   "en": "please say it again",
+   "group": 10,
+   "day": 5
+  },
+  {
+   "n": 100,
+   "ko": "이거 뭐예요?",
+   "pron": "i-geo mwo-ye-yo?",
+   "en": "what is this?",
+   "group": 10,
+   "day": 5
+  }
+ ],
+ "groups": [
+  "Greetings & Social Basics",
+  "Politeness & Conversation Survival",
+  "People & Pronouns",
+  "Essential Question Words",
+  "Core Everyday Verbs",
+  "Time & Frequency",
+  "Places & Directions",
+  "Food, Drink & Basic Needs",
+  "Useful Descriptions & Connectors",
+  "High-Value Everyday Expressions"
+ ],
+ "patterns": [
+  {
+   "template": [
+    "…이/가 필요해요",
+    "i/ga pil-yo-hae-yo",
+    "I need…"
+   ],
+   "example": [
+    "물이 필요해요.",
+    "mu-ri pil-yo-hae-yo.",
+    "I need water."
+   ]
+  },
+  {
+   "template": [
+    "…을/를 원해요",
+    "eul/reul won-hae-yo",
+    "I want…"
+   ],
+   "example": [
+    "커피를 원해요.",
+    "keo-pi-reul won-hae-yo.",
+    "I want coffee."
+   ]
+  },
+  {
+   "template": [
+    "…어디예요?",
+    "…eo-di-ye-yo?",
+    "Where is…?"
+   ],
+   "example": [
+    "화장실이 어디예요?",
+    "hwa-jang-si-ri eo-di-ye-yo?",
+    "Where is the restroom?"
+   ]
+  },
+  {
+   "template": [
+    "이거 뭐예요?",
+    "i-geo mwo-ye-yo?",
+    "What is this?"
+   ]
+  },
+  {
+   "template": [
+    "이해가 안 돼요.",
+    "i-hae-ga an dwae-yo.",
+    "I don't understand."
+   ]
+  },
+  {
+   "template": [
+    "…할 수 있어요?",
+    "…hal su i-sseo-yo?",
+    "Can you…?"
+   ],
+   "example": [
+    "영어 할 수 있어요?",
+    "yeong-eo hal su i-sseo-yo?",
+    "Can you speak English?"
+   ]
+  },
+  {
+   "template": [
+    "저는 …에서 왔어요.",
+    "jeo-neun …-e-seo wa-sseo-yo.",
+    "I'm from…"
+   ],
+   "example": [
+    "저는 한국에서 왔어요.",
+    "jeo-neun han-guk-e-seo wa-sseo-yo.",
+    "I'm from Korea."
+   ]
+  },
+  {
+   "template": [
+    "제 이름은 …예요.",
+    "je i-reu-meun …-ye-yo.",
+    "My name is…"
+   ],
+   "example": [
+    "제 이름은 민수예요.",
+    "je i-reu-meun min-su-ye-yo.",
+    "My name is Minsu."
+   ]
+  },
+  {
+   "template": [
+    "…을/를 좋아해요.",
+    "eul/reul jo-a-hae-yo.",
+    "I like…"
+   ],
+   "example": [
+    "음악을 좋아해요.",
+    "eu-ma-geul jo-a-hae-yo.",
+    "I like music."
+   ]
+  },
+  {
+   "template": [
+    "…주세요.",
+    "…ju-se-yo.",
+    "Please give me…"
+   ],
+   "example": [
+    "물 주세요.",
+    "mul ju-se-yo.",
+    "Water, please."
+   ]
+  }
+ ],
+ "conversations": [
+  {
+   "title": "Conversation 1 — Meeting someone",
+   "lines": [
+    {
+     "speaker": "A",
+     "ko": "제 이름은 알렉스예요.",
+     "pron": "je i-reu-meun al-lek-seu-ye-yo.",
+     "en": "My name is Alex."
+    },
+    {
+     "speaker": "B",
+     "ko": "저는 민지예요.",
+     "pron": "jeo-neun min-ji-ye-yo.",
+     "en": "I'm Minji."
+    },
+    {
+     "speaker": "A",
+     "ko": "어떻게 지내세요?",
+     "pron": "eo-tteo-ke ji-nae-se-yo?",
+     "en": "How are you?"
+    },
+    {
+     "speaker": "B",
+     "ko": "잘 지내요, 감사합니다.",
+     "pron": "jal ji-nae-yo, gam-sa-ham-ni-da.",
+     "en": "I'm doing well, thank you."
+    }
+   ]
+  },
+  {
+   "title": "Conversation 2 — Asking for help",
+   "lines": [
+    {
+     "speaker": "A",
+     "ko": "실례합니다.",
+     "pron": "sil-lye-ham-ni-da.",
+     "en": "Excuse me."
+    },
+    {
+     "speaker": "B",
+     "ko": "네?",
+     "pron": "ne?",
+     "en": "Yes?"
+    },
+    {
+     "speaker": "A",
+     "ko": "화장실이 어디예요?",
+     "pron": "hwa-jang-si-ri eo-di-ye-yo?",
+     "en": "Where is the restroom?"
+    },
+    {
+     "speaker": "B",
+     "ko": "저쪽, 오른쪽이에요.",
+     "pron": "jeo-jjok, o-reun-jjo-gi-e-yo.",
+     "en": "Over there, on the right."
+    },
+    {
+     "speaker": "A",
+     "ko": "감사합니다!",
+     "pron": "gam-sa-ham-ni-da!",
+     "en": "Thank you!"
+    }
+   ]
+  },
+  {
+   "title": "Conversation 3 — When you don't understand",
+   "lines": [
+    {
+     "speaker": "A",
+     "ko": "영어 할 줄 아세요?",
+     "pron": "yeong-eo hal jul a-se-yo?",
+     "en": "Do you speak English?"
+    },
+    {
+     "speaker": "B",
+     "ko": "조금요.",
+     "pron": "jo-geum-yo.",
+     "en": "A little."
+    },
+    {
+     "speaker": "A",
+     "ko": "이해가 안 돼요. 다시 한 번 말해 주세요.",
+     "pron": "i-hae-ga an dwae-yo. da-si han beon mal-hae ju-se-yo.",
+     "en": "I don't understand. Please say it again."
+    }
+   ]
+  }
+ ],
+ "checklist": [
+  "Recognize at least 80 of the 100 items from Korean → English.",
+  "Produce at least 70 of the 100 from English → Korean.",
+  "Say the 10 sentence patterns without looking.",
+  "Introduce yourself.",
+  "Ask where something is.",
+  "Ask someone to repeat themselves.",
+  "Say that you understand or do not understand.",
+  "Ask for something you want.",
+  "Ask for something you need.",
+  "Complete the three mini conversations with minimal help."
+ ],
+ "pronKey": [
+  "Hyphens split syllables. Each Hangul block is one syllable, and Korean has no stress marks, so stay light and even.",
+  "ㅓ (eo) is an open uh, not o. ㅗ (o) is round. Keep them apart.",
+  "ㅡ (eu) has no English twin: lips spread, say uh.",
+  "ㄱ ㄷ ㅂ ㅈ sit between g/k, d/t, b/p, and j/ch. Their voice depends on position in the word.",
+  "Tense consonants ㄲ ㄸ ㅃ ㅆ ㅉ come with no puff of air. Aspirated ㅋ ㅌ ㅍ ㅊ come with one."
+ ],
+ "pronNotes": [
+  {
+   "ko": "한국어",
+   "note": "hang-gu-geo. The ㄱ between two vowels softens toward g."
+  },
+  {
+   "ko": "감사합니다",
+   "note": "gam-sa-ham-ni-da. ㅂ before ㄴ is said as m, so 합니다 sounds like ham-ni-da."
+  },
+  {
+   "ko": "좋아요",
+   "note": "jo-a-yo. The ㅎ in 좋 goes silent before a vowel."
+  },
+  {
+   "ko": "있어요",
+   "note": "i-sseo-yo. The final ㅆ carries into the next syllable."
+  }
+ ],
+ "threshold": "Once you can recall roughly 80% comfortably, begin Stage 2 while continuing to review weak Stage 1 words.",
+ "reading": [
+  {
+   "word": "아빠",
+   "tr": "appa",
+   "meaning": "dad",
+   "parts": [
+    "아 · ㅇ+ㅏ",
+    "빠 · ㅃ+ㅏ"
+   ]
+  },
+  {
+   "word": "고양이",
+   "tr": "goyangi",
+   "meaning": "cat",
+   "parts": [
+    "고 · ㄱ+ㅗ",
+    "양 · ㅇ+ㅑ+ㅇ",
+    "이 · ㅇ+ㅣ"
+   ]
+  },
+  {
+   "word": "도시",
+   "tr": "dosi",
+   "meaning": "city",
+   "parts": [
+    "도 · ㄷ+ㅗ",
+    "시 · ㅅ+ㅣ"
+   ]
+  },
+  {
+   "word": "사과",
+   "tr": "sagwa",
+   "meaning": "apple",
+   "parts": [
+    "사 · ㅅ+ㅏ",
+    "과 · ㄱ+ㅘ"
+   ]
+  },
+  {
+   "word": "나무",
+   "tr": "namu",
+   "meaning": "tree",
+   "parts": [
+    "나 · ㄴ+ㅏ",
+    "무 · ㅁ+ㅜ"
+   ]
+  },
+  {
+   "word": "바다",
+   "tr": "bada",
+   "meaning": "sea",
+   "parts": [
+    "바 · ㅂ+ㅏ",
+    "다 · ㄷ+ㅏ"
+   ]
+  },
+  {
+   "word": "우유",
+   "tr": "uyu",
+   "meaning": "milk",
+   "parts": [
+    "우 · ㅇ+ㅜ",
+    "유 · ㅇ+ㅠ"
+   ]
+  },
+  {
+   "word": "커피",
+   "tr": "keopi",
+   "meaning": "coffee",
+   "parts": [
+    "커 · ㅋ+ㅓ",
+    "피 · ㅍ+ㅣ"
+   ]
+  }
+ ]
+}
