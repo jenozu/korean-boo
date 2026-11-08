@@ -125,6 +125,7 @@ function speak(text) {
   const v = koreanVoice(); if (v) u.voice = v;
   speechSynthesis.speak(u);
 }
+document.addEventListener('click', e => { const b = e.target.closest('[data-say]'); if (b) speak(b.dataset.say); });
 function speakCurrent() { if (current) speak(current.ko); }
 
 // ---------- Views ----------
@@ -190,15 +191,21 @@ function renderStage() {
   $('audio').classList.toggle('hidden', !revealed);
   $('ratings').classList.toggle('hidden', !revealed);
   $('whyThis').textContent = scheduleReason(state.stageItems[x.n]);
-  const line = (a, b, c) => '<div class="line"><b>' + esc(a) + '</b><span>' + esc(b) + '</span><small>' + esc(c) + '</small></div>';
+  // Optional 4th argument adds a speaker button on the right that plays that Korean text.
+  const line = (a, b, c, say) => say
+    ? '<div class="line lineRow"><div class="lineText"><b>' + esc(a) + '</b><span>' + esc(b) + '</span><small>' + esc(c) + '</small></div>' +
+      '<button class="lineAudio" data-say="' + esc(say) + '" aria-label="Hear ' + esc(say) + '" title="Hear it">🔊</button></div>'
+    : '<div class="line"><b>' + esc(a) + '</b><span>' + esc(b) + '</span><small>' + esc(c) + '</small></div>';
+  // Fill-in templates (with … or a/b particles) read badly aloud, so only complete sentences get a button.
+  const sayable = t => /[…\/]|\.\.\./.test(t) ? '' : t;
   $('patterns').innerHTML = DATA.patterns.map(p => {
-    let h = line(p.template[0], p.template[1], p.template[2]);
-    if (p.example) h += line(p.example[0], p.example[1], p.example[2]);
+    let h = line(p.template[0], p.template[1], p.template[2], sayable(p.template[0]));
+    if (p.example) h += line(p.example[0], p.example[1], p.example[2], p.example[0]);
     return h;
   }).join('');
   $('conversation').innerHTML = DATA.conversations.map(c =>
     '<div class="eyebrow" style="margin-top:6px">' + esc(c.title.toUpperCase()) + '</div>' +
-    c.lines.map(l => line(l.speaker + ' · ' + l.ko, l.pron, l.en)).join('')).join('');
+    c.lines.map(l => line(l.speaker + ' · ' + l.ko, l.pron, l.en, l.ko)).join('')).join('');
   $('checklist').innerHTML = DATA.checklist.map(c => '<div class="line"><b>□ ' + esc(c) + '</b></div>').join('') +
     '<p class="hint">' + esc(DATA.threshold) + '</p>' +
     '<div class="eyebrow" style="margin-top:10px">PRONUNCIATION KEY</div>' +
