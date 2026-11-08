@@ -178,9 +178,9 @@ function renderStage() {
   const done = dayItems().filter(i => state.stageItems[i.n]).length;
   $('dayEyebrow').textContent = 'DAY ' + day + ' / ' + meta[0].toUpperCase();
   $('daySummary').textContent = meta[1];
-  $('itemCounter').textContent = done + '/20 reviewed';
-  $('sectionLabel').textContent = DATA.groups[x.group - 1].toUpperCase();
-  $('itemIndex').textContent = 'ITEM ' + x.n;
+  $('itemCounter').textContent = done + '/20';
+  $('sectionLabel').textContent = 'STAGE 1 · ITEM ' + x.n;
+  $('itemIndex').textContent = x.n;
   $('meaning').textContent = x.en;
   $('russian').textContent = x.ko;
   $('pron').textContent = x.pron;
@@ -226,8 +226,8 @@ function renderAlphabet() {
   $('alphabetGrid').innerHTML = DATA.letters.map(l =>
     '<button class="letter" data-sound="' + esc(l.example) + '" title="Tap to hear ' + esc(l.example) + '">' +
     '<span class="g">' + l.glyph + '</span><span class="l">' + esc(l.name) + '</span>' +
-    '<small>' + esc(l.rr) + ' · ' + esc(l.guide) + '</small>' +
-    '<em>' + esc(l.example) + ' (' + esc(l.exampleRr) + ') · ' + esc(l.meaning) + '</em></button>').join('');
+    '<small>' + esc(l.rr) + ' · ' + esc(l.sound) + '</small>' +
+    '<em>' + esc(l.example) + ' · ' + esc(l.meaning.split(' / ')[0]) + '</em></button>').join('');
   document.querySelectorAll('#alphabetGrid [data-sound]').forEach(b => b.onclick = () => speak(b.dataset.sound));
 }
 function renderProgress() {
