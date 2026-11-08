@@ -197,7 +197,7 @@ function renderStage() {
       '<button class="lineAudio" data-say="' + esc(say) + '" aria-label="Hear ' + esc(say) + '" title="Hear it">🔊</button></div>'
     : '<div class="line"><b>' + esc(a) + '</b><span>' + esc(b) + '</span><small>' + esc(c) + '</small></div>';
   // Fill-in templates (with … or a/b particles) read badly aloud, so only complete sentences get a button.
-  const sayable = t => /[…\/]|\.\.\./.test(t) ? '' : t;
+  const sayable = t => t.replace(/(…|\.\.\.)\s*([가-힣]\/[가-힣])?/g, '').replace(/\s+/g, ' ').trim();
   $('patterns').innerHTML = DATA.patterns.map(p => {
     let h = line(p.template[0], p.template[1], p.template[2], sayable(p.template[0]));
     if (p.example) h += line(p.example[0], p.example[1], p.example[2], p.example[0]);
