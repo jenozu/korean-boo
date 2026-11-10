@@ -1,12 +1,147 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>한글 — Korean in small loops</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#ffd8e8"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="manifest" href="manifest.json"><link rel="icon" href="data:,"><title>한글 — Korean in small loops</title><style>
+
 :root{--p:#ffd8e8;--c:#9be9fb;--l:#fae8ff;--w:#fff;--m:#4b5563;--k:#000}*{box-sizing:border-box}body{margin:0;background:var(--p);color:#000;font-family:Inter,system-ui,sans-serif}button{font:inherit;cursor:pointer;color:inherit}.app{max-width:1080px;margin:auto;padding:20px 18px 46px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:11px}.mark{width:52px;height:52px;border:3px solid;border-radius:17px;background:var(--c);display:grid;place-items:center;font-size:30px;font-weight:950;box-shadow:4px 4px #000}.brand h1{font-size:21px;line-height:1;margin:0;font-weight:950}.brand p{font-size:12px;font-weight:800;color:var(--m);margin:5px 0 0}.nav{display:flex;gap:7px;flex-wrap:wrap}.nav button,.primary,.ghost,.audio{border:2px solid;border-radius:13px;background:var(--w);padding:10px 13px;font-weight:900}.nav button{border-radius:99px}.nav .active{background:#000;color:#fff}.primary{background:var(--c);box-shadow:3px 3px #000}.layout{display:grid;grid-template-columns:1.45fr .8fr;gap:18px}.panel{background:var(--w);border:3px solid;border-radius:24px;padding:20px;box-shadow:5px 5px #000}.hero{min-height:285px;display:flex;flex-direction:column;justify-content:space-between}.eyebrow{font-size:10px;letter-spacing:1.1px;font-weight:950;color:var(--m)}h2,h3,p{margin:0}.hero h2{font-size:clamp(42px,7vw,72px);line-height:.92;letter-spacing:-3px;margin-top:12px}.hero p{max-width:650px;color:var(--m);font-weight:700;font-size:16px;line-height:1.45;margin:18px 0}.actions{display:flex;gap:10px;flex-wrap:wrap}.goal{background:var(--c);min-height:180px}.goal h3{font-size:27px;line-height:1;margin-top:10px}.goalrow{display:flex;justify-content:space-between;align-items:center;margin:18px 0 12px}.goalrow small{font-weight:900;color:var(--m)}.adjust{display:flex;gap:6px}.adjust button{width:31px;height:31px;border:2px solid;border-radius:10px;background:#fff;font-size:20px;font-weight:950}.bar{height:12px;border:2px solid;border-radius:99px;background:#fff;overflow:hidden}.bar i{display:block;height:100%;background:#000}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.stat{border:2px solid;border-radius:16px;background:#fff;padding:13px}.stat:nth-child(2){background:var(--l)}.stat:nth-child(3){background:var(--c)}.stat strong{font-size:28px;display:block}.stat small{font-size:11px;font-weight:900;color:var(--m)}.section{margin-top:22px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:10px}.head h2{font-size:40px;line-height:.95;margin-top:7px}.head span{font-size:12px;font-weight:950;color:var(--m)}.days{display:flex;gap:9px;overflow:auto;padding:2px 2px 10px}.day{min-width:160px;text-align:left;border:2px solid;border-radius:17px;background:#fff;padding:12px}.day.active{background:#000;color:#fff}.day b{font-size:9px;letter-spacing:1px}.day strong{display:block;font-size:17px;margin:7px 0 3px}.day small{font-size:10px;font-weight:800;color:var(--m)}.day.active small{color:#fff}.lessonhead{display:flex;justify-content:space-between;align-items:end;margin:14px 0 10px}.lessonhead h3{font-size:23px;margin-top:5px}.lesson{min-height:350px;display:flex;flex-direction:column;justify-content:space-between}.lessonTop{display:flex;justify-content:space-between}.lessonTop strong{font-size:10px;letter-spacing:1px;color:var(--m)}.center{text-align:center;padding:28px 5px}.meaning{font-size:clamp(32px,5vw,55px);font-weight:950;line-height:1}.russian{font-size:clamp(45px,8vw,84px);font-weight:950;line-height:1}.pron{font-size:20px;font-weight:850;color:var(--m);margin-top:10px}.hint{font-size:13px;font-weight:800;color:var(--m);margin-top:14px}.callout{border:2px solid;border-radius:14px;background:var(--l);padding:11px;text-align:left;font-weight:800;font-size:13px;margin:18px auto;max-width:460px}.lessonActions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.audio{background:var(--l)}.fold{border:2px solid;border-radius:16px;background:var(--l);padding:14px;margin-top:16px}.fold summary{cursor:pointer;font-weight:950}.foldGrid{display:grid;gap:9px;margin-top:12px}.line{background:#fff;border:2px solid;border-radius:12px;padding:10px}.line b,.line span,.line small{display:block}.line span{font-size:12px;font-weight:800;color:var(--m);margin-top:3px}.line small{font-size:12px;color:var(--m);margin-top:2px}.alphabet{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.letter{border:2px solid;border-radius:16px;background:#fff;padding:12px;text-align:left;min-height:120px}.letter:hover{background:var(--c)}.letter .g{font-size:38px;font-weight:950;line-height:.9}.letter .l{font-size:22px;color:var(--m);font-weight:800}.letter small,.letter em{display:block;margin-top:8px;font-size:11px;font-weight:850}.letter em{font-style:normal;color:var(--m);margin-top:3px}.hidden{display:none!important}.footer{text-align:center;color:var(--m);font-size:12px;font-weight:800;margin-top:28px}@media(max-width:760px){.top{align-items:flex-start;flex-direction:column}.nav{width:100%}.nav button{flex:1}.layout{grid-template-columns:1fr}.panel{padding:16px;border-radius:21px}.hero{min-height:310px}.stats{gap:6px}.stat{padding:10px}.stat strong{font-size:23px}.head h2{font-size:35px}}
-.ratingRow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.ratingRow span{width:100%;font-size:13px;font-weight:850;color:var(--m)}.ratingRow button{border:2px solid #000;border-radius:999px;padding:9px 12px;font:inherit;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 #000}.ratingRow button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}.ratingRow .again{background:#ffc9c9}.ratingRow .hard{background:#ffe4a8}.ratingRow .good{background:#bff3dc}.ratingRow .easy{background:#c9e8ff}.debugSchedule{display:grid;gap:6px;margin-top:12px;font-size:12px;font-weight:800;color:var(--m)}.debugSchedule .debugItem{display:grid;grid-template-columns:38px 1fr;gap:8px;border-top:1px solid #000;padding-top:6px}.debugSchedule b{color:#000}.mini-ratings{display:flex;gap:4px;margin-top:7px}.mini-ratings button{border:1px solid #000;border-radius:8px;padding:3px 5px;background:#fff;font-size:10px;font-weight:900;cursor:pointer}.mini-ratings button:active{transform:translateY(1px)}.lineRow{display:flex;align-items:center;justify-content:space-between;gap:12px}.lineText{min-width:0;flex:1}.lineAudio{flex:0 0 auto;width:36px;height:36px;border:2px solid #000;border-radius:50%;background:var(--c);font-size:15px;line-height:1;box-shadow:2px 2px 0 #000;cursor:pointer}.lineAudio:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #000}</style></head><body><main class="app"><header class="top"><div class="brand"><div class="mark">한</div><div><h1>한글</h1><p>Korean in small, useful loops.</p></div></div><nav class="nav"><button class="active" data-view="today">Today</button><button data-view="stage">Stage 1</button><button data-view="alphabet">Alphabet</button><button data-view="progress">Progress</button><button data-view="settings">Settings</button></nav></header>
+.ratingRow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.ratingRow span{width:100%;font-size:13px;font-weight:850;color:var(--m)}.ratingRow button{border:2px solid #000;border-radius:999px;padding:9px 12px;font:inherit;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 #000}.ratingRow button:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}.ratingRow .again{background:#ffc9c9}.ratingRow .hard{background:#ffe4a8}.ratingRow .good{background:#bff3dc}.ratingRow .easy{background:#c9e8ff}.debugSchedule{display:grid;gap:6px;margin-top:12px;font-size:12px;font-weight:800;color:var(--m)}.debugSchedule .debugItem{display:grid;grid-template-columns:38px 1fr;gap:8px;border-top:1px solid #000;padding-top:6px}.debugSchedule b{color:#000}.mini-ratings{display:flex;gap:4px;margin-top:7px}.mini-ratings button{border:1px solid #000;border-radius:8px;padding:3px 5px;background:#fff;font-size:10px;font-weight:900;cursor:pointer}.mini-ratings button:active{transform:translateY(1px)}.lineRow{display:flex;align-items:center;justify-content:space-between;gap:12px}.lineText{min-width:0;flex:1}.lineAudio{flex:0 0 auto;width:36px;height:36px;border:2px solid #000;border-radius:50%;background:var(--c);font-size:15px;line-height:1;box-shadow:2px 2px 0 #000;cursor:pointer}.lineAudio:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #000}
+.audioTools{display:grid;gap:9px;width:100%;margin-top:10px}
+.audioButtons,.audioSettings{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.audioSettings{font-size:12px;font-weight:850}
+.audioSettings label{display:flex;gap:5px;align-items:center}
+.audioSettings select{border:2px solid #000;border-radius:8px;padding:5px;background:#fff;font:inherit;font-weight:800;max-width:180px}
+.audioStatus{font-weight:800;color:var(--m)}
+.tinyAudio{border:2px solid #000;border-radius:8px;background:var(--c);font-weight:900;padding:4px 7px;cursor:pointer}
+.speaking{background:var(--c);border-radius:6px;padding:2px 5px}
+.recordTools{display:grid;gap:8px;width:100%;margin-top:14px;padding:12px;border:2px solid #000;border-radius:14px;background:var(--l)}
+.recordHeader{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.recordHeader span{font-variant-numeric:tabular-nums}
+.record{border:2px solid #000;border-radius:999px;background:#ffb8b8;padding:9px 12px;font:inherit;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 #000}
+.record:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+.record:disabled,.recordTools button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.recordTools .audioStatus{display:block}
+.transcribeTools{display:grid;gap:9px;width:100%;margin-top:14px;padding:12px;border:2px solid #000;border-radius:14px;background:var(--w)}
+.transcribeNote,.consent{font-size:12px;line-height:1.4;font-weight:750;color:var(--m)}
+.consent{display:flex;gap:7px;align-items:flex-start}
+.consent input{accent-color:#000;margin-top:2px}
+.transcriptBox{border:2px solid #000;border-radius:10px;padding:10px;background:#fff}
+.transcriptBox #transcriptText{margin-top:6px;font-size:20px;font-weight:900}
+.interim{margin-top:4px;color:var(--m);font-style:italic}
+.transcribeTools[data-state="error"]{background:#ffd2d2}
+.transcribeTools[data-state="result"]{background:var(--c)}
+.scoreBox{display:grid;gap:7px;border:2px solid #000;border-radius:10px;padding:10px;background:#fff}
+.scoreTop{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.scoreTop strong{font-size:28px}
+.scoreTop span{font-weight:900}
+.scoreBox p{margin:0;font-weight:850}
+.scoreLists{display:grid;gap:4px;font-size:12px;line-height:1.4}
+.scoreLists i{font-style:normal;color:var(--m)}
+.scoreBox>small{font-weight:750;color:var(--m)}
+<style>
+.scenarioPanel{margin-top:18px;padding:18px;border:3px solid var(--k);background:var(--l);box-shadow:4px 4px 0 var(--k)}
+.scenarioDialogue{display:grid;gap:9px;margin:14px 0}
+.scenarioTurn{border:2px solid var(--k);border-radius:12px;padding:10px;background:var(--w)}
+.scenarioTurn.current{background:var(--c)}
+.scenarioTurn b,.scenarioTurn span,.scenarioTurn small{display:block}
+.scenarioTurn span{font-size:20px;font-weight:950;margin-top:4px}
+.scenarioTurn small{color:var(--m);font-weight:800;margin-top:4px}
+.scenarioPrompt{display:grid;gap:9px;margin-top:12px}
+.scenarioPrompt input{width:100%;border:2px solid var(--k);border-radius:10px;padding:10px;font:inherit;font-weight:750;background:var(--w)}
+.scenarioActions{display:flex;gap:8px;flex-wrap:wrap}
+.scenarioStatus{min-height:24px;font-weight:850;line-height:1.35}
+.scenarioStatus.good{color:#075b2a}
+.scenarioStatus.bad{color:#8e1b1b}
+.scenarioHint{border:2px solid var(--k);border-radius:10px;padding:10px;background:#fff;font-weight:800}
+.scenarioEnglish{margin-top:7px;color:var(--m);font-weight:750}
+.scenarioMeta{font-size:12px;color:var(--m);font-weight:800}
+.contextPanel{margin-top:18px;padding:16px;border:3px solid var(--k);background:var(--l);box-shadow:4px 4px 0 var(--k)}
+.contextTip{border:2px solid var(--k);border-radius:12px;padding:12px;background:var(--w)}
+.contextTip h3{margin:4px 0 6px;font-size:22px}
+.contextTip p{margin:6px 0;line-height:1.4;font-weight:750}
+.contextExample{margin:10px 0;padding:9px;border:2px solid var(--k);border-radius:9px;background:var(--c);font-weight:900}
+.contextMore{margin-top:8px;padding:8px;border-left:4px solid var(--k);font-weight:750;line-height:1.4}
+.contextActions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.accountForm{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.accountForm input{flex:1;min-width:210px;border:2px solid var(--k);border-radius:9px;padding:10px;font:inherit;font-weight:750}
+.accountStatus{min-height:22px;margin:8px 0;font-weight:800;color:var(--m)}
+.motivationGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}
+.motivationGrid>div{border:2px solid var(--k);border-radius:10px;padding:10px;background:var(--w)}
+.motivationGrid b{display:block;font-size:23px}
+.motivationGrid small{font-weight:800;color:var(--m)}
+.motivationHint{font-weight:800;line-height:1.4}
+.goalControls{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.goalControls label{display:flex;align-items:center;gap:6px;font-weight:850}
+.goalControls button{padding:4px 9px}
+.badgeList{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.badge{border:2px solid var(--k);border-radius:999px;padding:6px 9px;background:var(--l);font-weight:900;font-size:12px}
+.storyPanel{margin-top:18px;padding:18px;border:3px solid var(--k);background:var(--c);box-shadow:4px 4px 0 var(--k)}
+.storyText{display:grid;gap:10px;margin:14px 0}
+.storyLine{border:2px solid var(--k);border-radius:12px;padding:11px;background:var(--w);font-size:19px;font-weight:900;line-height:1.35}
+.storyLine small{display:block;margin-top:5px;color:var(--m);font-size:13px;font-weight:750}
+.storyWord{border:2px solid var(--k);border-radius:8px;background:var(--l);padding:2px 5px;font:inherit;font-weight:950;cursor:pointer}
+.storyWord.new{background:#fff}
+.storyQuestions{display:grid;gap:10px;margin-top:14px}
+.storyQuestion{border:2px solid var(--k);border-radius:12px;padding:11px;background:var(--w)}
+.storyQuestion strong{display:block;margin-bottom:8px}
+.storyChoices{display:flex;gap:7px;flex-wrap:wrap}
+.storyChoice{border:2px solid var(--k);border-radius:999px;padding:7px 10px;background:#fff;font:inherit;font-weight:850;cursor:pointer}
+.storyChoice.correct{background:#b8f5ca}
+.storyChoice.wrong{background:#ffd0d0}
+.storyResult{min-height:20px;margin-top:7px;font-size:13px;font-weight:850}
+.storyResult.good{color:#075b2a}
+.storyResult.bad{color:#8e1b1b}
+.storyCloze{margin-top:14px;border:2px solid var(--k);border-radius:12px;padding:11px;background:var(--l)}
+.storyCloze select{border:2px solid var(--k);border-radius:8px;padding:6px;background:#fff;font:inherit;font-weight:800}
+.storyFooter{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.storyMeta{font-size:12px;color:var(--m);font-weight:800}
+.quizPanel{margin-top:18px;padding:18px;border:3px solid var(--k);background:var(--w);box-shadow:4px 4px 0 var(--k)}
+.quizPrompt{margin:14px 0;padding:16px;background:var(--c);border:2px solid var(--k)}
+.quizPrompt strong{display:block;font-size:30px;margin-top:5px}
+.quizChoices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.quizChoice{background:var(--w);border:2px solid var(--k);box-shadow:3px 3px 0 var(--k);padding:12px;text-align:left;font-weight:800;cursor:pointer}
+.quizChoice:disabled{cursor:default;opacity:.85}
+.quizChoice.correct{background:#b8f5ca}
+.quizChoice.wrong{background:#ffd0d0}
+.quizFeedback{min-height:24px;margin-top:14px;font-weight:800;line-height:1.35}
+.quizFeedback.good{color:#075b2a}
+.quizFeedback.bad{color:#8e1b1b}
+.quizChoices{grid-template-columns:1fr}
+<style>
+.quizReason{margin:10px 0 0;padding:8px 10px;background:var(--l);border:2px solid var(--k);font-size:14px;font-weight:800}
+button,.primary,.ghost,.audio,.record,.tinyAudio,.storyChoice,.quizChoice,.scenarioActions button,.ratingRow button{min-height:44px;touch-action:manipulation}
+.app{padding:12px 12px 40px}
+.top{align-items:flex-start;flex-direction:column;gap:12px}
+.nav{width:100%;gap:6px}
+.nav button{flex:1;padding:10px 8px}
+.panel{padding:16px;border-radius:18px}
+.hero{min-height:240px}
+.hero h2{font-size:clamp(40px,14vw,62px);letter-spacing:-2px}
+.stats{grid-template-columns:1fr}
+.goal{min-height:150px}
+.motivationGrid{grid-template-columns:1fr}
+.goalControls{display:grid;gap:8px}
+.accountForm input{min-width:0;width:100%}
+.accountForm button{width:100%}
+.storyLine small{display:block;margin-top:7px}
+.recordTools,.transcribeTools{padding:10px}
+.audioButtons,.audioSettings{gap:6px}
+.audioSettings select{max-width:145px}
+.storyActions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.scenarioActions input{flex:1;min-width:0}
+.recordHeader{align-items:center}
+</style></head><body><main class="app"><header class="top"><div class="brand"><div class="mark">한</div><div><h1>한글</h1><p>Korean in small, useful loops.</p></div></div><nav class="nav"><button class="active" data-view="today">Today</button><button data-view="stage">Stage 1</button><button data-view="alphabet">Alphabet</button><button data-view="progress">Progress</button><button data-view="settings">Settings</button></nav></header>
 <section id="today" class="view"><div class="layout"><div><div class="panel hero"><div><div class="eyebrow">HANGEUL / TODAY</div><h2>Build your<br>sound map.</h2><p>Start with one small loop: learn what a Korean word means, hear how it sounds, then meet the Hangul letters.</p></div><div class="actions"><button class="primary" onclick="show('stage')">Start Stage 1</button><button class="ghost" onclick="show('alphabet')">Meet the alphabet</button></div></div><div class="stats"><div class="stat"><strong id="todayDone">0</strong><small>reviews today</small></div><div class="stat"><strong id="mastered">0</strong><small>alphabet letters mastered</small></div><div class="stat"><strong id="overall">0%</strong><small>alphabet completion</small></div></div></div><aside><div class="panel goal"><div class="eyebrow">TODAY'S SMALL WIN</div><h3><span id="remaining">10</span> quick reviews left</h3><div class="goalrow"><small>Daily goal · <span id="goalValue">10</span> items</small><div class="adjust"><button onclick="changeGoal(-1)">−</button><button onclick="changeGoal(1)">+</button></div></div><div class="bar"><i id="goalBar" style="width:0%"></i></div></div><div class="panel" style="margin-top:18px"><div class="eyebrow">WHY THIS ORDER</div><h3 style="font-size:25px;line-height:1.05;margin-top:7px">Meaning before spelling.</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">Stage 1 lets you communicate quickly without requiring Hangul first. The alphabet loop stays available whenever you are ready to connect sound to shape.</p></div></aside></div></section>
-<section id="stage" class="view hidden"><div class="head"><div><div class="eyebrow">STAGE 1 / SPEAK FIRST</div><h2>100 useful words.</h2></div><span><b id="stageProgress">0</b>/100 reviewed</span></div><div class="days" id="days"></div><div class="lessonhead"><div><div class="eyebrow" id="dayEyebrow"></div><h3 id="daySummary"></h3></div><b id="itemCounter"></b></div><div class="panel lesson"><div class="lessonTop"><strong id="sectionLabel"></strong><strong id="itemIndex"></strong></div><div class="center"><div id="front"><div class="meaning" id="meaning"></div><div class="hint">Meaning first. Tap when ready to see the Korean.</div></div><div id="back" class="hidden"><div class="russian" id="russian"></div><div class="pron" id="pron"></div><div class="hint" id="englishBack"></div><div class="callout">Say it aloud once. Recognition comes after the sound.</div></div></div><div class="lessonActions"><button class="primary" id="reveal" onclick="reveal()">Reveal Korean</button><button class="audio hidden" id="audio" onclick="speakCurrent()">🔊 Hear it</button><div class="ratingRow hidden" id="ratings"><span id="whyThis">New item</span><button class="again" onclick="rateCurrent('again')">Again</button><button class="hard" onclick="rateCurrent('hard')">Hard</button><button class="good" onclick="rateCurrent('good')">Good</button><button class="easy" onclick="rateCurrent('easy')">Easy</button></div></div></div><div class="layout"><div class="fold"><details><summary>Tiny sentence lab</summary><div class="foldGrid" id="patterns"></div></details></div><div class="fold"><details><summary>Mini conversation</summary><div class="foldGrid" id="conversation"></div></details></div></div><div class="fold"><details><summary>Ready for Stage 2?</summary><div class="foldGrid" id="checklist"></div></details></div></section>
+<section id="stage" class="view hidden"><div class="head"><div><div class="eyebrow">STAGE 1 / SPEAK FIRST</div><h2>100 useful words.</h2></div><span><b id="stageProgress">0</b>/100 reviewed</span></div><div class="days" id="days"></div><div class="lessonhead"><div><div class="eyebrow" id="dayEyebrow"></div><h3 id="daySummary"></h3></div><b id="itemCounter"></b></div>
+<div class="panel lesson"><div class="lessonTop"><strong id="sectionLabel"></strong><strong id="itemIndex"></strong></div><div class="center"><div id="front"><div class="meaning" id="meaning"></div><div class="hint">Meaning first. Tap when ready to hear the Korean.</div></div><div id="back" class="hidden"><div class="russian" id="korean"></div><div class="pron" id="pron"></div><div class="hint" id="englishBack"></div><div class="callout">Say it aloud once. Recognition comes after the sound.</div></div></div><div class="lessonActions"><button class="primary" id="reveal" onclick="reveal()">Reveal Korean</button><div class="audioTools hidden" id="audioTools"><div class="audioButtons"><button class="audio" onclick="audioController.playCurrent()">▶ Play word</button><button class="ghost" onclick="audioController.pause()">Ⅱ Pause</button><button class="ghost" onclick="audioController.replay()">↻ Replay</button></div><div class="audioSettings"><label>Speed <select id="audioSpeed" onchange="audioController.setSpeed(this.value)"><option value="0.55">slow</option><option value="0.8">steady</option><option value="0.95">quick</option><option value="1.1">fast</option></select></label><label>Voice <select id="voiceSelect" onchange="audioController.setVoice(this.value)"><option value="">Finding Korean voices…</option></select></label></div><small id="audioStatus" class="audioStatus">Checking browser voices…</small></div><div class="recordTools hidden" id="recordTools"><div class="recordHeader"><strong>Say it yourself</strong><span id="recordDuration">00:00</span></div><div class="audioButtons"><button class="record" id="recordStart" onclick="recordingController.start()">● Record</button><button class="ghost" id="recordStop" onclick="recordingController.stop()" disabled>■ Stop</button><button class="ghost" id="recordReplay" onclick="recordingController.replay()" disabled>▶ Replay</button><button class="ghost" id="recordDiscard" onclick="recordingController.discard()" disabled>× Discard</button></div><small id="recordStatus" class="audioStatus">Microphone stays on this device and is never uploaded.</small><small id="secureNote" class="audioStatus">Microphone recording requires a secure HTTPS context.</small></div><div class="transcribeTools hidden" id="transcribeTools"><div class="recordHeader"><strong>Transcribe your response</strong><span id="transcribeState">idle</span></div><p class="transcribeNote">Uses browser-native Korean speech recognition. 한글 does not upload your recording or send it to a server.</p><label class="consent"><input id="transcriptionConsent" type="checkbox" onchange="transcriptionController.setConsent(this.checked)"> I understand the browser may process this audio according to its own privacy policy.</label><div class="audioButtons"><button class="primary" id="transcribeStart" onclick="transcriptionController.start()" disabled>● Start transcription</button><button class="ghost" id="transcribeStop" onclick="transcriptionController.stop()" disabled>■ Stop</button><button class="ghost" id="transcribeRetry" onclick="transcriptionController.retry()" disabled>↻ Retry</button></div><small id="transcribeStatus" class="audioStatus">Checking browser speech recognition…</small><div class="transcriptBox"><div class="eyebrow">TRANSCRIPT</div><div id="transcriptText">No transcript yet.</div><div id="transcriptInterim" class="interim"></div></div><button class="primary" id="scoreButton" onclick="transcriptionController.score()" disabled>Check transcript</button><div id="scoreBox" class="scoreBox hidden"><div class="scoreTop"><strong id="scoreValue">—%</strong><span id="scoreLabel"></span></div><p id="scoreFeedback"></p><div class="scoreLists"><span><b>Missing:</b> <i id="missingWords">none</i></span><span><b>Extra:</b> <i id="extraWords">none</i></span><span><b>Likely trouble spots:</b> <i id="troubleWords">none</i></span></div><small>Transcript comparison only — this is not phoneme-accurate pronunciation scoring.</small></div></div><div class="ratingRow hidden" id="ratings"><span id="whyThis">New item</span><button class="again" onclick="rateCurrent('again')">Again</button><button class="hard" onclick="rateCurrent('hard')">Hard</button><button class="good" onclick="rateCurrent('good')">Good</button><button class="easy" onclick="rateCurrent('easy')">Easy</button></div></div></div>
+<div class="quizPanel hidden" id="quizPanel"><div class="recordHeader"><strong>Quick check · Korean → English</strong><span id="quizState">not started</span></div><p class="transcribeNote">One focused question. Pick the meaning of the Korean word, then retry without losing your place.</p><button class="primary" id="quizStart" onclick="startQuiz()">Start multiple choice</button><div id="quizBody" class="hidden"><div class="quizReason" id="quizReason"></div><div class="quizPrompt"><div class="eyebrow">WHAT DOES THIS MEAN?</div><strong id="quizTarget"></strong></div><div id="quizChoices" class="quizChoices"></div><div id="quizFeedback" class="quizFeedback"></div><button class="ghost hidden" id="quizRetry" onclick="retryQuiz()">↻ Retry this question</button><button class="primary hidden" id="quizNext" onclick="startQuiz()">Next adaptive question →</button></div></div>
+<div class="scenarioPanel" id="scenarioPanel"><div class="recordHeader"><strong>Conversation · Meeting someone</strong><span id="scenarioState">not started</span></div><p class="transcribeNote">A tiny guided exchange. Listen, read, reveal English when you need it, then type or speak a natural response.</p><div id="scenarioDialogue" class="scenarioDialogue"></div><button class="primary" id="scenarioStart" onclick="startScenario()">Start conversation</button><div id="scenarioBody" class="hidden"><div id="scenarioPrompt" class="scenarioPrompt"></div><div class="scenarioActions"><button class="audio" onclick="playScenarioTutor()">▶ Listen again</button><button class="ghost" id="scenarioEnglish" onclick="toggleScenarioEnglish()">Show English</button></div><div class="scenarioActions" id="scenarioInputRow"><input id="scenarioInput" placeholder="Type your Korean response" autocomplete="off"><button class="primary" onclick="checkScenario('typed')">Check response</button><button class="ghost" onclick="speakScenario()">● Speak response</button></div><div id="scenarioStatus" class="scenarioStatus"></div><div id="scenarioRecovery" class="scenarioHint hidden"></div><button class="ghost hidden" id="scenarioRetry" onclick="retryScenario()">↻ Try this turn again</button></div><div class="scenarioMeta" id="scenarioMeta">Progress saves locally as scenario attempts.</div></div>
+<div class="storyPanel" id="storyPanel"><div class="recordHeader"><strong id="storyTitle">Short story · 알렉스의 아침</strong><span id="storyState">0 / 4</span></div><p class="transcribeNote">Read one tiny Korean story. Tap highlighted words to review them, reveal English, then answer three quick questions and one fill-in.</p><div class="storyActions"><button class="audio" onclick="playStory()">▶ Listen to story</button><button class="ghost" id="storyEnglish" onclick="toggleStoryEnglish()">Show English</button></div><div id="storyText" class="storyText"></div><div id="storyQuestions" class="storyQuestions"></div><div class="storyCloze"><strong>Fill the gap:</strong> <span id="storyClozeBefore"></span><select id="storyClozeSelect" onchange="checkStoryCloze()"></select><span id="storyClozeAfter"></span><div id="storyClozeResult" class="storyResult"></div></div><div class="storyFooter"><span id="storyMeta" class="storyMeta">Answers save locally as story review events.</span><button class="ghost" onclick="resetStoryPractice()">↻ Try story again</button></div></div>
+<div class="contextPanel hidden" id="contextPanel"><div class="recordHeader"><strong>Small context tip</strong><span id="contextKind"></span></div><div id="contextBody"></div></div>
+<div class="layout"><div class="fold"><details><summary>Tiny sentence lab</summary><div class="foldGrid" id="patterns"></div></details></div><div class="fold"><details><summary>Mini conversation</summary><div class="foldGrid" id="conversation"></div></details></div></div><div class="fold"><details><summary>Ready for Stage 2?</summary><div class="foldGrid" id="checklist"></div></details></div><p class="transcribeNote" id="contentNote" style="margin-top:14px"></p></section>
 <section id="alphabet" class="view hidden"><div class="head"><div><div class="eyebrow">40 LETTERS / FIVE DECKS</div><h2>Meet the alphabet.</h2></div><span>Tap a letter to hear it</span></div><div class="panel" style="background:var(--c);margin-bottom:18px"><p style="font-weight:850;line-height:1.45">Start with familiar shapes, then notice the lookalikes and tricky sounds. Each card connects a letter, its sound, and a useful example word.</p></div><div id="alphabetGrid" class="alphabet"></div></section>
-<section id="settings" class="view hidden"><div class="head"><div><div class="eyebrow">YOUR DATA</div><h2>Keep your map.</h2></div></div><div class="layout"><div class="panel"><div class="eyebrow">BACKUP</div><h3 style="font-size:28px;margin-top:7px">Export or import</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">Your learning state stays in this browser. Export a JSON backup before switching devices, then import it here later.</p><div class="actions" style="margin-top:18px"><button class="primary" onclick="exportState()">Download backup</button><label class="ghost" style="display:inline-block">Import backup<input id="importFile" type="file" accept="application/json" style="display:none" onchange="importState(event)"></label></div></div><div class="panel" style="background:var(--l)"><div class="eyebrow">RESET</div><h3 style="font-size:28px;margin-top:7px">Start fresh</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">This clears local progress, goals, and review history on this browser. Export first if you may want to restore it.</p><button class="ghost" style="margin-top:18px" onclick="resetState()">Reset local progress</button></div></div><div class="panel" style="margin-top:18px"><div class="eyebrow">STATE DETAILS</div><p id="stateDetails" style="margin-top:8px;line-height:1.5;font-weight:800;color:var(--m)"></p><details style="margin-top:14px"><summary>Review schedule debug</summary><div id="debugSchedule" class="debugSchedule"></div></details></div></section><section id="progress" class="view hidden"><div class="head"><div><div class="eyebrow">YOUR MAP</div><h2>Progress, not pressure.</h2></div></div><div class="layout"><div class="panel"><div class="eyebrow">STAGE 1</div><h3 style="font-size:30px;margin-top:7px"><span id="progressStage">0</span>% of the first 100</h3><div class="bar" style="margin-top:15px"><i id="stageBar" style="width:0%"></i></div></div><div class="panel" style="background:var(--l)"><div class="eyebrow">ALPHABET</div><h3 style="font-size:30px;margin-top:7px"><span id="progressAlpha">0</span>% complete</h3><div class="bar" style="margin-top:15px"><i id="alphaBar" style="width:0%"></i></div></div></div><div class="panel" style="margin-top:18px"><div class="head"><h3>Letter mastery</h3><span id="masteryHint">0 / 40</span></div><div id="masteryGrid" class="alphabet"></div></div></section><div class="footer">Standalone Hangeul app · progress saves locally in your browser</div></main>
-<script>const DATA={"letters":[{"id":"m","glyph":"ㅁ","name":"미음","rr":"mieum","sound":"m","guide":"m, as in moon","example":"마음","exampleRr":"maeum","meaning":"heart / mind","tip":"ㅁ is a square and says m, just like Latin M.","deck":"familiar"},{"id":"a","glyph":"ㅏ","name":"아","rr":"a","sound":"a","guide":"ah, as in father","example":"아빠","exampleRr":"appa","meaning":"dad","tip":"ㅏ is an open a. Open your mouth wide.","deck":"familiar"},{"id":"o","glyph":"ㅗ","name":"오","rr":"o","sound":"o","guide":"o, as in more","example":"오리","exampleRr":"ori","meaning":"duck","tip":"ㅗ is round: pull the lips into a small circle.","deck":"familiar"},{"id":"i","glyph":"ㅣ","name":"이","rr":"i","sound":"ee","guide":"ee, as in see","example":"이름","exampleRr":"ireum","meaning":"name","tip":"ㅣ is one straight line. Smile and say ee.","deck":"familiar"},{"id":"s","glyph":"ㅅ","name":"시옷","rr":"siot","sound":"s","guide":"s, as in sun","example":"사과","exampleRr":"sagwa","meaning":"apple","tip":"ㅅ looks like a little roof and says s.","deck":"familiar"},{"id":"n","glyph":"ㄴ","name":"니은","rr":"nieun","sound":"n","guide":"n, as in nose","example":"나무","exampleRr":"namu","meaning":"tree","tip":"ㄴ is a corner with a tail. It says n.","deck":"familiar"},{"id":"eo","glyph":"ㅓ","name":"어","rr":"eo","sound":"eo","guide":"uh, as in fun","example":"어머니","exampleRr":"eomeoni","meaning":"mother","tip":"ㅓ is ㅏ turned around. It says uh, with a relaxed jaw, not ah.","deck":"lookalikes"},{"id":"u","glyph":"ㅜ","name":"우","rr":"u","sound":"u","guide":"oo, as in boot","example":"우유","exampleRr":"uyu","meaning":"milk","tip":"ㅜ is ㅗ turned upside down. Round the lips for oo.","deck":"lookalikes"},{"id":"ae","glyph":"ㅐ","name":"애","rr":"ae","sound":"ae","guide":"eh, as in bed","example":"개","exampleRr":"gae","meaning":"dog","tip":"ㅐ looks like ㅏ with an extra stroke. It says eh.","deck":"lookalikes"},{"id":"e","glyph":"ㅔ","name":"에","rr":"e","sound":"e","guide":"eh, as in bed","example":"네","exampleRr":"ne","meaning":"yes","tip":"ㅔ looks like ㅓ with an extra stroke. In everyday speech it sounds almost the same as ㅐ.","deck":"lookalikes"},{"id":"ng","glyph":"ㅇ","name":"이응","rr":"ieung","sound":"silent / ng","guide":"silent at the start, ng at the bottom","example":"아이","exampleRr":"ai","meaning":"child","tip":"At the start of a syllable ㅇ is silent. At the bottom it says ng, as in sing.","deck":"lookalikes"},{"id":"ch","glyph":"ㅊ","name":"치읓","rr":"chieut","sound":"ch","guide":"ch, with a small puff of air","example":"치마","exampleRr":"chima","meaning":"skirt","tip":"ㅊ is ㅈ with an extra stroke on top. Say ch with a little breath.","deck":"lookalikes"},{"id":"p","glyph":"ㅍ","name":"피읖","rr":"pieup","sound":"p","guide":"p, with a small puff","example":"포도","exampleRr":"podo","meaning":"grape","tip":"ㅍ is ㅁ with a bar through the middle. It says p, not m.","deck":"lookalikes"},{"id":"g","glyph":"ㄱ","name":"기역","rr":"giyeok","sound":"g / k","guide":"g at the start, k at the end","example":"고양이","exampleRr":"goyangi","meaning":"cat","tip":"ㄱ says g at the start of a word and k at the end.","deck":"new"},{"id":"d","glyph":"ㄷ","name":"디귿","rr":"digeut","sound":"d / t","guide":"d at the start, t at the end","example":"도시","exampleRr":"dosi","meaning":"city","tip":"ㄷ says d at the start of a word and t at the end.","deck":"new"},{"id":"r","glyph":"ㄹ","name":"리을","rr":"rieul","sound":"r / l","guide":"one light tap, between r and l","example":"라면","exampleRr":"ramyeon","meaning":"ramen noodles","tip":"ㄹ sounds like r at the start of a word and like l at the end. Tap the tongue once.","deck":"new"},{"id":"b","glyph":"ㅂ","name":"비읍","rr":"bieup","sound":"b / p","guide":"b at the start, p at the end","example":"바다","exampleRr":"bada","meaning":"sea","tip":"ㅂ sounds like b at the start of a word, and softer than English p at the end.","deck":"new"},{"id":"j","glyph":"ㅈ","name":"지읒","rr":"jieut","sound":"j","guide":"j, as in jam","example":"지금","exampleRr":"jigeum","meaning":"now","tip":"ㅈ is a soft j at the start, softer than ch.","deck":"new"},{"id":"h","glyph":"ㅎ","name":"히읗","rr":"hieut","sound":"h","guide":"h, as in hat","example":"하나","exampleRr":"hana","meaning":"one","tip":"ㅎ is a soft h. Keep it light before vowels.","deck":"new"},{"id":"ya","glyph":"ㅑ","name":"야","rr":"ya","sound":"ya","guide":"ya, as in yacht","example":"야구","exampleRr":"yagu","meaning":"baseball","tip":"ㅑ is ㅏ with an extra stroke. Add a y-glide before the a.","deck":"new"},{"id":"yo","glyph":"ㅛ","name":"요","rr":"yo","sound":"yo","guide":"yo, as in yoga","example":"요리","exampleRr":"yori","meaning":"cooking","tip":"ㅛ is ㅗ with an extra stroke. Add a y-glide before the o.","deck":"new"},{"id":"yu","glyph":"ㅠ","name":"유","rr":"yu","sound":"yu","guide":"yoo, as in you","example":"유리","exampleRr":"yuri","meaning":"glass","tip":"ㅠ is ㅜ with an extra stroke. A y-glide, then oo.","deck":"new"},{"id":"yeo","glyph":"ㅕ","name":"여","rr":"yeo","sound":"yeo","guide":"yuh, as in yonder","example":"여자","exampleRr":"yeoja","meaning":"woman","tip":"ㅕ is ㅓ with an extra stroke. A y-glide, then uh.","deck":"new"},{"id":"k","glyph":"ㅋ","name":"키읔","rr":"kieuk","sound":"k (strong puff)","guide":"k with a strong puff, as in kite","example":"커피","exampleRr":"keopi","meaning":"coffee","tip":"ㅋ is a k with a strong puff. Hold a hand to your mouth: you should feel air.","deck":"difficult"},{"id":"t","glyph":"ㅌ","name":"티읕","rr":"tieut","sound":"t (strong puff)","guide":"t with a strong puff, as in top","example":"토끼","exampleRr":"tokki","meaning":"rabbit","tip":"ㅌ is a t with a strong puff of air.","deck":"difficult"},{"id":"kk","glyph":"ㄲ","name":"쌍기역","rr":"ssang-giyeok","sound":"kk (tense)","guide":"tight k with no puff, as in sky","example":"꼬리","exampleRr":"kkori","meaning":"tail","tip":"Tense consonants sound tight: no puff of air, and the throat stays closed.","deck":"difficult"},{"id":"tt","glyph":"ㄸ","name":"쌍디귿","rr":"ssang-digeut","sound":"tt (tense)","guide":"tight t with no puff, as in stop","example":"딸기","exampleRr":"ttalgi","meaning":"strawberry","tip":"ㄸ is a tight t. Let no breath out.","deck":"difficult"},{"id":"pp","glyph":"ㅃ","name":"쌍비읍","rr":"ssang-bieup","sound":"pp (tense)","guide":"tight p with no puff, as in spy","example":"빵","exampleRr":"ppang","meaning":"bread","tip":"ㅃ is a tight p. Keep the lips firm and the breath in.","deck":"difficult"},{"id":"ss","glyph":"ㅆ","name":"쌍시옷","rr":"ssang-siot","sound":"ss (tense)","guide":"tight, sharp s","example":"쌀","exampleRr":"ssal","meaning":"rice","tip":"ㅆ is a tight, sharp s.","deck":"difficult"},{"id":"jj","glyph":"ㅉ","name":"쌍지읒","rr":"ssang-jieut","sound":"jj (tense)","guide":"tight j with no puff","example":"짜다","exampleRr":"jjada","meaning":"salty","tip":"ㅉ is a tight j. No breath comes out.","deck":"difficult"},{"id":"eu","glyph":"ㅡ","name":"으","rr":"eu","sound":"eu","guide":"uh with the lips spread wide, no English twin","example":"그림","exampleRr":"geurim","meaning":"picture","tip":"Keep the lips flat, like a relaxed smile, and say uh.","deck":"difficult"},{"id":"yae","glyph":"ㅒ","name":"얘","rr":"yae","sound":"yae","guide":"yeh, as in yes","example":"얘기","exampleRr":"yaegi","meaning":"talk / story","tip":"ㅒ is ㅐ with an extra stroke. Add a y-glide.","deck":"combined"},{"id":"ye","glyph":"ㅖ","name":"예","rr":"ye","sound":"ye","guide":"yeh, as in yes","example":"예쁘다","exampleRr":"yeppeuda","meaning":"pretty","tip":"ㅖ is ㅔ with an extra stroke. Add a y-glide.","deck":"combined"},{"id":"wa","glyph":"ㅘ","name":"와","rr":"wa","sound":"wa","guide":"wa, as in wand","example":"과자","exampleRr":"gwaja","meaning":"snack","tip":"ㅘ is ㅗ and ㅏ together: start round, then open to ah.","deck":"combined"},{"id":"wae","glyph":"ㅙ","name":"왜","rr":"wae","sound":"wae","guide":"way, as in wedge","example":"왜","exampleRr":"wae","meaning":"why","tip":"ㅙ is ㅗ and ㅐ together. Say wa, then eh, fast.","deck":"combined"},{"id":"oe","glyph":"ㅚ","name":"외","rr":"oe","sound":"oe / we","guide":"we, as in wet","example":"외국","exampleRr":"oeguk","meaning":"foreign country","tip":"ㅚ is ㅗ and ㅣ together. It often sounds like we.","deck":"combined"},{"id":"wo","glyph":"ㅝ","name":"워","rr":"wo","sound":"wo","guide":"wuh, as in wonder","example":"월요일","exampleRr":"woryoil","meaning":"Monday","tip":"ㅝ is ㅜ and ㅓ together: oo, then uh.","deck":"combined"},{"id":"we","glyph":"ㅞ","name":"웨","rr":"we","sound":"we","guide":"weh, as in wet","example":"웨이터","exampleRr":"weiteo","meaning":"waiter","tip":"ㅞ is ㅜ and ㅔ together. Say oo, then eh, quickly.","deck":"combined"},{"id":"wi","glyph":"ㅟ","name":"위","rr":"wi","sound":"wi","guide":"wee, as in weed","example":"위","exampleRr":"wi","meaning":"top / stomach","tip":"ㅟ is ㅜ and ㅣ together. The lips start round, then smile into ee.","deck":"combined"},{"id":"ui","glyph":"ㅢ","name":"의","rr":"ui","sound":"ui","guide":"a quick glide from eu to ee","example":"의사","exampleRr":"uisa","meaning":"doctor","tip":"ㅢ glides from eu to ee. When it is not the first sound, it often sounds like ee.","deck":"combined"}],"learnOrder":["a","o","m","s","n","i","g","d","r","b","j","h","eo","u","ng","ae","e","ch","p","ya","yo","yu","yeo","k","t","eu","kk","tt","pp","ss","jj","yae","ye","wa","wae","oe","wo","we","wi","ui"],"decks":{"familiar":{"title":"Looks familiar","eyebrow":"01 / START HERE","color":"#9BE9FB","description":"Shapes that sound like letters you already know."},"lookalikes":{"title":"Sneaky lookalikes","eyebrow":"02 / WATCH CLOSELY","color":"#FAE8FF","description":"Shapes that look alike but sound different."},"new":{"title":"New characters","eyebrow":"03 / BUILD IT UP","color":"#F6BED5","description":"A fresh set of shapes to add to your map."},"difficult":{"title":"Tricky sounds","eyebrow":"04 / LISTEN IN","color":"#FDE68A","description":"Puffs of air, tight sounds, and the flat eu."},"combined":{"title":"Combined vowels","eyebrow":"05 / FINAL PIECES","color":"#D9F99D","description":"Two vowel strokes stacked into one shape."}},"items":[{"n":1,"ko":"안녕하세요","pron":"an-nyeong-ha-se-yo","en":"hello (polite)","group":1,"day":1},{"n":2,"ko":"안녕","pron":"an-nyeong","en":"hi / bye (casual)","group":1,"day":1},{"n":3,"ko":"좋은 아침이에요","pron":"jo-eun a-chi-mi-e-yo","en":"good morning","group":1,"day":1},{"n":4,"ko":"좋은 저녁이에요","pron":"jo-eun jeo-nyeo-gi-e-yo","en":"good evening","group":1,"day":1},{"n":5,"ko":"안녕히 주무세요","pron":"an-nyeong-hi ju-mu-se-yo","en":"good night (to someone going to sleep)","group":1,"day":1},{"n":6,"ko":"안녕히 가세요","pron":"an-nyeong-hi ga-se-yo","en":"goodbye (said to someone leaving)","group":1,"day":1},{"n":7,"ko":"안녕히 계세요","pron":"an-nyeong-hi gye-se-yo","en":"goodbye (said by the one leaving)","group":1,"day":1},{"n":8,"ko":"어떻게 지내세요?","pron":"eo-tteo-ke ji-nae-se-yo?","en":"how are you? (formal)","group":1,"day":1},{"n":9,"ko":"잘 지내요","pron":"jal ji-nae-yo","en":"I'm doing well","group":1,"day":1},{"n":10,"ko":"괜찮아요","pron":"gwaen-chan-a-yo","en":"it's okay / I'm fine","group":1,"day":1},{"n":11,"ko":"감사합니다","pron":"gam-sa-ham-ni-da","en":"thank you (formal)","group":2,"day":1},{"n":12,"ko":"고마워요","pron":"go-ma-wo-yo","en":"thanks (polite)","group":2,"day":1},{"n":13,"ko":"천만에요","pron":"cheon-man-e-yo","en":"you're welcome","group":2,"day":1},{"n":14,"ko":"죄송합니다","pron":"joe-song-ham-ni-da","en":"I'm sorry (formal)","group":2,"day":1},{"n":15,"ko":"미안해요","pron":"mi-an-hae-yo","en":"sorry (polite)","group":2,"day":1},{"n":16,"ko":"네","pron":"ne","en":"yes","group":2,"day":1},{"n":17,"ko":"아니요","pron":"a-ni-yo","en":"no","group":2,"day":1},{"n":18,"ko":"알겠어요","pron":"al-ges-seo-yo","en":"got it / okay","group":2,"day":1},{"n":19,"ko":"이해해요","pron":"i-hae-hae-yo","en":"I understand","group":2,"day":1},{"n":20,"ko":"이해가 안 돼요","pron":"i-hae-ga an dwae-yo","en":"I don't understand","group":2,"day":1},{"n":21,"ko":"나","pron":"na","en":"I (casual)","group":3,"day":2},{"n":22,"ko":"저","pron":"jeo","en":"I (polite)","group":3,"day":2},{"n":23,"ko":"너","pron":"neo","en":"you (casual)","group":3,"day":2},{"n":24,"ko":"그","pron":"geu","en":"he","group":3,"day":2},{"n":25,"ko":"그녀","pron":"geu-nyeo","en":"she","group":3,"day":2},{"n":26,"ko":"우리","pron":"u-ri","en":"we","group":3,"day":2},{"n":27,"ko":"그들","pron":"geu-deul","en":"they","group":3,"day":2},{"n":28,"ko":"친구","pron":"chin-gu","en":"friend","group":3,"day":2},{"n":29,"ko":"가족","pron":"ga-jok","en":"family","group":3,"day":2},{"n":30,"ko":"선생님","pron":"seon-saeng-nim","en":"teacher","group":3,"day":2},{"n":31,"ko":"누구","pron":"nu-gu","en":"who","group":4,"day":2},{"n":32,"ko":"뭐","pron":"mwo","en":"what","group":4,"day":2},{"n":33,"ko":"어디","pron":"eo-di","en":"where","group":4,"day":2},{"n":34,"ko":"언제","pron":"eon-je","en":"when","group":4,"day":2},{"n":35,"ko":"왜","pron":"wae","en":"why","group":4,"day":2},{"n":36,"ko":"어떻게","pron":"eo-tteo-ke","en":"how","group":4,"day":2},{"n":37,"ko":"어떤","pron":"eo-tteon","en":"which / what kind","group":4,"day":2},{"n":38,"ko":"얼마","pron":"eol-ma","en":"how much / how many","group":4,"day":2},{"n":39,"ko":"어디로","pron":"eo-di-ro","en":"to where","group":4,"day":2},{"n":40,"ko":"어디서","pron":"eo-di-seo","en":"from where / where at","group":4,"day":2},{"n":41,"ko":"있다","pron":"it-da","en":"to have / there is","group":5,"day":3},{"n":42,"ko":"없다","pron":"eop-da","en":"to not have / there isn't","group":5,"day":3},{"n":43,"ko":"먹다","pron":"meok-da","en":"to eat","group":5,"day":3},{"n":44,"ko":"마시다","pron":"ma-si-da","en":"to drink","group":5,"day":3},{"n":45,"ko":"원하다","pron":"won-ha-da","en":"to want","group":5,"day":3},{"n":46,"ko":"할 수 있다","pron":"hal su it-da","en":"can / to be able to","group":5,"day":3},{"n":47,"ko":"알다","pron":"al-da","en":"to know","group":5,"day":3},{"n":48,"ko":"이해하다","pron":"i-hae-ha-da","en":"to understand","group":5,"day":3},{"n":49,"ko":"말하다","pron":"mal-ha-da","en":"to speak","group":5,"day":3},{"n":50,"ko":"하다","pron":"ha-da","en":"to do / to make","group":5,"day":3},{"n":51,"ko":"가다","pron":"ga-da","en":"to go","group":5,"day":3},{"n":52,"ko":"타다","pron":"ta-da","en":"to ride (transport)","group":5,"day":3},{"n":53,"ko":"살다","pron":"sal-da","en":"to live","group":5,"day":3},{"n":54,"ko":"일하다","pron":"il-ha-da","en":"to work","group":5,"day":3},{"n":55,"ko":"보다","pron":"bo-da","en":"to see / to watch","group":5,"day":3},{"n":56,"ko":"지금","pron":"ji-geum","en":"now","group":6,"day":3},{"n":57,"ko":"오늘","pron":"o-neul","en":"today","group":6,"day":3},{"n":58,"ko":"내일","pron":"nae-il","en":"tomorrow","group":6,"day":3},{"n":59,"ko":"어제","pron":"eo-je","en":"yesterday","group":6,"day":3},{"n":60,"ko":"아침","pron":"a-chim","en":"morning","group":6,"day":3},{"n":61,"ko":"낮","pron":"nat","en":"daytime / afternoon","group":6,"day":4},{"n":62,"ko":"저녁","pron":"jeo-nyeok","en":"evening","group":6,"day":4},{"n":63,"ko":"밤","pron":"bam","en":"night","group":6,"day":4},{"n":64,"ko":"항상","pron":"hang-sang","en":"always","group":6,"day":4},{"n":65,"ko":"가끔","pron":"ga-kkeum","en":"sometimes","group":6,"day":4},{"n":66,"ko":"집","pron":"jip","en":"home / house","group":7,"day":4},{"n":67,"ko":"직장","pron":"jik-jang","en":"workplace / work","group":7,"day":4},{"n":68,"ko":"가게","pron":"ga-ge","en":"store / shop","group":7,"day":4},{"n":69,"ko":"식당","pron":"sik-dang","en":"restaurant","group":7,"day":4},{"n":70,"ko":"화장실","pron":"hwa-jang-sil","en":"restroom","group":7,"day":4},{"n":71,"ko":"여기","pron":"yeo-gi","en":"here","group":7,"day":4},{"n":72,"ko":"거기","pron":"geo-gi","en":"there","group":7,"day":4},{"n":73,"ko":"똑바로","pron":"ttok-ba-ro","en":"straight ahead","group":7,"day":4},{"n":74,"ko":"왼쪽","pron":"oen-jjok","en":"to the left","group":7,"day":4},{"n":75,"ko":"오른쪽","pron":"o-reun-jjok","en":"to the right","group":7,"day":4},{"n":76,"ko":"물","pron":"mul","en":"water","group":8,"day":4},{"n":77,"ko":"음식","pron":"eum-sik","en":"food","group":8,"day":4},{"n":78,"ko":"커피","pron":"keo-pi","en":"coffee","group":8,"day":4},{"n":79,"ko":"차","pron":"cha","en":"tea","group":8,"day":4},{"n":80,"ko":"빵","pron":"ppang","en":"bread","group":8,"day":4},{"n":81,"ko":"고기","pron":"go-gi","en":"meat","group":8,"day":5},{"n":82,"ko":"돈","pron":"don","en":"money","group":8,"day":5},{"n":83,"ko":"도움","pron":"do-um","en":"help","group":8,"day":5},{"n":84,"ko":"…이/가 필요해요","pron":"i/ga pil-yo-hae-yo","en":"I need…","group":8,"day":5},{"n":85,"ko":"…을/를 원해요","pron":"eul/reul won-hae-yo","en":"I want…","group":8,"day":5},{"n":86,"ko":"좋은","pron":"jo-eun","en":"good (before a noun)","group":9,"day":5},{"n":87,"ko":"나쁜","pron":"na-ppeun","en":"bad (before a noun)","group":9,"day":5},{"n":88,"ko":"큰","pron":"keun","en":"big","group":9,"day":5},{"n":89,"ko":"작은","pron":"ja-geun","en":"small","group":9,"day":5},{"n":90,"ko":"새로운","pron":"sae-ro-un","en":"new","group":9,"day":5},{"n":91,"ko":"오래된","pron":"o-rae-doen","en":"old","group":9,"day":5},{"n":92,"ko":"그리고","pron":"geu-ri-go","en":"and","group":9,"day":5},{"n":93,"ko":"하지만","pron":"ha-ji-man","en":"but","group":9,"day":5},{"n":94,"ko":"왜냐하면","pron":"wae-nya-ha-myeon","en":"because","group":9,"day":5},{"n":95,"ko":"아주","pron":"a-ju","en":"very","group":9,"day":5},{"n":96,"ko":"제 이름은 …예요","pron":"je i-reu-meun …-ye-yo","en":"my name is…","group":10,"day":5},{"n":97,"ko":"저는 …에서 왔어요","pron":"jeo-neun …-e-seo wa-sseo-yo","en":"I'm from…","group":10,"day":5},{"n":98,"ko":"영어 할 줄 아세요?","pron":"yeong-eo hal jul a-se-yo?","en":"do you speak English?","group":10,"day":5},{"n":99,"ko":"다시 한 번 말해 주세요","pron":"da-si han beon mal-hae ju-se-yo","en":"please say it again","group":10,"day":5},{"n":100,"ko":"이거 뭐예요?","pron":"i-geo mwo-ye-yo?","en":"what is this?","group":10,"day":5}],"groups":["Greetings & Social Basics","Politeness & Conversation Survival","People & Pronouns","Essential Question Words","Core Everyday Verbs","Time & Frequency","Places & Directions","Food, Drink & Basic Needs","Useful Descriptions & Connectors","High-Value Everyday Expressions"],"patterns":[{"template":["…이/가 필요해요","i/ga pil-yo-hae-yo","I need…"],"example":["물이 필요해요.","mu-ri pil-yo-hae-yo.","I need water."]},{"template":["…을/를 원해요","eul/reul won-hae-yo","I want…"],"example":["커피를 원해요.","keo-pi-reul won-hae-yo.","I want coffee."]},{"template":["…어디예요?","…eo-di-ye-yo?","Where is…?"],"example":["화장실이 어디예요?","hwa-jang-si-ri eo-di-ye-yo?","Where is the restroom?"]},{"template":["이거 뭐예요?","i-geo mwo-ye-yo?","What is this?"]},{"template":["이해가 안 돼요.","i-hae-ga an dwae-yo.","I don't understand."]},{"template":["…할 수 있어요?","…hal su i-sseo-yo?","Can you…?"],"example":["영어 할 수 있어요?","yeong-eo hal su i-sseo-yo?","Can you speak English?"]},{"template":["저는 …에서 왔어요.","jeo-neun …-e-seo wa-sseo-yo.","I'm from…"],"example":["저는 한국에서 왔어요.","jeo-neun han-guk-e-seo wa-sseo-yo.","I'm from Korea."]},{"template":["제 이름은 …예요.","je i-reu-meun …-ye-yo.","My name is…"],"example":["제 이름은 민수예요.","je i-reu-meun min-su-ye-yo.","My name is Minsu."]},{"template":["…을/를 좋아해요.","eul/reul jo-a-hae-yo.","I like…"],"example":["음악을 좋아해요.","eu-ma-geul jo-a-hae-yo.","I like music."]},{"template":["…주세요.","…ju-se-yo.","Please give me…"],"example":["물 주세요.","mul ju-se-yo.","Water, please."]}],"conversations":[{"title":"Conversation 1 — Meeting someone","lines":[{"speaker":"A","ko":"제 이름은 알렉스예요.","pron":"je i-reu-meun al-lek-seu-ye-yo.","en":"My name is Alex."},{"speaker":"B","ko":"저는 민지예요.","pron":"jeo-neun min-ji-ye-yo.","en":"I'm Minji."},{"speaker":"A","ko":"어떻게 지내세요?","pron":"eo-tteo-ke ji-nae-se-yo?","en":"How are you?"},{"speaker":"B","ko":"잘 지내요, 감사합니다.","pron":"jal ji-nae-yo, gam-sa-ham-ni-da.","en":"I'm doing well, thank you."}]},{"title":"Conversation 2 — Asking for help","lines":[{"speaker":"A","ko":"실례합니다.","pron":"sil-lye-ham-ni-da.","en":"Excuse me."},{"speaker":"B","ko":"네?","pron":"ne?","en":"Yes?"},{"speaker":"A","ko":"화장실이 어디예요?","pron":"hwa-jang-si-ri eo-di-ye-yo?","en":"Where is the restroom?"},{"speaker":"B","ko":"저쪽, 오른쪽이에요.","pron":"jeo-jjok, o-reun-jjo-gi-e-yo.","en":"Over there, on the right."},{"speaker":"A","ko":"감사합니다!","pron":"gam-sa-ham-ni-da!","en":"Thank you!"}]},{"title":"Conversation 3 — When you don't understand","lines":[{"speaker":"A","ko":"영어 할 줄 아세요?","pron":"yeong-eo hal jul a-se-yo?","en":"Do you speak English?"},{"speaker":"B","ko":"조금요.","pron":"jo-geum-yo.","en":"A little."},{"speaker":"A","ko":"이해가 안 돼요. 다시 한 번 말해 주세요.","pron":"i-hae-ga an dwae-yo. da-si han beon mal-hae ju-se-yo.","en":"I don't understand. Please say it again."}]}],"checklist":["Recognize at least 80 of the 100 items from Korean → English.","Produce at least 70 of the 100 from English → Korean.","Say the 10 sentence patterns without looking.","Introduce yourself.","Ask where something is.","Ask someone to repeat themselves.","Say that you understand or do not understand.","Ask for something you want.","Ask for something you need.","Complete the three mini conversations with minimal help."],"pronKey":["Hyphens split syllables. Each Hangul block is one syllable, and Korean has no stress marks, so stay light and even.","ㅓ (eo) is an open uh, not o. ㅗ (o) is round. Keep them apart.","ㅡ (eu) has no English twin: lips spread, say uh.","ㄱ ㄷ ㅂ ㅈ sit between g/k, d/t, b/p, and j/ch. Their voice depends on position in the word.","Tense consonants ㄲ ㄸ ㅃ ㅆ ㅉ come with no puff of air. Aspirated ㅋ ㅌ ㅍ ㅊ come with one."],"pronNotes":[{"ko":"한국어","note":"hang-gu-geo. The ㄱ between two vowels softens toward g."},{"ko":"감사합니다","note":"gam-sa-ham-ni-da. ㅂ before ㄴ is said as m, so 합니다 sounds like ham-ni-da."},{"ko":"좋아요","note":"jo-a-yo. The ㅎ in 좋 goes silent before a vowel."},{"ko":"있어요","note":"i-sseo-yo. The final ㅆ carries into the next syllable."}],"threshold":"Once you can recall roughly 80% comfortably, begin Stage 2 while continuing to review weak Stage 1 words.","reading":[{"word":"아빠","tr":"appa","meaning":"dad","parts":["아 · ㅇ+ㅏ","빠 · ㅃ+ㅏ"]},{"word":"고양이","tr":"goyangi","meaning":"cat","parts":["고 · ㄱ+ㅗ","양 · ㅇ+ㅑ+ㅇ","이 · ㅇ+ㅣ"]},{"word":"도시","tr":"dosi","meaning":"city","parts":["도 · ㄷ+ㅗ","시 · ㅅ+ㅣ"]},{"word":"사과","tr":"sagwa","meaning":"apple","parts":["사 · ㅅ+ㅏ","과 · ㄱ+ㅘ"]},{"word":"나무","tr":"namu","meaning":"tree","parts":["나 · ㄴ+ㅏ","무 · ㅁ+ㅜ"]},{"word":"바다","tr":"bada","meaning":"sea","parts":["바 · ㅂ+ㅏ","다 · ㄷ+ㅏ"]},{"word":"우유","tr":"uyu","meaning":"milk","parts":["우 · ㅇ+ㅜ","유 · ㅇ+ㅠ"]},{"word":"커피","tr":"keopi","meaning":"coffee","parts":["커 · ㅋ+ㅓ","피 · ㅍ+ㅣ"]}]};
+<section id="settings" class="view hidden"><div class="head"><div><div class="eyebrow">YOUR DATA</div><h2>Keep your map.</h2></div></div><div class="panel" style="background:var(--c);margin-bottom:18px"><div class="eyebrow">LOCAL ACCOUNT</div><h3 style="font-size:28px;margin-top:7px">Your portable learner profile</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">This standalone build has no server login. A local profile ID labels backups so you can move them safely between browsers.</p><div class="accountForm"><input id="accountName" placeholder="Your name (optional)" autocomplete="off"><button class="primary" onclick="saveAccountProfile()">Save profile</button></div><p id="accountStatus" class="accountStatus"></p><button class="ghost" onclick="deleteLocalAccount()">Delete local account and data</button></div><div class="layout"><div class="panel"><div class="eyebrow">BACKUP</div><h3 style="font-size:28px;margin-top:7px">Export or merge</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">Your learning state stays in this browser. Export a JSON backup before switching devices. Importing merges it: newer review records and unique events are kept, not overwritten.</p><div class="actions" style="margin-top:18px"><button class="primary" onclick="exportState()">Download backup</button><label class="ghost" style="display:inline-block">Import backup<input id="importFile" type="file" accept="application/json" style="display:none" onchange="importState(event)"></label></div></div><div class="panel" style="background:var(--l)"><div class="eyebrow">RESET</div><h3 style="font-size:28px;margin-top:7px">Start fresh</h3><p style="margin-top:10px;line-height:1.45;font-weight:750;color:var(--m)">This clears local progress, goals, and review history on this browser. Export first if you may want to restore it.</p><button class="ghost" style="margin-top:18px" onclick="resetState()">Reset local progress</button></div></div><div class="panel" style="margin-top:18px"><div class="eyebrow">STATE DETAILS</div><p id="stateDetails" style="margin-top:8px;line-height:1.5;font-weight:800;color:var(--m)"></p><details style="margin-top:14px"><summary>Review schedule debug</summary><div id="debugSchedule" class="debugSchedule"></div></details></div></section>
+<section id="progress" class="view hidden"><div class="head"><div><div class="eyebrow">YOUR MAP</div><h2>Progress, not pressure.</h2></div></div><div class="layout"><div class="panel"><div class="eyebrow">STAGE 1</div><h3 style="font-size:30px;margin-top:7px"><span id="progressStage">0</span>% of the first 100</h3><div class="bar" style="margin-top:15px"><i id="stageBar" style="width:0%"></i></div></div><div class="panel" style="background:var(--l)"><div class="eyebrow">ALPHABET</div><h3 style="font-size:30px;margin-top:7px"><span id="progressAlpha">0</span>% complete</h3><div class="bar" style="margin-top:15px"><i id="alphaBar" style="width:0%"></i></div></div></div><div class="panel" style="margin-top:18px;background:var(--c)"><div class="head"><div><div class="eyebrow">PRIVATE SUMMARY</div><h3>Small wins, clearly counted.</h3></div><span id="motivationXp">0 XP</span></div><div class="motivationGrid"><div><b id="motivationStreak">0 days</b><small>current streak</small></div><div><b id="motivationWeek">0 / 5</b><small>weekly activities</small></div><div><b id="motivationBadges">0</b><small>badges earned</small></div></div><p id="motivationHint" class="motivationHint"></p><div class="goalControls"><label>Daily reviews <button class="ghost" onclick="changeGoal(-1)">−</button><strong id="motivationDailyGoal">10</strong><button class="ghost" onclick="changeGoal(1)">+</button></label><label>Weekly activities <button class="ghost" onclick="changeWeeklyGoal(-1)">−</button><strong id="motivationWeeklyGoal">5</strong><button class="ghost" onclick="changeWeeklyGoal(1)">+</button></label></div><div id="badgeList" class="badgeList"></div></div><div class="panel" style="margin-top:18px"><div class="head"><h3>Letter mastery</h3><span id="masteryHint">0 / 40</span></div><div id="masteryGrid" class="alphabet"></div></div></section><div class="footer">Standalone 한글 app · progress saves locally in your browser</div></main>
+<script>const DATA={"letters":[{"id":"m","glyph":"ㅁ","name":"미음","rr":"mieum","sound":"m","guide":"m, as in moon","example":"마음","exampleRr":"maeum","meaning":"heart / mind","tip":"ㅁ is a square and says m, just like Latin M.","deck":"familiar"},{"id":"a","glyph":"ㅏ","name":"아","rr":"a","sound":"a","guide":"ah, as in father","example":"아빠","exampleRr":"appa","meaning":"dad","tip":"ㅏ is an open a. Open your mouth wide.","deck":"familiar"},{"id":"o","glyph":"ㅗ","name":"오","rr":"o","sound":"o","guide":"o, as in more","example":"오리","exampleRr":"ori","meaning":"duck","tip":"ㅗ is round: pull the lips into a small circle.","deck":"familiar"},{"id":"i","glyph":"ㅣ","name":"이","rr":"i","sound":"ee","guide":"ee, as in see","example":"이름","exampleRr":"ireum","meaning":"name","tip":"ㅣ is one straight line. Smile and say ee.","deck":"familiar"},{"id":"s","glyph":"ㅅ","name":"시옷","rr":"siot","sound":"s","guide":"s, as in sun","example":"사과","exampleRr":"sagwa","meaning":"apple","tip":"ㅅ looks like a little roof and says s.","deck":"familiar"},{"id":"n","glyph":"ㄴ","name":"니은","rr":"nieun","sound":"n","guide":"n, as in nose","example":"나무","exampleRr":"namu","meaning":"tree","tip":"ㄴ is a corner with a tail. It says n.","deck":"familiar"},{"id":"eo","glyph":"ㅓ","name":"어","rr":"eo","sound":"eo","guide":"uh, as in fun","example":"어머니","exampleRr":"eomeoni","meaning":"mother","tip":"ㅓ is ㅏ turned around. It says uh, with a relaxed jaw, not ah.","deck":"lookalikes"},{"id":"u","glyph":"ㅜ","name":"우","rr":"u","sound":"u","guide":"oo, as in boot","example":"우유","exampleRr":"uyu","meaning":"milk","tip":"ㅜ is ㅗ turned upside down. Round the lips for oo.","deck":"lookalikes"},{"id":"ae","glyph":"ㅐ","name":"애","rr":"ae","sound":"ae","guide":"eh, as in bed","example":"개","exampleRr":"gae","meaning":"dog","tip":"ㅐ looks like ㅏ with an extra stroke. It says eh.","deck":"lookalikes"},{"id":"e","glyph":"ㅔ","name":"에","rr":"e","sound":"e","guide":"eh, as in bed","example":"네","exampleRr":"ne","meaning":"yes","tip":"ㅔ looks like ㅓ with an extra stroke. In everyday speech it sounds almost the same as ㅐ.","deck":"lookalikes"},{"id":"ng","glyph":"ㅇ","name":"이응","rr":"ieung","sound":"silent / ng","guide":"silent at the start, ng at the bottom","example":"아이","exampleRr":"ai","meaning":"child","tip":"At the start of a syllable ㅇ is silent. At the bottom it says ng, as in sing.","deck":"lookalikes"},{"id":"ch","glyph":"ㅊ","name":"치읓","rr":"chieut","sound":"ch","guide":"ch, with a small puff of air","example":"치마","exampleRr":"chima","meaning":"skirt","tip":"ㅊ is ㅈ with an extra stroke on top. Say ch with a little breath.","deck":"lookalikes"},{"id":"p","glyph":"ㅍ","name":"피읖","rr":"pieup","sound":"p","guide":"p, with a small puff","example":"포도","exampleRr":"podo","meaning":"grape","tip":"ㅍ is ㅁ with a bar through the middle. It says p, not m.","deck":"lookalikes"},{"id":"g","glyph":"ㄱ","name":"기역","rr":"giyeok","sound":"g / k","guide":"g at the start, k at the end","example":"고양이","exampleRr":"goyangi","meaning":"cat","tip":"ㄱ says g at the start of a word and k at the end.","deck":"new"},{"id":"d","glyph":"ㄷ","name":"디귿","rr":"digeut","sound":"d / t","guide":"d at the start, t at the end","example":"도시","exampleRr":"dosi","meaning":"city","tip":"ㄷ says d at the start of a word and t at the end.","deck":"new"},{"id":"r","glyph":"ㄹ","name":"리을","rr":"rieul","sound":"r / l","guide":"one light tap, between r and l","example":"라면","exampleRr":"ramyeon","meaning":"ramen noodles","tip":"ㄹ sounds like r at the start of a word and like l at the end. Tap the tongue once.","deck":"new"},{"id":"b","glyph":"ㅂ","name":"비읍","rr":"bieup","sound":"b / p","guide":"b at the start, p at the end","example":"바다","exampleRr":"bada","meaning":"sea","tip":"ㅂ sounds like b at the start of a word, and softer than English p at the end.","deck":"new"},{"id":"j","glyph":"ㅈ","name":"지읒","rr":"jieut","sound":"j","guide":"j, as in jam","example":"지금","exampleRr":"jigeum","meaning":"now","tip":"ㅈ is a soft j at the start, softer than ch.","deck":"new"},{"id":"h","glyph":"ㅎ","name":"히읗","rr":"hieut","sound":"h","guide":"h, as in hat","example":"하나","exampleRr":"hana","meaning":"one","tip":"ㅎ is a soft h. Keep it light before vowels.","deck":"new"},{"id":"ya","glyph":"ㅑ","name":"야","rr":"ya","sound":"ya","guide":"ya, as in yacht","example":"야구","exampleRr":"yagu","meaning":"baseball","tip":"ㅑ is ㅏ with an extra stroke. Add a y-glide before the a.","deck":"new"},{"id":"yo","glyph":"ㅛ","name":"요","rr":"yo","sound":"yo","guide":"yo, as in yoga","example":"요리","exampleRr":"yori","meaning":"cooking","tip":"ㅛ is ㅗ with an extra stroke. Add a y-glide before the o.","deck":"new"},{"id":"yu","glyph":"ㅠ","name":"유","rr":"yu","sound":"yu","guide":"yoo, as in you","example":"유리","exampleRr":"yuri","meaning":"glass","tip":"ㅠ is ㅜ with an extra stroke. A y-glide, then oo.","deck":"new"},{"id":"yeo","glyph":"ㅕ","name":"여","rr":"yeo","sound":"yeo","guide":"yuh, as in yonder","example":"여자","exampleRr":"yeoja","meaning":"woman","tip":"ㅕ is ㅓ with an extra stroke. A y-glide, then uh.","deck":"new"},{"id":"k","glyph":"ㅋ","name":"키읔","rr":"kieuk","sound":"k (strong puff)","guide":"k with a strong puff, as in kite","example":"커피","exampleRr":"keopi","meaning":"coffee","tip":"ㅋ is a k with a strong puff. Hold a hand to your mouth: you should feel air.","deck":"difficult"},{"id":"t","glyph":"ㅌ","name":"티읕","rr":"tieut","sound":"t (strong puff)","guide":"t with a strong puff, as in top","example":"토끼","exampleRr":"tokki","meaning":"rabbit","tip":"ㅌ is a t with a strong puff of air.","deck":"difficult"},{"id":"kk","glyph":"ㄲ","name":"쌍기역","rr":"ssang-giyeok","sound":"kk (tense)","guide":"tight k with no puff, as in sky","example":"꼬리","exampleRr":"kkori","meaning":"tail","tip":"Tense consonants sound tight: no puff of air, and the throat stays closed.","deck":"difficult"},{"id":"tt","glyph":"ㄸ","name":"쌍디귿","rr":"ssang-digeut","sound":"tt (tense)","guide":"tight t with no puff, as in stop","example":"딸기","exampleRr":"ttalgi","meaning":"strawberry","tip":"ㄸ is a tight t. Let no breath out.","deck":"difficult"},{"id":"pp","glyph":"ㅃ","name":"쌍비읍","rr":"ssang-bieup","sound":"pp (tense)","guide":"tight p with no puff, as in spy","example":"빵","exampleRr":"ppang","meaning":"bread","tip":"ㅃ is a tight p. Keep the lips firm and the breath in.","deck":"difficult"},{"id":"ss","glyph":"ㅆ","name":"쌍시옷","rr":"ssang-siot","sound":"ss (tense)","guide":"tight, sharp s","example":"쌀","exampleRr":"ssal","meaning":"rice","tip":"ㅆ is a tight, sharp s.","deck":"difficult"},{"id":"jj","glyph":"ㅉ","name":"쌍지읒","rr":"ssang-jieut","sound":"jj (tense)","guide":"tight j with no puff","example":"짜다","exampleRr":"jjada","meaning":"salty","tip":"ㅉ is a tight j. No breath comes out.","deck":"difficult"},{"id":"eu","glyph":"ㅡ","name":"으","rr":"eu","sound":"eu","guide":"uh with the lips spread wide, no English twin","example":"그림","exampleRr":"geurim","meaning":"picture","tip":"Keep the lips flat, like a relaxed smile, and say uh.","deck":"difficult"},{"id":"yae","glyph":"ㅒ","name":"얘","rr":"yae","sound":"yae","guide":"yeh, as in yes","example":"얘기","exampleRr":"yaegi","meaning":"talk / story","tip":"ㅒ is ㅐ with an extra stroke. Add a y-glide.","deck":"combined"},{"id":"ye","glyph":"ㅖ","name":"예","rr":"ye","sound":"ye","guide":"yeh, as in yes","example":"예쁘다","exampleRr":"yeppeuda","meaning":"pretty","tip":"ㅖ is ㅔ with an extra stroke. Add a y-glide.","deck":"combined"},{"id":"wa","glyph":"ㅘ","name":"와","rr":"wa","sound":"wa","guide":"wa, as in wand","example":"과자","exampleRr":"gwaja","meaning":"snack","tip":"ㅘ is ㅗ and ㅏ together: start round, then open to ah.","deck":"combined"},{"id":"wae","glyph":"ㅙ","name":"왜","rr":"wae","sound":"wae","guide":"way, as in wedge","example":"왜","exampleRr":"wae","meaning":"why","tip":"ㅙ is ㅗ and ㅐ together. Say wa, then eh, fast.","deck":"combined"},{"id":"oe","glyph":"ㅚ","name":"외","rr":"oe","sound":"oe / we","guide":"we, as in wet","example":"외국","exampleRr":"oeguk","meaning":"foreign country","tip":"ㅚ is ㅗ and ㅣ together. It often sounds like we.","deck":"combined"},{"id":"wo","glyph":"ㅝ","name":"워","rr":"wo","sound":"wo","guide":"wuh, as in wonder","example":"월요일","exampleRr":"woryoil","meaning":"Monday","tip":"ㅝ is ㅜ and ㅓ together: oo, then uh.","deck":"combined"},{"id":"we","glyph":"ㅞ","name":"웨","rr":"we","sound":"we","guide":"weh, as in wet","example":"웨이터","exampleRr":"weiteo","meaning":"waiter","tip":"ㅞ is ㅜ and ㅔ together. Say oo, then eh, quickly.","deck":"combined"},{"id":"wi","glyph":"ㅟ","name":"위","rr":"wi","sound":"wi","guide":"wee, as in weed","example":"위","exampleRr":"wi","meaning":"top / stomach","tip":"ㅟ is ㅜ and ㅣ together. The lips start round, then smile into ee.","deck":"combined"},{"id":"ui","glyph":"ㅢ","name":"의","rr":"ui","sound":"ui","guide":"a quick glide from eu to ee","example":"의사","exampleRr":"uisa","meaning":"doctor","tip":"ㅢ glides from eu to ee. When it is not the first sound, it often sounds like ee.","deck":"combined"}],"learnOrder":["a","o","m","s","n","i","g","d","r","b","j","h","eo","u","ng","ae","e","ch","p","ya","yo","yu","yeo","k","t","eu","kk","tt","pp","ss","jj","yae","ye","wa","wae","oe","wo","we","wi","ui"],"decks":{"familiar":{"title":"Looks familiar","eyebrow":"01 / START HERE","color":"#9BE9FB","description":"Shapes that sound like letters you already know."},"lookalikes":{"title":"Sneaky lookalikes","eyebrow":"02 / WATCH CLOSELY","color":"#FAE8FF","description":"Shapes that look alike but sound different."},"new":{"title":"New characters","eyebrow":"03 / BUILD IT UP","color":"#F6BED5","description":"A fresh set of shapes to add to your map."},"difficult":{"title":"Tricky sounds","eyebrow":"04 / LISTEN IN","color":"#FDE68A","description":"Puffs of air, tight sounds, and the flat eu."},"combined":{"title":"Combined vowels","eyebrow":"05 / FINAL PIECES","color":"#D9F99D","description":"Two vowel strokes stacked into one shape."}},"items":[{"n":1,"ko":"안녕하세요","pron":"an-nyeong-ha-se-yo","en":"hello (polite)","group":1,"day":1},{"n":2,"ko":"안녕","pron":"an-nyeong","en":"hi / bye (casual)","group":1,"day":1},{"n":3,"ko":"좋은 아침이에요","pron":"jo-eun a-chi-mi-e-yo","en":"good morning","group":1,"day":1},{"n":4,"ko":"좋은 저녁이에요","pron":"jo-eun jeo-nyeo-gi-e-yo","en":"good evening","group":1,"day":1},{"n":5,"ko":"안녕히 주무세요","pron":"an-nyeong-hi ju-mu-se-yo","en":"good night (to someone going to sleep)","group":1,"day":1},{"n":6,"ko":"안녕히 가세요","pron":"an-nyeong-hi ga-se-yo","en":"goodbye (said to someone leaving)","group":1,"day":1},{"n":7,"ko":"안녕히 계세요","pron":"an-nyeong-hi gye-se-yo","en":"goodbye (said by the one leaving)","group":1,"day":1},{"n":8,"ko":"어떻게 지내세요?","pron":"eo-tteo-ke ji-nae-se-yo?","en":"how are you? (formal)","group":1,"day":1},{"n":9,"ko":"잘 지내요","pron":"jal ji-nae-yo","en":"I'm doing well","group":1,"day":1},{"n":10,"ko":"괜찮아요","pron":"gwaen-chan-a-yo","en":"it's okay / I'm fine","group":1,"day":1},{"n":11,"ko":"감사합니다","pron":"gam-sa-ham-ni-da","en":"thank you (formal)","group":2,"day":1},{"n":12,"ko":"고마워요","pron":"go-ma-wo-yo","en":"thanks (polite)","group":2,"day":1},{"n":13,"ko":"천만에요","pron":"cheon-man-e-yo","en":"you're welcome","group":2,"day":1},{"n":14,"ko":"죄송합니다","pron":"joe-song-ham-ni-da","en":"I'm sorry (formal)","group":2,"day":1},{"n":15,"ko":"미안해요","pron":"mi-an-hae-yo","en":"sorry (polite)","group":2,"day":1},{"n":16,"ko":"네","pron":"ne","en":"yes","group":2,"day":1},{"n":17,"ko":"아니요","pron":"a-ni-yo","en":"no","group":2,"day":1},{"n":18,"ko":"알겠어요","pron":"al-ges-seo-yo","en":"got it / okay","group":2,"day":1},{"n":19,"ko":"이해해요","pron":"i-hae-hae-yo","en":"I understand","group":2,"day":1},{"n":20,"ko":"이해가 안 돼요","pron":"i-hae-ga an dwae-yo","en":"I don't understand","group":2,"day":1},{"n":21,"ko":"나","pron":"na","en":"I (casual)","group":3,"day":2},{"n":22,"ko":"저","pron":"jeo","en":"I (polite)","group":3,"day":2},{"n":23,"ko":"너","pron":"neo","en":"you (casual)","group":3,"day":2},{"n":24,"ko":"그","pron":"geu","en":"he","group":3,"day":2},{"n":25,"ko":"그녀","pron":"geu-nyeo","en":"she","group":3,"day":2},{"n":26,"ko":"우리","pron":"u-ri","en":"we","group":3,"day":2},{"n":27,"ko":"그들","pron":"geu-deul","en":"they","group":3,"day":2},{"n":28,"ko":"친구","pron":"chin-gu","en":"friend","group":3,"day":2},{"n":29,"ko":"가족","pron":"ga-jok","en":"family","group":3,"day":2},{"n":30,"ko":"선생님","pron":"seon-saeng-nim","en":"teacher","group":3,"day":2},{"n":31,"ko":"누구","pron":"nu-gu","en":"who","group":4,"day":2},{"n":32,"ko":"뭐","pron":"mwo","en":"what","group":4,"day":2},{"n":33,"ko":"어디","pron":"eo-di","en":"where","group":4,"day":2},{"n":34,"ko":"언제","pron":"eon-je","en":"when","group":4,"day":2},{"n":35,"ko":"왜","pron":"wae","en":"why","group":4,"day":2},{"n":36,"ko":"어떻게","pron":"eo-tteo-ke","en":"how","group":4,"day":2},{"n":37,"ko":"어떤","pron":"eo-tteon","en":"which / what kind","group":4,"day":2},{"n":38,"ko":"얼마","pron":"eol-ma","en":"how much / how many","group":4,"day":2},{"n":39,"ko":"어디로","pron":"eo-di-ro","en":"to where","group":4,"day":2},{"n":40,"ko":"어디서","pron":"eo-di-seo","en":"from where / where at","group":4,"day":2},{"n":41,"ko":"있다","pron":"it-da","en":"to have / there is","group":5,"day":3},{"n":42,"ko":"없다","pron":"eop-da","en":"to not have / there isn't","group":5,"day":3},{"n":43,"ko":"먹다","pron":"meok-da","en":"to eat","group":5,"day":3},{"n":44,"ko":"마시다","pron":"ma-si-da","en":"to drink","group":5,"day":3},{"n":45,"ko":"원하다","pron":"won-ha-da","en":"to want","group":5,"day":3},{"n":46,"ko":"할 수 있다","pron":"hal su it-da","en":"can / to be able to","group":5,"day":3},{"n":47,"ko":"알다","pron":"al-da","en":"to know","group":5,"day":3},{"n":48,"ko":"이해하다","pron":"i-hae-ha-da","en":"to understand","group":5,"day":3},{"n":49,"ko":"말하다","pron":"mal-ha-da","en":"to speak","group":5,"day":3},{"n":50,"ko":"하다","pron":"ha-da","en":"to do / to make","group":5,"day":3},{"n":51,"ko":"가다","pron":"ga-da","en":"to go","group":5,"day":3},{"n":52,"ko":"타다","pron":"ta-da","en":"to ride (transport)","group":5,"day":3},{"n":53,"ko":"살다","pron":"sal-da","en":"to live","group":5,"day":3},{"n":54,"ko":"일하다","pron":"il-ha-da","en":"to work","group":5,"day":3},{"n":55,"ko":"보다","pron":"bo-da","en":"to see / to watch","group":5,"day":3},{"n":56,"ko":"지금","pron":"ji-geum","en":"now","group":6,"day":3},{"n":57,"ko":"오늘","pron":"o-neul","en":"today","group":6,"day":3},{"n":58,"ko":"내일","pron":"nae-il","en":"tomorrow","group":6,"day":3},{"n":59,"ko":"어제","pron":"eo-je","en":"yesterday","group":6,"day":3},{"n":60,"ko":"아침","pron":"a-chim","en":"morning","group":6,"day":3},{"n":61,"ko":"낮","pron":"nat","en":"daytime / afternoon","group":6,"day":4},{"n":62,"ko":"저녁","pron":"jeo-nyeok","en":"evening","group":6,"day":4},{"n":63,"ko":"밤","pron":"bam","en":"night","group":6,"day":4},{"n":64,"ko":"항상","pron":"hang-sang","en":"always","group":6,"day":4},{"n":65,"ko":"가끔","pron":"ga-kkeum","en":"sometimes","group":6,"day":4},{"n":66,"ko":"집","pron":"jip","en":"home / house","group":7,"day":4},{"n":67,"ko":"직장","pron":"jik-jang","en":"workplace / work","group":7,"day":4},{"n":68,"ko":"가게","pron":"ga-ge","en":"store / shop","group":7,"day":4},{"n":69,"ko":"식당","pron":"sik-dang","en":"restaurant","group":7,"day":4},{"n":70,"ko":"화장실","pron":"hwa-jang-sil","en":"restroom","group":7,"day":4},{"n":71,"ko":"여기","pron":"yeo-gi","en":"here","group":7,"day":4},{"n":72,"ko":"거기","pron":"geo-gi","en":"there","group":7,"day":4},{"n":73,"ko":"똑바로","pron":"ttok-ba-ro","en":"straight ahead","group":7,"day":4},{"n":74,"ko":"왼쪽","pron":"oen-jjok","en":"to the left","group":7,"day":4},{"n":75,"ko":"오른쪽","pron":"o-reun-jjok","en":"to the right","group":7,"day":4},{"n":76,"ko":"물","pron":"mul","en":"water","group":8,"day":4},{"n":77,"ko":"음식","pron":"eum-sik","en":"food","group":8,"day":4},{"n":78,"ko":"커피","pron":"keo-pi","en":"coffee","group":8,"day":4},{"n":79,"ko":"차","pron":"cha","en":"tea","group":8,"day":4},{"n":80,"ko":"빵","pron":"ppang","en":"bread","group":8,"day":4},{"n":81,"ko":"고기","pron":"go-gi","en":"meat","group":8,"day":5},{"n":82,"ko":"돈","pron":"don","en":"money","group":8,"day":5},{"n":83,"ko":"도움","pron":"do-um","en":"help","group":8,"day":5},{"n":84,"ko":"…이/가 필요해요","pron":"i/ga pil-yo-hae-yo","en":"I need…","group":8,"day":5},{"n":85,"ko":"…을/를 원해요","pron":"eul/reul won-hae-yo","en":"I want…","group":8,"day":5},{"n":86,"ko":"좋은","pron":"jo-eun","en":"good (before a noun)","group":9,"day":5},{"n":87,"ko":"나쁜","pron":"na-ppeun","en":"bad (before a noun)","group":9,"day":5},{"n":88,"ko":"큰","pron":"keun","en":"big","group":9,"day":5},{"n":89,"ko":"작은","pron":"ja-geun","en":"small","group":9,"day":5},{"n":90,"ko":"새로운","pron":"sae-ro-un","en":"new","group":9,"day":5},{"n":91,"ko":"오래된","pron":"o-rae-doen","en":"old","group":9,"day":5},{"n":92,"ko":"그리고","pron":"geu-ri-go","en":"and","group":9,"day":5},{"n":93,"ko":"하지만","pron":"ha-ji-man","en":"but","group":9,"day":5},{"n":94,"ko":"왜냐하면","pron":"wae-nya-ha-myeon","en":"because","group":9,"day":5},{"n":95,"ko":"아주","pron":"a-ju","en":"very","group":9,"day":5},{"n":96,"ko":"제 이름은 …예요","pron":"je i-reu-meun …-ye-yo","en":"my name is…","group":10,"day":5},{"n":97,"ko":"저는 …에서 왔어요","pron":"jeo-neun …-e-seo wa-sseo-yo","en":"I'm from…","group":10,"day":5},{"n":98,"ko":"영어 할 줄 아세요?","pron":"yeong-eo hal jul a-se-yo?","en":"do you speak English?","group":10,"day":5},{"n":99,"ko":"다시 한 번 말해 주세요","pron":"da-si han beon mal-hae ju-se-yo","en":"please say it again","group":10,"day":5},{"n":100,"ko":"이거 뭐예요?","pron":"i-geo mwo-ye-yo?","en":"what is this?","group":10,"day":5}],"groups":["Greetings & Social Basics","Politeness & Conversation Survival","People & Pronouns","Essential Question Words","Core Everyday Verbs","Time & Frequency","Places & Directions","Food, Drink & Basic Needs","Useful Descriptions & Connectors","High-Value Everyday Expressions"],"patterns":[{"template":["…이/가 필요해요","i/ga pil-yo-hae-yo","I need…"],"example":["물이 필요해요.","mu-ri pil-yo-hae-yo.","I need water."]},{"template":["…을/를 원해요","eul/reul won-hae-yo","I want…"],"example":["커피를 원해요.","keo-pi-reul won-hae-yo.","I want coffee."]},{"template":["…어디예요?","…eo-di-ye-yo?","Where is…?"],"example":["화장실이 어디예요?","hwa-jang-si-ri eo-di-ye-yo?","Where is the restroom?"]},{"template":["이거 뭐예요?","i-geo mwo-ye-yo?","What is this?"]},{"template":["이해가 안 돼요.","i-hae-ga an dwae-yo.","I don't understand."]},{"template":["…할 수 있어요?","…hal su i-sseo-yo?","Can you…?"],"example":["영어 할 수 있어요?","yeong-eo hal su i-sseo-yo?","Can you speak English?"]},{"template":["저는 …에서 왔어요.","jeo-neun …-e-seo wa-sseo-yo.","I'm from…"],"example":["저는 한국에서 왔어요.","jeo-neun han-guk-e-seo wa-sseo-yo.","I'm from Korea."]},{"template":["제 이름은 …예요.","je i-reu-meun …-ye-yo.","My name is…"],"example":["제 이름은 민수예요.","je i-reu-meun min-su-ye-yo.","My name is Minsu."]},{"template":["…을/를 좋아해요.","eul/reul jo-a-hae-yo.","I like…"],"example":["음악을 좋아해요.","eu-ma-geul jo-a-hae-yo.","I like music."]},{"template":["…주세요.","…ju-se-yo.","Please give me…"],"example":["물 주세요.","mul ju-se-yo.","Water, please."]}],"conversations":[{"title":"Conversation 1 — Meeting someone","lines":[{"speaker":"A","ko":"제 이름은 알렉스예요.","pron":"je i-reu-meun al-lek-seu-ye-yo.","en":"My name is Alex."},{"speaker":"B","ko":"저는 민지예요.","pron":"jeo-neun min-ji-ye-yo.","en":"I'm Minji."},{"speaker":"A","ko":"어떻게 지내세요?","pron":"eo-tteo-ke ji-nae-se-yo?","en":"How are you?"},{"speaker":"B","ko":"잘 지내요, 감사합니다.","pron":"jal ji-nae-yo, gam-sa-ham-ni-da.","en":"I'm doing well, thank you."}]},{"title":"Conversation 2 — Asking for help","lines":[{"speaker":"A","ko":"실례합니다.","pron":"sil-lye-ham-ni-da.","en":"Excuse me."},{"speaker":"B","ko":"네?","pron":"ne?","en":"Yes?"},{"speaker":"A","ko":"화장실이 어디예요?","pron":"hwa-jang-si-ri eo-di-ye-yo?","en":"Where is the restroom?"},{"speaker":"B","ko":"저쪽, 오른쪽이에요.","pron":"jeo-jjok, o-reun-jjo-gi-e-yo.","en":"Over there, on the right."},{"speaker":"A","ko":"감사합니다!","pron":"gam-sa-ham-ni-da!","en":"Thank you!"}]},{"title":"Conversation 3 — When you don't understand","lines":[{"speaker":"A","ko":"영어 할 줄 아세요?","pron":"yeong-eo hal jul a-se-yo?","en":"Do you speak English?"},{"speaker":"B","ko":"조금요.","pron":"jo-geum-yo.","en":"A little."},{"speaker":"A","ko":"이해가 안 돼요. 다시 한 번 말해 주세요.","pron":"i-hae-ga an dwae-yo. da-si han beon mal-hae ju-se-yo.","en":"I don't understand. Please say it again."}]}],"checklist":["Recognize at least 80 of the 100 items from Korean → English.","Produce at least 70 of the 100 from English → Korean.","Say the 10 sentence patterns without looking.","Introduce yourself.","Ask where something is.","Ask someone to repeat themselves.","Say that you understand or do not understand.","Ask for something you want.","Ask for something you need.","Complete the three mini conversations with minimal help."],"pronKey":["Hyphens split syllables. Each Hangul block is one syllable, and Korean has no stress marks, so stay light and even.","ㅓ (eo) is an open uh, not o. ㅗ (o) is round. Keep them apart.","ㅡ (eu) has no English twin: lips spread, say uh.","ㄱ ㄷ ㅂ ㅈ sit between g/k, d/t, b/p, and j/ch. Their voice depends on position in the word.","Tense consonants ㄲ ㄸ ㅃ ㅆ ㅉ come with no puff of air. Aspirated ㅋ ㅌ ㅍ ㅊ come with one."],"pronNotes":[{"ko":"한국어","note":"hang-gu-geo. The ㄱ between two vowels softens toward g."},{"ko":"감사합니다","note":"gam-sa-ham-ni-da. ㅂ before ㄴ is said as m, so 합니다 sounds like ham-ni-da."},{"ko":"좋아요","note":"jo-a-yo. The ㅎ in 좋 goes silent before a vowel."},{"ko":"있어요","note":"i-sseo-yo. The final ㅆ carries into the next syllable."}],"threshold":"Once you can recall roughly 80% comfortably, begin Stage 2 while continuing to review weak Stage 1 words.","reading":[{"word":"아빠","tr":"appa","meaning":"dad","parts":["아 · ㅇ+ㅏ","빠 · ㅃ+ㅏ"]},{"word":"고양이","tr":"goyangi","meaning":"cat","parts":["고 · ㄱ+ㅗ","양 · ㅇ+ㅑ+ㅇ","이 · ㅇ+ㅣ"]},{"word":"도시","tr":"dosi","meaning":"city","parts":["도 · ㄷ+ㅗ","시 · ㅅ+ㅣ"]},{"word":"사과","tr":"sagwa","meaning":"apple","parts":["사 · ㅅ+ㅏ","과 · ㄱ+ㅘ"]},{"word":"나무","tr":"namu","meaning":"tree","parts":["나 · ㄴ+ㅏ","무 · ㅁ+ㅜ"]},{"word":"바다","tr":"bada","meaning":"sea","parts":["바 · ㅂ+ㅏ","다 · ㄷ+ㅏ"]},{"word":"우유","tr":"uyu","meaning":"milk","parts":["우 · ㅇ+ㅜ","유 · ㅇ+ㅠ"]},{"word":"커피","tr":"keopi","meaning":"coffee","parts":["커 · ㅋ+ㅓ","피 · ㅍ+ㅣ"]}],"contentNote":"Milestones 9–11 Korean content (the meeting conversation, the story, and grammar tips) was written without native-speaker review. Have a fluent speaker check it before relying on it.","contextTips":[{"id":"speech-levels","kind":"Grammar","topic":"Polite endings","title":"-요 is the safe ending","explanation":"Korean verb endings change with how formal the speech is. The -요 ending is polite and works with almost anyone you meet for the first time.","exampleKo":"저는 학생이에요.","exampleEn":"I am a student.","learn":"Casual speech (반말) is for close friends and people younger than you. Until someone invites it, stay with -요 endings.","related":[1,2,22,96,97]},{"id":"greeting-culture","kind":"Culture","topic":"Greetings","title":"안녕하세요 works almost anywhere","explanation":"안녕하세요 is a polite hello for most situations. 안녕 is casual, so save it for close friends.","exampleKo":"안녕! 잘 지내?","exampleEn":"Hi! How are you doing?","learn":"With elders or people in service jobs, a slight bow with a polite greeting is a good default. A smile helps too.","related":[1,2,6,7]},{"id":"syllable-blocks","kind":"Pronunciation","topic":"Syllables","title":"Each block is one syllable","explanation":"Hangul groups letters into square blocks, and each block is one syllable. Korean has no stress marks, so keep the rhythm even.","exampleKo":"한국어","exampleEn":"Korean (the language)","learn":"Count the blocks before you speak: 한-국-어 has three. The hyphens in the pronunciation guide mark them.","related":[3,11,60]}],"scenario":{"id":"meeting-someone","title":"Meeting someone","turns":[{"tutor":"안녕하세요! 저는 민지예요. 이름이 뭐예요?","english":"Hello! I'm Minji. What is your name?","prompt":"Say your name.","accept":["제 이름은","내 이름은","저는"],"hint":"Start with «제 이름은…예요» or «저는…예요»."},{"tutor":"만나서 반가워요! 어디에서 왔어요?","english":"Nice to meet you! Where are you from?","prompt":"Say where you are from.","accept":["에서 왔","에 살아요","에서 살아요"],"hint":"Try «저는 … 에서 왔어요» or «저는 … 에 살아요»."},{"tutor":"만나서 반가웠어요. 안녕히 가세요!","english":"It was nice to meet you. Goodbye!","prompt":"","accept":[],"hint":""}]},"story":{"id":"alex-morning","title":"알렉스의 아침","lines":[{"ko":"좋은 아침이에요! 알렉스는 집에 있어요.","en":"Good morning! Alex is at home."},{"ko":"그는 차를 마셔요.","en":"He drinks tea."},{"ko":"오늘은 집에서 일해요.","en":"Today he works at home."}],"vocab":[{"id":3,"word":"좋은 아침이에요","en":"good morning"},{"id":66,"word":"집","en":"home"},{"id":79,"word":"차","en":"tea"},{"id":44,"word":"마셔요","en":"drinks"},{"id":54,"word":"일해요","en":"works"},{"id":57,"word":"오늘","en":"today"}],"questions":[{"q":"알렉스는 어디에 있어요?","options":["집에","카페에","학교에"],"answer":"집에"},{"q":"알렉스는 무엇을 마셔요?","options":["차","커피","물"],"answer":"차"},{"q":"알렉스는 언제 일해요?","options":["오늘","내일","저녁"],"answer":"오늘"}],"cloze":{"before":"알렉스는 ","after":" 마셔요.","options":["차를","커피를","주스를"],"answer":"차를"}}};
 // 한글 — app logic. DATA is injected by scripts/build_standalone.py.
+
+// ---------- Constants ----------
 const STORAGE_KEY = 'hangeul-standalone';
 const LEGACY_KEY = 'hangeul-web-v1'; // first Korean prototype
 const MIN = 60 * 1000, DAY = 24 * 60 * MIN;
@@ -18,35 +153,72 @@ const DAYS = [
   ['Find your way', 'Items 61–80 · places, directions, food'],
   ['Ask for what you need', 'Items 81–100 · descriptions and survival'],
 ];
+const ITEM_BY_N = Object.fromEntries(DATA.items.map(i => [i.n, i]));
 const LETTER_BY_ID = Object.fromEntries(DATA.letters.map(l => [l.id, l]));
-const $ = id => document.getElementById(id);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LETTER_COUNT = DATA.letters.length;
+const BADGE_NAMES = { 'first-win': 'First small win', 'steady-learner': '50 XP learner', 'three-day-streak': '3-day streak' };
+const SCENARIO = DATA.scenario;
+const STORY = DATA.story;
 
-// ---------- State ----------
-// Local calendar date (not UTC), so the daily counter rolls over at local midnight.
+// ---------- DOM helpers ----------
+const $ = id => document.getElementById(id);
+const setText = (id, text) => { const el = $(id); if (el) el.textContent = text; };
+const setHidden = (id, hidden) => { const el = $(id); if (el) el.classList.toggle('hidden', hidden); };
+const setWidth = (id, pct) => { const el = $(id); if (el) el.style.width = Math.max(0, Math.min(100, pct)) + '%'; };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const escapeRegex = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// ---------- Dates (local calendar day, not UTC) ----------
 function todayKey() {
   const d = new Date(), p = n => String(n).padStart(2, '0');
   return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
 }
-function emptyState() {
-  return { version: 1, goal: 10, daily: { date: todayKey(), reviewed: [] }, stageItems: {}, letters: {}, events: [] };
+function shiftDay(key, n) {
+  const [y, m, d] = key.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + n)).toISOString().slice(0, 10);
 }
+
+// ---------- State ----------
+function emptyState() {
+  return {
+    version: 1, goal: 10, audio: { speed: 0.8, voiceName: '' },
+    daily: { date: todayKey(), reviewed: [] }, stageItems: {}, letters: {}, events: [],
+    scenario: { attempts: 0, completed: 0, lastCompletedAt: null },
+    story: { attempts: 0, correct: 0, clozeCorrect: 0 },
+    contextDismissed: {},
+    motivation: { xp: 0, rewards: {}, badges: [], activityDates: [], weeklyGoal: 5 },
+    account: { id: '', displayName: '', createdAt: null },
+    sync: { lastExportAt: null, lastImportAt: null },
+  };
+}
+const clampGoal = v => Math.max(5, Math.min(30, Number(v) || 10));
 function normalizeState(raw) {
   const n = emptyState();
-  if (!raw || typeof raw !== 'object') return n;
-  if (raw.version === 1 && raw.stageItems && raw.letters) {
-    n.goal = Math.max(5, Math.min(30, Number(raw.goal) || 10));
-    n.stageItems = raw.stageItems; n.letters = raw.letters;
-    n.events = Array.isArray(raw.events) ? raw.events.slice(-500) : [];
-    if (raw.daily && raw.daily.date === todayKey() && Array.isArray(raw.daily.reviewed)) n.daily = raw.daily;
-    return n;
-  }
+  if (!raw || typeof raw !== 'object' || raw.version !== 1 || !raw.stageItems || !raw.letters) return n;
+  const m = raw.motivation || {};
+  n.goal = clampGoal(raw.goal);
+  n.audio = { ...n.audio, ...(raw.audio || {}) };
+  n.stageItems = raw.stageItems; n.letters = raw.letters;
+  n.events = Array.isArray(raw.events) ? raw.events.slice(-500) : [];
+  n.scenario = { ...n.scenario, ...(raw.scenario || {}) };
+  n.story = { ...n.story, ...(raw.story || {}) };
+  n.contextDismissed = { ...(raw.contextDismissed || {}) };
+  n.motivation = {
+    xp: Number(m.xp) || 0,
+    rewards: { ...(m.rewards || {}) },
+    badges: Array.isArray(m.badges) ? m.badges : [],
+    activityDates: Array.isArray(m.activityDates) ? m.activityDates : [],
+    weeklyGoal: Math.max(1, Math.min(7, Number(m.weeklyGoal) || 5)),
+  };
+  n.account = { ...n.account, ...(raw.account || {}) };
+  n.sync = { ...n.sync, ...(raw.sync || {}) };
+  if (raw.daily && raw.daily.date === todayKey() && Array.isArray(raw.daily.reviewed)) n.daily = raw.daily;
   return n;
 }
 // Carry progress over from the first Korean prototype (hangeul-web-v1).
 function migrateLegacy(old) {
   const n = emptyState(), now = new Date().toISOString();
-  n.goal = Math.max(5, Math.min(30, Number(old.dailyGoal) || 10));
+  n.goal = clampGoal(old.dailyGoal);
   const rec = () => ({ attempts: 1, correct: 1, intervalDays: 0, lastReviewed: now, nextReview: null, lastRating: 'good', difficulty: 'good', streakContribution: 1 });
   Object.entries(old.cards || {}).forEach(([id, c]) => { if (c && c.mastery >= 3 && LETTER_BY_ID[id]) n.letters[id] = rec(); });
   Object.keys(old.reviewed || {}).forEach(k => { const m = /^stage-1-(\d+)$/.exec(k); if (m) n.stageItems[m[1]] = rec(); });
@@ -63,6 +235,9 @@ function loadState() {
 }
 let state = loadState();
 let day = 1, current = null, revealed = false;
+let quizStarted = false, quizAnswered = false, quizItemId = null, quizReason = '', quizSession = { seen: {}, asked: 0 };
+let scenarioState = { started: false, turn: 0, english: false, pending: false };
+let storyEnglish = false, storyAnswers = {};
 
 function rollDaily() { if (state.daily.date !== todayKey()) state.daily = { date: todayKey(), reviewed: [] }; }
 function save() {
@@ -70,6 +245,11 @@ function save() {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable */ }
   update();
 }
+function pushEvent(ev) {
+  state.events.push(ev);
+  if (state.events.length > 500) state.events = state.events.slice(-500);
+}
+function markDaily(key) { rollDaily(); if (!state.daily.reviewed.includes(key)) state.daily.reviewed.push(key); }
 
 // ---------- Scheduling (transparent, deterministic) ----------
 const isDue = r => !!r && !!r.nextReview && Date.parse(r.nextReview) <= Date.now();
@@ -114,92 +294,385 @@ function scheduleReason(r) {
   return 'Next review ' + new Date(r.nextReview).toLocaleDateString() + ' · ' + r.lastRating;
 }
 function logEvent(type, id, rating, rec) {
-  state.events.push({ type, id, rating, at: new Date().toISOString(), nextReview: rec.nextReview });
-  if (state.events.length > 500) state.events = state.events.slice(-500);
+  pushEvent({ type, id, rating, at: new Date().toISOString(), nextReview: rec.nextReview });
 }
-function markDaily(key) { rollDaily(); if (!state.daily.reviewed.includes(key)) state.daily.reviewed.push(key); }
 
-// ---------- Audio ----------
-function koreanVoice() {
-  if (!('speechSynthesis' in window)) return null;
-  const voices = speechSynthesis.getVoices().filter(v => v.lang.replace('_', '-').toLowerCase().startsWith('ko'));
-  return voices.find(v => /yuna|google|siri|premium|enhanced/i.test(v.name)) || voices[0] || null;
+// ---------- Motivation: XP, streak, badges (idempotent per reward key) ----------
+function recordMotivationActivity() {
+  const d = todayKey();
+  if (!state.motivation.activityDates.includes(d)) state.motivation.activityDates.push(d);
 }
-function speak(text) {
-  if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ko-KR'; u.rate = 0.8;
-  const v = koreanVoice(); if (v) u.voice = v;
-  speechSynthesis.speak(u);
+function streakCount() {
+  const days = new Set(state.motivation.activityDates || []);
+  let d = todayKey();
+  if (!days.has(d)) d = shiftDay(d, -1); // today may not be over yet
+  let n = 0;
+  while (days.has(d)) { n++; d = shiftDay(d, -1); }
+  return n;
 }
-document.addEventListener('click', e => { const b = e.target.closest('[data-say]'); if (b) speak(b.dataset.say); });
-function speakCurrent() { if (current) speak(current.ko); }
+function weeklyActivityCount() {
+  const today = todayKey(), cutoff = shiftDay(today, -6);
+  return (state.motivation.activityDates || []).filter(x => x >= cutoff && x <= today).length;
+}
+function updateBadges() {
+  const m = state.motivation, badges = [];
+  if (m.xp >= 10) badges.push('first-win');
+  if (m.xp >= 50) badges.push('steady-learner');
+  if (streakCount() >= 3) badges.push('three-day-streak');
+  m.badges = badges;
+}
+function awardXP(key, amount, label) {
+  if (state.motivation.rewards[key]) return false;
+  const at = new Date().toISOString();
+  state.motivation.rewards[key] = { amount, label, at };
+  state.motivation.xp += amount;
+  recordMotivationActivity();
+  updateBadges();
+  pushEvent({ type: 'xp-awarded', key, amount, label, at });
+  save();
+  return true;
+}
+function renderMotivation() {
+  if (!$('motivationXp')) return;
+  updateBadges();
+  const m = state.motivation, week = weeklyActivityCount(), streak = streakCount();
+  setText('motivationXp', m.xp + ' XP');
+  setText('motivationStreak', streak + ' ' + (streak === 1 ? 'day' : 'days'));
+  setText('motivationWeek', week + ' / ' + m.weeklyGoal);
+  setText('motivationBadges', m.badges.length);
+  setText('motivationHint', week >= m.weeklyGoal ? 'Weekly goal complete — keep the loop light.' : Math.max(0, m.weeklyGoal - week) + ' activity day' + (m.weeklyGoal - week === 1 ? '' : 's') + ' to reach this week’s goal.');
+  setText('motivationDailyGoal', state.goal);
+  setText('motivationWeeklyGoal', m.weeklyGoal);
+  const list = $('badgeList');
+  if (list) list.innerHTML = m.badges.map(x => '<span class="badge">' + BADGE_NAMES[x] + '</span>').join('') || '<span class="badge">No badges yet — keep one small loop going.</span>';
+}
+function changeWeeklyGoal(n) { state.motivation.weeklyGoal = Math.max(1, Math.min(7, state.motivation.weeklyGoal + n)); save(); }
 
-// ---------- Views ----------
-function update() {
-  rollDaily();
-  const stageDone = Object.keys(state.stageItems).length;
-  const mastered = DATA.letters.filter(l => isMastered(state.letters[l.id])).length;
-  const alphaPct = Math.round(mastered / DATA.letters.length * 100);
-  const daily = state.daily.reviewed.length;
-  $('todayDone').textContent = daily;
-  $('mastered').textContent = mastered;
-  $('overall').textContent = alphaPct + '%';
-  $('goalValue').textContent = state.goal;
-  $('remaining').textContent = Math.max(0, state.goal - daily);
-  $('goalBar').style.width = Math.min(100, daily / state.goal * 100) + '%';
-  $('stageProgress').textContent = stageDone;
-  $('progressStage').textContent = stageDone;
-  $('stageBar').style.width = stageDone + '%';
-  $('progressAlpha').textContent = alphaPct;
-  $('alphaBar').style.width = alphaPct + '%';
-  if ($('stateDetails')) $('stateDetails').textContent = 'Version ' + state.version + ' · ' + stageDone + ' Stage 1 items · ' + Object.keys(state.letters).length + ' letters reviewed · ' + state.events.length + ' review events · daily counter resets after ' + state.daily.date;
-  if ($('debugSchedule')) renderDebug();
+// ---------- Speech utilities ----------
+function normalizeSpeechWords(text) {
+  return String(text || '').toLocaleLowerCase('ko-KR').replace(/[^\p{L}\p{N}\s-]/gu, ' ').split(/\s+/).map(x => x.trim()).filter(Boolean);
 }
-function show(v) {
-  document.querySelectorAll('.view').forEach(x => x.classList.toggle('hidden', x.id !== v));
-  document.querySelectorAll('.nav button').forEach(x => x.classList.toggle('active', x.dataset.view === v));
-  if (v === 'stage') renderStage();
-  if (v === 'alphabet') renderAlphabet();
-  if (v === 'progress') renderProgress();
-  if (v === 'settings') update();
-  scrollTo(0, 0);
+function compareSpeech(targetText, answerText) {
+  const targetWords = normalizeSpeechWords(targetText), answerWords = normalizeSpeechWords(answerText), remaining = {};
+  targetWords.forEach(w => remaining[w] = (remaining[w] || 0) + 1);
+  let matched = 0; const extra = [];
+  answerWords.forEach(w => { if (remaining[w]) { remaining[w]--; matched++; } else extra.push(w); });
+  const missing = [];
+  Object.keys(remaining).forEach(w => { for (let i = 0; i < remaining[w]; i++) missing.push(w); });
+  const score = targetWords.length ? Math.round((2 * matched / (targetWords.length + answerWords.length)) * 100) : 0;
+  const feedback = score === 100 ? 'Exact word match — nice work.' : score >= 70 ? 'Good start. Practice the missing words once more.' : score > 0 ? 'You caught part of the phrase. Try the missing words slowly.' : 'No target words matched yet. Listen again, then retry.';
+  return { score, matched, targetCount: targetWords.length, missing, extra, feedback };
 }
-document.querySelectorAll('.nav button').forEach(b => b.onclick = () => show(b.dataset.view));
-function changeGoal(n) { state.goal = Math.max(5, Math.min(30, state.goal + n)); save(); }
 
+// ---------- Audio: browser speech synthesis (M3) ----------
+const audioController = (() => {
+  let currentText = '', currentGuide = '', currentUtterance = null, voices = [];
+  let speed = Number(state.audio.speed) || 0.8;
+  const supported = () => 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+  const setStatus = t => setText('audioStatus', t);
+  const findVoice = name => voices.find(v => v.name === name) || voices.find(v => /^ko(-|_)/i.test(v.lang)) || voices.find(v => /korean|한국/i.test(v.name)) || null;
+  function refreshVoices() {
+    if (!supported()) { setStatus('Speech playback is unavailable here; the lesson still works without audio.'); return; }
+    voices = speechSynthesis.getVoices();
+    const select = $('voiceSelect');
+    if (!select) return;
+    select.innerHTML = '';
+    if (!voices.length) {
+      const o = document.createElement('option'); o.value = ''; o.textContent = 'No browser voices available';
+      select.appendChild(o); select.disabled = true;
+      setStatus('No browser voices available; use the pronunciation guide or enable a Korean voice in your browser.');
+      return;
+    }
+    select.disabled = false;
+    voices.forEach(v => { const o = document.createElement('option'); o.value = v.name; o.textContent = v.name + ' · ' + v.lang; select.appendChild(o); });
+    const chosen = findVoice(state.audio.voiceName || '');
+    if (chosen) select.value = chosen.name;
+    setStatus(chosen ? 'Korean voice ready · ' + chosen.name : 'No Korean voice found; using browser fallback.');
+  }
+  function playText(text, guide = '') {
+    if (!supported()) { setStatus('Speech playback is unavailable here; use the pronunciation guide.'); return; }
+    currentText = String(text || '').trim(); currentGuide = guide;
+    if (!currentText) return;
+    speechSynthesis.cancel(); // never stack utterances
+    const u = new SpeechSynthesisUtterance(currentText);
+    currentUtterance = u;
+    const voice = findVoice(state.audio.voiceName || '');
+    if (voice) { u.voice = voice; u.lang = voice.lang || 'ko-KR'; } else { u.lang = 'ko-KR'; }
+    u.rate = speed;
+    const pron = () => $('pron');
+    u.onstart = () => { if (u !== currentUtterance) return; setStatus('Playing · ' + currentText); if (pron()) pron().classList.add('speaking'); };
+    u.onend = () => { if (u !== currentUtterance) return; setStatus('Ready · ' + (voice ? voice.lang : 'ko-KR')); if (pron()) pron().classList.remove('speaking'); };
+    u.onerror = e => {
+      if (u !== currentUtterance || (e && (e.error === 'canceled' || e.error === 'interrupted'))) return;
+      setStatus('Audio could not play; the lesson is still available.');
+      if (pron()) pron().classList.remove('speaking');
+    };
+    speechSynthesis.speak(u);
+  }
+  function playCurrent() { if (current) playText(current.ko, current.pron); }
+  function pause() {
+    if (!supported()) return;
+    if (speechSynthesis.speaking && !speechSynthesis.paused) { speechSynthesis.pause(); setStatus('Paused'); }
+    else if (speechSynthesis.paused) { speechSynthesis.resume(); setStatus('Playing · ' + currentText); }
+  }
+  function replay() { if (currentText) playText(currentText, currentGuide); else playCurrent(); }
+  function setSpeed(value) { speed = Number(value) || 0.8; state.audio.speed = speed; save(); setStatus('Speed set to ' + speed + '×'); }
+  function setVoice(name) {
+    state.audio.voiceName = name; save();
+    const v = findVoice(name);
+    setStatus(v ? 'Voice selected · ' + v.name : 'Using browser fallback voice');
+  }
+  return { playText, playCurrent, pause, replay, setSpeed, setVoice, refreshVoices };
+})();
+
+// ---------- Microphone capture, in memory only (M4) ----------
+const recordingController = (() => {
+  let recorder = null, stream = null, chunks = [], objectUrl = '', player = null, timer = null, startedAt = 0, discarding = false;
+  const supported = () => !!(window.MediaRecorder && navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+  const secure = () => window.isSecureContext || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+  const status = t => setText('recordStatus', t);
+  const setDisabled = (id, v) => { const el = $(id); if (el) el.disabled = v; };
+  function duration() {
+    const s = Math.floor((Date.now() - startedAt) / 1000);
+    setText('recordDuration', String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'));
+  }
+  function clearUrl() {
+    if (player) { player.pause(); player.removeAttribute('src'); player.load(); player = null; }
+    if (objectUrl) { URL.revokeObjectURL(objectUrl); objectUrl = ''; }
+  }
+  function refresh() {
+    const ok = supported() && secure();
+    setDisabled('recordStart', !ok || !!recorder);
+    setDisabled('recordStop', !recorder);
+    setDisabled('recordReplay', !objectUrl);
+    setDisabled('recordDiscard', !objectUrl);
+    setText('secureNote', secure() ? 'Recording is local-only; nothing is uploaded.' : 'Microphone recording requires a secure HTTPS context.');
+    if (!supported()) status('Microphone recording is not supported in this browser.');
+    else if (!secure()) status('Microphone needs HTTPS or localhost; the rest of the lesson remains available.');
+    else if (!recorder && !objectUrl) status('Ready when you are — recording starts only after you tap Record.');
+  }
+  async function start() {
+    if (!supported() || !secure()) { refresh(); return; }
+    clearUrl(); chunks = [];
+    try {
+      status('Requesting microphone permission…');
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      recorder = new MediaRecorder(stream);
+      startedAt = Date.now(); duration(); timer = setInterval(duration, 250);
+      recorder.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+      recorder.onstop = () => {
+        if (timer) { clearInterval(timer); timer = null; }
+        if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
+        const mime = recorder && recorder.mimeType;
+        const wasDiscarding = discarding; discarding = false;
+        recorder = null;
+        if (wasDiscarding) { chunks = []; status('Recording discarded. Nothing was uploaded.'); refresh(); return; }
+        objectUrl = URL.createObjectURL(new Blob(chunks, { type: mime || 'audio/webm' }));
+        player = new Audio(objectUrl);
+        status('Recording saved in memory — replay or discard it.');
+        refresh();
+      };
+      recorder.onerror = () => { status('Recording failed; you can continue the lesson.'); stop(); };
+      recorder.start();
+      refresh();
+      status('Recording… tap Stop when you finish.');
+    } catch (error) {
+      if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
+      recorder = null;
+      const message = error && error.name === 'NotAllowedError' ? 'Microphone permission was denied. You can continue without recording.'
+        : error && error.name === 'NotFoundError' ? 'No microphone was found. You can continue without recording.'
+        : 'Microphone could not start. You can continue without recording.';
+      refresh(); status(message);
+    }
+  }
+  function stop() {
+    if (recorder && recorder.state !== 'inactive') { status('Finishing recording…'); recorder.stop(); }
+    else refresh();
+  }
+  function replay() {
+    if (!player) { status('Record something first.'); return; }
+    player.currentTime = 0;
+    player.onended = () => status('Recording finished — replay or discard it.');
+    player.play().then(() => status('Playing your recording…')).catch(() => status('The recording could not be replayed.'));
+  }
+  function discard() {
+    if (recorder && recorder.state !== 'inactive') { discarding = true; recorder.stop(); }
+    clearUrl(); chunks = [];
+    setText('recordDuration', '00:00');
+    refresh();
+    if (!recorder) status('Recording discarded. Nothing was uploaded.');
+  }
+  return { start, stop, replay, discard, refresh };
+})();
+
+// ---------- Browser-native transcription with consent (M5) and word feedback (M6) ----------
+const transcriptionController = (() => {
+  let recognition = null, phase = 'idle', consent = false, finalText = '', target = '';
+  const Engine = () => window.SpeechRecognition || window.webkitSpeechRecognition || null;
+  const supported = () => !!Engine();
+  const status = t => setText('transcribeStatus', t);
+  const setDisabled = (id, v) => { const el = $(id); if (el) el.disabled = v; };
+  function setPhase(next) {
+    phase = next;
+    setText('transcribeState', next);
+    const tools = $('transcribeTools'); if (tools) tools.dataset.state = next;
+    setDisabled('transcribeStart', !consent || !supported() || next === 'recording' || next === 'processing');
+    setDisabled('transcribeStop', next !== 'recording');
+    setDisabled('transcribeRetry', next !== 'result' && next !== 'error');
+    setDisabled('scoreButton', next !== 'result');
+  }
+  function clearScore() {
+    setHidden('scoreBox', true);
+    setText('scoreValue', '—%'); setText('scoreLabel', '');
+    setText('missingWords', 'none'); setText('extraWords', 'none'); setText('troubleWords', 'none');
+  }
+  function refresh() {
+    if (!supported()) { setPhase('error'); status('Browser speech recognition is unavailable here. You can still use local recording and typed responses.'); return; }
+    if (phase === 'idle') status('Ready — check consent, then start Korean transcription.');
+    setPhase(phase);
+  }
+  function setConsent(value) {
+    consent = !!value; setPhase(phase);
+    if (consent && supported()) status('Consent recorded for browser-native recognition.');
+  }
+  function syncTarget(text) {
+    if (text === target) return;
+    target = text || '';
+    if (phase === 'result' || phase === 'error') { reset(); return; }
+    clearScore();
+  }
+  function start() {
+    const Ctor = Engine();
+    if (!Ctor) { refresh(); return; }
+    if (!consent) { status('Please confirm the browser speech-recognition privacy note first.'); return; }
+    if (phase === 'recording' || phase === 'processing') return;
+    clearScore(); finalText = '';
+    setText('transcriptText', 'Listening…'); setText('transcriptInterim', '');
+    recognition = new Ctor();
+    recognition.lang = 'ko-KR'; recognition.interimResults = true; recognition.continuous = false; recognition.maxAlternatives = 1;
+    recognition.onstart = () => { setPhase('recording'); status('Listening in Korean… speak clearly, then tap Stop.'); };
+    recognition.onresult = e => {
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const text = e.results[i][0].transcript;
+        if (e.results[i].isFinal) finalText += (finalText ? ' ' : '') + text; else interim += text;
+      }
+      setText('transcriptText', finalText || 'Listening…');
+      setText('transcriptInterim', interim ? 'Live: ' + interim : '');
+    };
+    recognition.onerror = e => {
+      const message = e.error === 'not-allowed' ? 'Speech-recognition permission was denied.'
+        : e.error === 'no-speech' ? 'No speech was detected. Try again in a quieter place.'
+        : e.error === 'network' ? 'The browser recognition service reported a network problem.'
+        : 'Transcription failed: ' + e.error + '.';
+      setPhase('error');
+      status(message + ' This is a transcription error, not an incorrect answer.');
+      setText('transcriptText', 'No transcript yet.');
+    };
+    recognition.onend = () => {
+      if (phase === 'recording' || phase === 'processing') {
+        if (finalText) { setPhase('result'); status('Transcript ready. Check it for word-level feedback.'); setText('transcriptText', finalText); }
+        else { setPhase('error'); status('No transcript was produced. Try again; this is not an incorrect answer.'); }
+      }
+      recognition = null;
+    };
+    setPhase('processing');
+    try { recognition.start(); }
+    catch (error) { recognition = null; setPhase('error'); status('Transcription could not start. You can retry without losing the target phrase.'); }
+  }
+  function stop() {
+    if (recognition && phase === 'recording') { setPhase('processing'); status('Finishing transcription…'); recognition.stop(); }
+  }
+  function renderScore(result) {
+    setHidden('scoreBox', false);
+    setText('scoreValue', result.score + '%');
+    setText('scoreLabel', result.matched + ' of ' + result.targetCount + ' target words');
+    setText('scoreFeedback', result.feedback);
+    setText('missingWords', result.missing.length ? result.missing.join(', ') : 'none');
+    setText('extraWords', result.extra.length ? result.extra.join(', ') : 'none');
+    setText('troubleWords', result.missing.length ? result.missing.join(', ') : 'none');
+  }
+  function score() {
+    if (phase !== 'result' || !finalText || !current) return;
+    const result = compareSpeech(target, finalText), item = current, now = new Date().toISOString();
+    // Only attach feedback to an item the learner has already rated, so scoring never changes the queue.
+    const record = state.stageItems[item.n];
+    if (record) {
+      record.scoreAttempts = (record.scoreAttempts || 0) + 1;
+      record.lastScore = result.score; record.lastTranscript = finalText; record.lastScoreAt = now;
+      record.transcriptAttempts = [...(record.transcriptAttempts || []), { text: finalText, score: result.score, at: now }].slice(-5);
+    }
+    pushEvent({ type: 'transcript-score', id: item.n, score: result.score, at: now });
+    save();
+    renderScore(result);
+    status(record ? 'Feedback saved locally. This is word matching, not phoneme scoring.'
+      : 'Feedback shown. Rate this card once to start saving scores. This is word matching, not phoneme scoring.');
+  }
+  function reset() {
+    if (recognition) { try { recognition.abort(); } catch (_) { /* already stopped */ } recognition = null; }
+    finalText = '';
+    setPhase('idle');
+    setText('transcriptText', 'No transcript yet.'); setText('transcriptInterim', '');
+    clearScore(); refresh();
+  }
+  function retry() { reset(); start(); }
+  return { start, stop, retry, reset, setConsent, syncTarget, refresh, score };
+})();
+
+// ---------- Stage 1 lesson views ----------
+function resetQuizState() {
+  quizStarted = false; quizAnswered = false; quizItemId = null; quizReason = ''; quizSession = { seen: {}, asked: 0 };
+}
 function renderDays() {
-  const d = $('days'); d.innerHTML = '';
+  const d = $('days'); if (!d) return;
+  d.innerHTML = '';
   DAYS.forEach((x, i) => {
     const b = document.createElement('button');
     b.className = 'day ' + (day === i + 1 ? 'active' : '');
     b.innerHTML = '<b>DAY ' + (i + 1) + '</b><strong>' + x[0] + '</strong><small>' + x[1] + '</small>';
-    b.onclick = () => { day = i + 1; current = null; revealed = false; renderStage(); };
+    b.onclick = () => {
+      recordingController.discard(); transcriptionController.reset();
+      day = i + 1; current = null; revealed = false; resetQuizState(); renderStage();
+    };
     d.appendChild(b);
   });
+}
+function renderContextTip(x) {
+  const panel = $('contextPanel'); if (!panel) return;
+  const tips = (DATA.contextTips || []).filter(t => t.related.includes(x.n) && !state.contextDismissed[t.id]);
+  if (!tips.length) { panel.classList.add('hidden'); return; }
+  const t = tips[0];
+  panel.classList.remove('hidden');
+  setText('contextKind', t.kind + ' · ' + t.topic);
+  $('contextBody').innerHTML = '<div class="contextTip"><h3>' + esc(t.title) + '</h3><p>' + esc(t.explanation) + '</p>' +
+    '<div class="contextExample">' + esc(t.exampleKo) + '<br><small>' + esc(t.exampleEn) + '</small></div>' +
+    '<div class="contextActions"><button class="ghost" data-context-more="' + esc(t.id) + '">Learn more</button>' +
+    '<button class="ghost" data-context-dismiss="' + esc(t.id) + '">Dismiss</button></div>' +
+    '<div id="context-more-' + esc(t.id) + '" class="contextMore hidden">' + esc(t.learn) + '</div></div>';
 }
 function renderStage() {
   renderDays();
   if (!current || current.day !== day) current = pickNext(null);
   const x = current, meta = DAYS[day - 1];
   const done = dayItems().filter(i => state.stageItems[i.n]).length;
-  $('dayEyebrow').textContent = 'DAY ' + day + ' / ' + meta[0].toUpperCase();
-  $('daySummary').textContent = meta[1];
-  $('itemCounter').textContent = done + '/20';
-  $('sectionLabel').textContent = 'STAGE 1 · ITEM ' + x.n;
-  $('itemIndex').textContent = x.n;
-  $('meaning').textContent = x.en;
-  $('russian').textContent = x.ko;
-  $('pron').textContent = x.pron;
-  $('englishBack').textContent = x.en;
-  $('front').classList.toggle('hidden', revealed);
-  $('back').classList.toggle('hidden', !revealed);
-  $('reveal').classList.toggle('hidden', revealed);
-  $('audio').classList.toggle('hidden', !revealed);
-  $('ratings').classList.toggle('hidden', !revealed);
-  $('whyThis').textContent = scheduleReason(state.stageItems[x.n]);
-  // Optional 4th argument adds a speaker button on the right that plays that Korean text.
+  setText('dayEyebrow', 'DAY ' + day + ' / ' + meta[0].toUpperCase());
+  setText('daySummary', meta[1]);
+  setText('itemCounter', done + '/20');
+  setText('sectionLabel', 'STAGE 1 · ITEM ' + x.n);
+  setText('itemIndex', x.n);
+  setText('meaning', x.en);
+  setText('korean', x.ko);
+  setText('pron', x.pron);
+  setText('englishBack', x.en);
+  setText('whyThis', scheduleReason(state.stageItems[x.n]));
+  setHidden('front', revealed); setHidden('back', !revealed); setHidden('reveal', revealed);
+  setHidden('audioTools', !revealed); setHidden('recordTools', !revealed); setHidden('transcribeTools', !revealed);
+  setHidden('ratings', !revealed);
+  const speed = $('audioSpeed'); if (speed) speed.value = String(state.audio.speed);
+  recordingController.refresh();
+  transcriptionController.syncTarget(x.ko);
+  renderContextTip(x);
+  // Optional 4th argument adds a speaker button that plays that Korean text.
   const line = (a, b, c, say) => say
     ? '<div class="line lineRow"><div class="lineText"><b>' + esc(a) + '</b><span>' + esc(b) + '</span><small>' + esc(c) + '</small></div>' +
       '<button class="lineAudio" data-say="' + esc(say) + '" aria-label="Hear ' + esc(say) + '" title="Hear it">🔊</button></div>'
@@ -219,35 +692,294 @@ function renderStage() {
     '<div class="eyebrow" style="margin-top:10px">PRONUNCIATION KEY</div>' +
     DATA.pronKey.map(k => '<div class="line"><span style="margin:0">' + esc(k) + '</span></div>').join('') +
     DATA.pronNotes.map(n => line(n.ko, n.note, '')).join('');
+  setText('contentNote', DATA.contentNote || '');
+  renderQuiz(); renderScenario(); renderStory();
 }
 function reveal() { revealed = true; renderStage(); }
 function rateCurrent(rating) {
   const x = current;
+  recordingController.discard(); transcriptionController.reset(); resetQuizState();
   const rec = scheduleRecord(state.stageItems, x.n, rating);
   markDaily('s:' + x.n);
   logEvent('stage-review', x.n, rating, rec);
+  awardXP('review:' + new Date().toISOString(), 5, 'completed review');
   current = pickNext(x.n); revealed = false;
   save(); renderStage();
 }
 
+// ---------- Adaptive multiple-choice quiz, Korean → English (M7, M8) ----------
+function quizChoicesFor(item) {
+  const pool = DATA.items.map(x => x.en).filter(en => en !== item.en).filter((en, i, a) => a.indexOf(en) === i);
+  const picks = [item.en];
+  for (let i = 0; picks.length < 4 && i < pool.length * 2; i++) {
+    const candidate = pool[(item.n * 7 + i * 11) % pool.length];
+    if (!picks.includes(candidate)) picks.push(candidate);
+  }
+  // Rotate so the correct answer does not always sit in the first slot.
+  const shift = item.n % picks.length;
+  return picks.slice(shift).concat(picks.slice(0, shift));
+}
+function adaptiveProfile(item) {
+  const r = state.stageItems[item.n];
+  const seen = quizSession.seen[item.n] || 0;
+  const isNew = !r || !r.lastReviewed;
+  const due = isDue(r);
+  const weak = !!r && (r.lastQuizCorrect === false || r.lastRating === 'again' || r.lastRating === 'hard' || (r.attempts > 1 && r.correct / r.attempts < 0.6));
+  const strong = !!r && (r.lastQuizCorrect === true || r.lastRating === 'good' || r.lastRating === 'easy');
+  let score = due ? 1000 : weak ? 820 : isNew ? 620 : strong ? 360 : 500;
+  if (r && r.lastQuizCorrect === false) score += 180;
+  if (seen >= 1) score -= 650 * seen;
+  return { r, seen, isNew, due, weak, strong, score };
+}
+function chooseAdaptiveQuizItem() {
+  const ranked = dayItems().map(item => ({ item, profile: adaptiveProfile(item) }))
+    .sort((a, b) => b.profile.score - a.profile.score || a.item.n - b.item.n);
+  const eligible = ranked.filter(x => x.profile.seen < 2);
+  const pick = (eligible[0] || ranked[0]).item;
+  const profile = adaptiveProfile(pick);
+  quizSession.seen[pick.n] = (quizSession.seen[pick.n] || 0) + 1;
+  quizSession.asked++;
+  const reason = profile.due ? 'Back because this item is due for review.'
+    : profile.weak ? 'Back because it was tricky last time.'
+    : profile.isNew ? 'New material — a gentle first check.'
+    : profile.strong ? 'Maintenance review — keeping a strong item active.'
+    : 'Balanced review — mixing recall and maintenance.';
+  return { item: pick, reason };
+}
+function startQuiz() {
+  const picked = chooseAdaptiveQuizItem();
+  quizStarted = true; quizAnswered = false; quizItemId = picked.item.n; quizReason = picked.reason;
+  current = picked.item;
+  renderStage();
+}
+function renderQuiz() {
+  const panel = $('quizPanel'); if (!panel) return;
+  panel.classList.toggle('hidden', !revealed);
+  setHidden('quizStart', quizStarted);
+  setHidden('quizBody', !quizStarted);
+  setText('quizState', quizStarted ? (quizAnswered ? 'answered' : 'ready') : 'not started');
+  if (!quizStarted) return;
+  const item = ITEM_BY_N[quizItemId] || current;
+  quizItemId = item.n;
+  const choices = quizChoicesFor(item);
+  setText('quizReason', quizReason || 'Adaptive review selected from this day’s Stage 1 queue.');
+  setText('quizTarget', item.ko);
+  $('quizChoices').innerHTML = choices.map((c, i) => '<button class="quizChoice" data-quiz-choice="' + i + '">' + esc(c) + '</button>').join('');
+  const feedback = $('quizFeedback');
+  if (quizAnswered) {
+    const record = state.stageItems[item.n] || {};
+    const correct = record.lastQuizCorrect === true;
+    feedback.textContent = correct ? 'Correct — nice recognition. This review is scheduled for later.'
+      : 'Not quite. The right meaning is “' + item.en + '”. Try it once more, then rate the card when ready.';
+    feedback.className = 'quizFeedback ' + (correct ? 'good' : 'bad');
+    document.querySelectorAll('.quizChoice').forEach((b, i) => {
+      b.disabled = true;
+      b.classList.toggle('correct', choices[i] === item.en);
+      b.classList.toggle('wrong', choices[i] !== item.en && i === record.lastQuizChoice);
+    });
+    setHidden('quizRetry', false); setHidden('quizNext', false);
+  } else {
+    feedback.textContent = ''; feedback.className = 'quizFeedback';
+    setHidden('quizRetry', true); setHidden('quizNext', true);
+  }
+}
+function answerQuiz(choiceIndex) {
+  if (!quizStarted || quizAnswered) return;
+  const item = ITEM_BY_N[quizItemId] || current;
+  const choices = quizChoicesFor(item);
+  const correct = choices[choiceIndex] === item.en;
+  const rec = scheduleRecord(state.stageItems, item.n, correct ? 'good' : 'again');
+  rec.quizAttempts = (rec.quizAttempts || 0) + 1;
+  rec.lastQuizCorrect = correct; rec.lastQuizChoice = choiceIndex; rec.lastQuizMode = 'ko-en';
+  rec.lastAdaptiveReason = quizReason; rec.lastAdaptiveSeen = quizSession.seen[item.n] || 1;
+  rec.lastQuizAt = new Date().toISOString();
+  pushEvent({ type: 'quiz-review', mode: 'ko-en', id: item.n, correct, choice: choices[choiceIndex], at: rec.lastQuizAt, nextReview: rec.nextReview });
+  awardXP('quiz:' + rec.lastQuizAt, correct ? 5 : 2, 'quiz result');
+  markDaily('s:' + item.n);
+  quizAnswered = true;
+  save(); renderQuiz();
+}
+function retryQuiz() { quizAnswered = false; renderQuiz(); }
+
+// ---------- Conversation scenario: Meeting someone (M9) ----------
+function scenarioMatches(answer, turn) {
+  const text = normalizeSpeechWords(answer).join(' ');
+  return !!text && (turn.accept || []).some(token => text.includes(token));
+}
+function setScenarioStatus(text, tone) {
+  setText('scenarioStatus', text);
+  const el = $('scenarioStatus'); if (el) el.className = 'scenarioStatus' + (tone ? ' ' + tone : '');
+}
+function scenarioLog(input, correct, method) {
+  const now = new Date().toISOString();
+  state.scenario.attempts = (state.scenario.attempts || 0) + 1;
+  pushEvent({ type: 'scenario-attempt', scenario: SCENARIO.id, turn: scenarioState.turn, input, correct, method, at: now });
+  if (method === 'speech') awardXP('speech:' + now, 4, 'speaking attempt');
+  if (correct && scenarioState.turn === SCENARIO.turns.length - 2) {
+    state.scenario.completed = (state.scenario.completed || 0) + 1;
+    state.scenario.lastCompletedAt = now;
+    awardXP('scenario-complete:' + state.scenario.completed, 15, 'scenario completion');
+  }
+  save();
+}
+function renderScenario() {
+  if (!$('scenarioPanel')) return;
+  const started = scenarioState.started;
+  const turns = SCENARIO.turns.slice(0, started ? scenarioState.turn + 1 : 1);
+  $('scenarioDialogue').innerHTML = turns.map((turn, i) =>
+    '<div class="scenarioTurn ' + (started && i === scenarioState.turn ? 'current' : '') + '"><b>TUTOR</b><span>' + esc(turn.tutor) + '</span>' +
+    (scenarioState.english && i === scenarioState.turn ? '<small class="scenarioEnglish">' + esc(turn.english) + '</small>' : '') + '</div>').join('');
+  const finishedAll = started && scenarioState.turn >= SCENARIO.turns.length - 1;
+  setHidden('scenarioStart', started);
+  setHidden('scenarioBody', !started);
+  setText('scenarioState', !started ? 'not started' : finishedAll ? 'completed' : 'turn ' + (scenarioState.turn + 1) + ' of ' + (SCENARIO.turns.length - 1));
+  setText('scenarioMeta', 'Local attempts: ' + (state.scenario.attempts || 0) + ' · completed: ' + (state.scenario.completed || 0));
+  if (!started) return;
+  const turn = SCENARIO.turns[scenarioState.turn];
+  const finalTurn = !turn.accept || !turn.accept.length;
+  setText('scenarioEnglish', scenarioState.english ? 'Hide English' : 'Show English');
+  setHidden('scenarioInputRow', finalTurn);
+  setHidden('scenarioRecovery', true);
+  setHidden('scenarioRetry', true);
+  $('scenarioPrompt').innerHTML = finalTurn
+    ? '<div class="scenarioHint">Conversation complete — nice work.</div>'
+    : '<div class="scenarioHint">' + esc(turn.prompt) + '<br><small>' + esc(turn.hint) + '</small></div>';
+  if (finalTurn) { setScenarioStatus('Conversation complete — nice work.', 'good'); return; }
+  if (!$('scenarioInput').value) setScenarioStatus('', '');
+}
+function startScenario() {
+  scenarioState = { started: true, turn: 0, english: false, pending: false };
+  renderScenario();
+  playScenarioTutor();
+}
+function toggleScenarioEnglish() { scenarioState.english = !scenarioState.english; renderScenario(); }
+function playScenarioTutor() {
+  const turn = SCENARIO.turns[scenarioState.turn];
+  if (turn) audioController.playText(turn.tutor);
+}
+function retryScenario() { setHidden('scenarioRecovery', true); setHidden('scenarioRetry', true); setScenarioStatus('', ''); }
+function checkScenario(method, spoken) {
+  if (!scenarioState.started || scenarioState.pending || scenarioState.turn >= SCENARIO.turns.length - 1) return;
+  const turn = SCENARIO.turns[scenarioState.turn];
+  const answer = method === 'typed' ? $('scenarioInput').value.trim() : String(spoken || '').trim();
+  if (!answer) { setScenarioStatus('Add a short Korean response first, or use Speak response.', 'bad'); return; }
+  const correct = scenarioMatches(answer, turn);
+  scenarioLog(answer, correct, method);
+  if (correct) {
+    scenarioState.pending = true;
+    setScenarioStatus('Accepted — that is a natural response. The conversation continues.', 'good');
+    setHidden('scenarioRecovery', true); setHidden('scenarioRetry', true);
+    setTimeout(() => {
+      scenarioState.pending = false;
+      scenarioState.turn++;
+      scenarioState.english = false;
+      renderScenario();
+      playScenarioTutor();
+    }, 250);
+  } else {
+    setScenarioStatus('That response was not recognized yet, but you can recover safely.', 'bad');
+    setText('scenarioRecovery', 'Try the pattern: ' + turn.hint + ' You can reveal English, listen again, or retry this same turn.');
+    setHidden('scenarioRecovery', false); setHidden('scenarioRetry', false);
+  }
+}
+function speakScenario() {
+  const Ctor = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Ctor) { setScenarioStatus('Speech recognition is unavailable here. Type your response instead.', 'bad'); return; }
+  const recognition = new Ctor();
+  recognition.lang = 'ko-KR'; recognition.interimResults = false; recognition.continuous = false;
+  setScenarioStatus('Listening in Korean…', '');
+  recognition.onresult = e => {
+    const text = e.results[0][0].transcript;
+    $('scenarioInput').value = text;
+    checkScenario('speech', text);
+  };
+  recognition.onerror = e => setScenarioStatus('Speech transcription failed (' + e.error + '). Type your response or try again.', 'bad');
+  try { recognition.start(); }
+  catch (_) { setScenarioStatus('Speech recognition could not start. Type your response instead.', 'bad'); }
+}
+
+// ---------- Short story and comprehension (M10) ----------
+function storyLog(type, value, correct) {
+  const now = new Date().toISOString();
+  state.story.attempts = (state.story.attempts || 0) + 1;
+  if (correct) state.story.correct = (state.story.correct || 0) + 1;
+  if (type === 'cloze' && correct) state.story.clozeCorrect = (state.story.clozeCorrect || 0) + 1;
+  pushEvent({ type: 'story-review', story: STORY.id, activity: type, value, correct, at: now });
+  save();
+}
+function storyLineHtml(ko) {
+  // One pass over the line, longest words first, so a short word never splits a longer one.
+  const vocab = STORY.vocab.slice().sort((a, b) => b.word.length - a.word.length);
+  const re = new RegExp(vocab.map(v => escapeRegex(v.word)).join('|'), 'g');
+  return esc(ko).replace(re, w => {
+    const v = vocab.find(x => x.word === w);
+    const known = !!state.stageItems[v.id];
+    return '<button class="storyWord ' + (known ? 'known' : 'new') + '" onclick="reviewStoryWord(' + v.id + ')" title="' + esc(v.en) + '">' + esc(w) + '</button>';
+  });
+}
+function renderStory() {
+  if (!$('storyPanel')) return;
+  setText('storyEnglish', storyEnglish ? 'Hide English' : 'Show English');
+  $('storyText').innerHTML = STORY.lines.map(line =>
+    '<div class="storyLine">' + storyLineHtml(line.ko) + (storyEnglish ? '<small>' + esc(line.en) + '</small>' : '') + '</div>').join('');
+  $('storyQuestions').innerHTML = STORY.questions.map((item, i) => {
+    const picked = storyAnswers[i];
+    const result = picked === undefined ? '' : picked === item.answer ? 'Correct — the story says it.' : 'Try again — find that detail in the story.';
+    const resultTone = picked === undefined ? '' : picked === item.answer ? 'good' : 'bad';
+    return '<div class="storyQuestion"><strong>' + (i + 1) + '. ' + esc(item.q) + '</strong><div class="storyChoices">' +
+      item.options.map(option => '<button class="storyChoice ' + (picked === option ? (option === item.answer ? 'correct' : 'wrong') : '') +
+        '" data-story-i="' + i + '" data-story-option="' + esc(option) + '">' + esc(option) + '</button>').join('') +
+      '</div><div class="storyResult ' + resultTone + '">' + result + '</div></div>';
+  }).join('');
+  setText('storyState', Object.keys(storyAnswers).length + ' / ' + (STORY.questions.length + 1));
+  setText('storyMeta', 'Answers save locally · attempts: ' + (state.story.attempts || 0) + ' · correct: ' + (state.story.correct || 0));
+  const cloze = STORY.cloze;
+  setText('storyClozeBefore', cloze.before);
+  setText('storyClozeAfter', cloze.after);
+  const select = $('storyClozeSelect');
+  if (select && !select.options.length) {
+    select.innerHTML = '<option value="">choose a word</option>' + cloze.options.map(o => '<option>' + esc(o) + '</option>').join('');
+  }
+  if (select && !storyAnswers.cloze) select.value = '';
+}
+function toggleStoryEnglish() { storyEnglish = !storyEnglish; renderStory(); }
+function playStory() { audioController.playText(STORY.lines.map(l => l.ko).join(' ')); }
+function answerStory(i, option) {
+  const correct = option === STORY.questions[i].answer;
+  storyAnswers[i] = option;
+  storyLog('question-' + (i + 1), option, correct);
+  renderStory();
+}
+function checkStoryCloze() {
+  const select = $('storyClozeSelect');
+  const value = select ? select.value : '';
+  if (!value) return;
+  const correct = value === STORY.cloze.answer;
+  storyAnswers.cloze = value;
+  storyLog('cloze', value, correct);
+  setText('storyClozeResult', correct ? 'Correct — the story says Alex drinks tea.' : 'Not quite. Read the second line again.');
+  const el = $('storyClozeResult'); if (el) el.className = 'storyResult ' + (correct ? 'good' : 'bad');
+}
+function resetStoryPractice() {
+  storyAnswers = {};
+  const select = $('storyClozeSelect'); if (select) select.value = '';
+  setText('storyClozeResult', '');
+  renderStory();
+}
+function reviewStoryWord(id) {
+  const item = ITEM_BY_N[id];
+  if (!item) return;
+  day = item.day; current = item; revealed = true; resetQuizState();
+  renderStage();
+}
+
+// ---------- Alphabet, progress, and debug ----------
 function renderAlphabet() {
   $('alphabetGrid').innerHTML = DATA.letters.map(l =>
-    '<button class="letter" data-sound="' + esc(l.example) + '" title="Tap to hear ' + esc(l.example) + '">' +
-    '<span class="g">' + l.glyph + '</span><span class="l">' + esc(l.name) + '</span>' +
+    '<button class="letter" data-say="' + esc(l.example) + '" title="Tap to hear ' + esc(l.example) + '">' +
+    '<span class="g">' + esc(l.glyph) + '</span><span class="l">' + esc(l.name) + '</span>' +
     '<small>' + esc(l.rr) + ' · ' + esc(l.sound) + '</small>' +
     '<em>' + esc(l.example) + ' · ' + esc(l.meaning.split(' / ')[0]) + '</em></button>').join('');
-  document.querySelectorAll('#alphabetGrid [data-sound]').forEach(b => b.onclick = () => speak(b.dataset.sound));
-}
-function renderProgress() {
-  const n = DATA.letters.filter(l => isMastered(state.letters[l.id])).length;
-  $('masteryHint').textContent = n + ' / ' + DATA.letters.length;
-  $('masteryGrid').innerHTML = DATA.letters.map(l => {
-    const r = state.letters[l.id];
-    const label = r ? (isDue(r) ? 'Due now' : 'Next ' + new Date(r.nextReview).toLocaleDateString()) : 'New';
-    const btn = (k, t, full) => '<button title="' + full + '" onclick="rateLetter(\'' + l.id + '\',\'' + k + '\')">' + t + '</button>';
-    return '<div class="letter" style="opacity:' + (r ? 1 : .48) + '"><span class="g">' + l.glyph + '</span><span class="l">' + esc(l.rr) + '</span><small>' + label + '</small>' +
-      '<div class="mini-ratings">' + btn('again', 'A', 'Again') + btn('hard', 'H', 'Hard') + btn('good', 'G', 'Good') + btn('easy', 'E', 'Easy') + '</div></div>';
-  }).join('');
 }
 function rateLetter(id, rating) {
   const rec = scheduleRecord(state.letters, id, rating);
@@ -255,22 +987,121 @@ function rateLetter(id, rating) {
   logEvent('letter-review', id, rating, rec);
   save(); renderProgress();
 }
+function renderProgress() {
+  const n = DATA.letters.filter(l => isMastered(state.letters[l.id])).length;
+  setText('masteryHint', n + ' / ' + LETTER_COUNT);
+  const grid = $('masteryGrid'); if (!grid) return;
+  grid.innerHTML = DATA.letters.map(l => {
+    const r = state.letters[l.id];
+    const label = r ? (isDue(r) ? 'Due now' : 'Next ' + new Date(r.nextReview).toLocaleDateString()) : 'New';
+    const btn = (k, t, full) => '<button title="' + full + '" onclick="rateLetter(\'' + l.id + '\',\'' + k + '\')">' + t + '</button>';
+    return '<div class="letter" style="opacity:' + (r ? 1 : .48) + '"><span class="g">' + esc(l.glyph) + '</span><span class="l">' + esc(l.rr) + '</span><small>' + label + '</small>' +
+      '<div class="mini-ratings">' + btn('again', 'A', 'Again') + btn('hard', 'H', 'Hard') + btn('good', 'G', 'Good') + btn('easy', 'E', 'Easy') + '</div></div>';
+  }).join('');
+  renderMotivation();
+}
 function renderDebug() {
+  const el = $('debugSchedule'); if (!el) return;
   const rows = [
     ...Object.entries(state.stageItems).map(([id, r]) => ({ kind: 'Stage', id, r })),
     ...Object.entries(state.letters).map(([id, r]) => ({ kind: 'Letter', id: (LETTER_BY_ID[id] || {}).glyph || id, r })),
   ].sort((a, b) => (a.r.nextReview || '').localeCompare(b.r.nextReview || ''));
-  $('debugSchedule').innerHTML = rows.length ? rows.slice(0, 40).map(x =>
+  el.innerHTML = rows.length ? rows.slice(0, 40).map(x =>
     '<div class="debugItem"><b>' + esc(x.kind) + ' ' + esc(x.id) + '</b><span>Last ' + (x.r.lastReviewed ? new Date(x.r.lastReviewed).toLocaleString() : '—') +
-    ' · ' + (x.r.lastRating || 'new') + ' · Next ' + (x.r.nextReview ? new Date(x.r.nextReview).toLocaleString() : 'not scheduled') + '</span></div>').join('') : 'No reviews yet.';
+    ' · ' + esc(x.r.lastRating || 'new') + ' · Next ' + (x.r.nextReview ? new Date(x.r.nextReview).toLocaleString() : 'not scheduled') + '</span></div>').join('') : 'No reviews yet.';
 }
 
-// ---------- Backup, import, reset ----------
+// ---------- Local account profile (M13) ----------
+function ensureAccount() {
+  if (!state.account.id) {
+    state.account.id = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'local-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+    state.account.createdAt = new Date().toISOString();
+    save();
+  }
+}
+function renderAccount() {
+  if (!$('accountName')) return;
+  ensureAccount();
+  $('accountName').value = state.account.displayName || '';
+  setText('accountStatus', 'Profile ID ' + state.account.id + ' · local only' +
+    (state.sync.lastImportAt ? ' · last merged ' + new Date(state.sync.lastImportAt).toLocaleString() : ''));
+}
+function saveAccountProfile() {
+  ensureAccount();
+  state.account.displayName = $('accountName').value.trim().slice(0, 40);
+  save(); renderAccount();
+  setText('accountStatus', 'Profile saved locally. Use a backup to move it to another browser.');
+}
+function deleteLocalAccount() {
+  if (!confirm('Delete this local account and all 한글 learning data?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  state = emptyState(); current = null; revealed = false; resetQuizState();
+  ensureAccount();
+  renderStage(); renderProgress(); renderAccount();
+  alert('Local account deleted and a fresh local profile was created.');
+}
+
+// ---------- Backup, merge, and reset (M1, M13) ----------
+function mergeRecords(a, b) {
+  if (!a) return b;
+  if (!b) return a;
+  return Date.parse(b.lastReviewed || 0) > Date.parse(a.lastReviewed || 0) ? b : a;
+}
+function mergeState(local, incomingRaw) {
+  const incoming = normalizeState(incomingRaw), base = normalizeState(local), today = todayKey();
+  const sameAccount = !local.account.id || !incoming.account.id || local.account.id === incoming.account.id;
+  const merged = { ...base };
+  merged.account = sameAccount
+    ? { ...incoming.account, ...local.account, id: local.account.id || incoming.account.id }
+    : local.account;
+  merged.stageItems = { ...base.stageItems };
+  Object.entries(incoming.stageItems).forEach(([id, r]) => { merged.stageItems[id] = mergeRecords(base.stageItems[id], r); });
+  merged.letters = { ...base.letters };
+  Object.entries(incoming.letters).forEach(([id, r]) => { merged.letters[id] = mergeRecords(base.letters[id], r); });
+  const seen = new Set();
+  merged.events = [...base.events, ...incoming.events].filter(e => {
+    const key = [e.type, e.at, e.id, e.key, e.scenario, e.story].join('|');
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).slice(-500);
+  merged.daily = {
+    date: today,
+    reviewed: [...new Set([
+      ...(base.daily.date === today ? base.daily.reviewed : []),
+      ...(incoming.daily.date === today ? incoming.daily.reviewed : []),
+    ])],
+  };
+  merged.scenario = {
+    attempts: Math.max(base.scenario.attempts || 0, incoming.scenario.attempts || 0),
+    completed: Math.max(base.scenario.completed || 0, incoming.scenario.completed || 0),
+    lastCompletedAt: [base.scenario.lastCompletedAt, incoming.scenario.lastCompletedAt].filter(Boolean).sort().pop() || null,
+  };
+  merged.story = {
+    attempts: Math.max(base.story.attempts || 0, incoming.story.attempts || 0),
+    correct: Math.max(base.story.correct || 0, incoming.story.correct || 0),
+    clozeCorrect: Math.max(base.story.clozeCorrect || 0, incoming.story.clozeCorrect || 0),
+  };
+  const lm = base.motivation, im = incoming.motivation;
+  const rewards = { ...im.rewards, ...lm.rewards };
+  const rewardXP = Object.values(rewards).reduce((s, r) => s + (Number(r.amount) || 0), 0);
+  merged.motivation = {
+    xp: Math.max(lm.xp, im.xp, rewardXP),
+    rewards,
+    badges: [...new Set([...lm.badges, ...im.badges])],
+    activityDates: [...new Set([...lm.activityDates, ...im.activityDates])].sort(),
+    weeklyGoal: lm.weeklyGoal,
+  };
+  merged.contextDismissed = { ...incoming.contextDismissed, ...base.contextDismissed };
+  return merged;
+}
 function exportState() {
-  rollDaily();
+  rollDaily(); ensureAccount();
+  state.sync.lastExportAt = new Date().toISOString();
+  save();
+  const blob = new Blob([JSON.stringify({ ...state, exportedAt: state.sync.lastExportAt, app: 'hangeul' }, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' }));
-  a.download = 'hangeul-progress-' + todayKey() + '.json';
+  a.href = URL.createObjectURL(blob);
+  a.download = 'hangeul-backup-' + todayKey() + '.json';
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 500);
 }
@@ -281,20 +1112,85 @@ function importState(e) {
     try {
       const parsed = JSON.parse(r.result);
       if (!parsed || parsed.version !== 1 || !parsed.stageItems || !parsed.letters) throw Error('shape');
-      state = normalizeState(parsed); current = null; save(); renderStage(); renderProgress();
-      alert('Backup imported.');
+      state = mergeState(state, parsed);
+      state.sync.lastImportAt = new Date().toISOString();
+      current = null; save(); renderStage(); renderProgress(); renderAccount();
+      alert('Backup merged safely. Newer review records and unique events were kept.');
     } catch (_) { alert('That backup could not be imported.'); }
     e.target.value = '';
   };
   r.readAsText(file);
 }
 function resetState() {
-  if (confirm('Reset all local 한글 progress?')) {
-    state = emptyState(); current = null; save(); renderStage(); renderProgress();
-    alert('Local progress reset.');
-  }
+  if (!confirm('Reset all local 한글 progress?')) return;
+  const account = state.account;
+  state = emptyState(); state.account = account;
+  current = null; revealed = false; resetQuizState();
+  save(); renderStage(); renderProgress(); renderAccount();
+  alert('Local progress reset.');
 }
 
-if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => {};
-update(); renderStage();
+// ---------- Navigation and global actions ----------
+function update() {
+  rollDaily();
+  const stageDone = Object.keys(state.stageItems).length;
+  const mastered = DATA.letters.filter(l => isMastered(state.letters[l.id])).length;
+  const alphaPct = Math.round(mastered / LETTER_COUNT * 100);
+  const stagePct = Math.round(stageDone / DATA.items.length * 100);
+  const daily = state.daily.reviewed.length;
+  setText('todayDone', daily);
+  setText('mastered', mastered);
+  setText('overall', alphaPct + '%');
+  setText('goalValue', state.goal);
+  setText('remaining', Math.max(0, state.goal - daily));
+  setWidth('goalBar', daily / state.goal * 100);
+  setText('stageProgress', stageDone);
+  setText('progressStage', stagePct);
+  setWidth('stageBar', stagePct);
+  setText('progressAlpha', alphaPct);
+  setWidth('alphaBar', alphaPct);
+  setText('stateDetails', 'Version ' + state.version + ' · ' + stageDone + ' Stage 1 items · ' + Object.keys(state.letters).length +
+    ' letters reviewed · ' + state.events.length + ' review events · daily counter for ' + state.daily.date);
+  renderDebug();
+  renderMotivation();
+}
+function show(v) {
+  document.querySelectorAll('.view').forEach(x => x.classList.toggle('hidden', x.id !== v));
+  document.querySelectorAll('.nav button').forEach(x => x.classList.toggle('active', x.dataset.view === v));
+  if (v === 'stage') renderStage();
+  if (v === 'alphabet') renderAlphabet();
+  if (v === 'progress') renderProgress();
+  if (v === 'settings') { update(); renderAccount(); }
+  scrollTo(0, 0);
+}
+function changeGoal(n) { state.goal = clampGoal(state.goal + n); save(); }
+
+document.querySelectorAll('.nav button').forEach(b => b.onclick = () => show(b.dataset.view));
+document.addEventListener('click', e => {
+  const say = e.target.closest('[data-say]');
+  if (say) { audioController.playText(say.dataset.say); return; }
+  const choice = e.target.closest('[data-quiz-choice]');
+  if (choice) { answerQuiz(Number(choice.dataset.quizChoice)); return; }
+  const more = e.target.closest('[data-context-more]');
+  if (more) { const el = $('context-more-' + more.dataset.contextMore); if (el) el.classList.toggle('hidden'); return; }
+  const dismiss = e.target.closest('[data-context-dismiss]');
+  if (dismiss) { state.contextDismissed[dismiss.dataset.contextDismiss] = true; save(); renderStage(); return; }
+  const storyChoice = e.target.closest('[data-story-option]');
+  if (storyChoice) { answerStory(Number(storyChoice.dataset.storyI), storyChoice.dataset.storyOption); }
+});
+
+// ---------- Boot ----------
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = () => audioController.refreshVoices();
+  setTimeout(() => audioController.refreshVoices(), 100);
+}
+ensureAccount();
+recordingController.refresh();
+transcriptionController.refresh();
+update();
+renderStage();
+renderProgress();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('service-worker.js').catch(() => {}));
+}
 </script></body></html>

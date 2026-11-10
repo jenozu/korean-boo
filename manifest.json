@@ -1,0 +1,12 @@
+{
+  "name": "한글 — Korean in small loops",
+  "short_name": "한글",
+  "lang": "en",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffd8e8",
+  "theme_color": "#ffd8e8",
+  "description": "A small, local-first Korean learning loop.",
+  "icons": []
+}

@@ -1722,5 +1722,180 @@
     "피 · ㅍ+ㅣ"
    ]
   }
- ]
+ ],
+ "contentNote": "Milestones 9–11 Korean content (the meeting conversation, the story, and grammar tips) was written without native-speaker review. Have a fluent speaker check it before relying on it.",
+ "contextTips": [
+  {
+   "id": "speech-levels",
+   "kind": "Grammar",
+   "topic": "Polite endings",
+   "title": "-요 is the safe ending",
+   "explanation": "Korean verb endings change with how formal the speech is. The -요 ending is polite and works with almost anyone you meet for the first time.",
+   "exampleKo": "저는 학생이에요.",
+   "exampleEn": "I am a student.",
+   "learn": "Casual speech (반말) is for close friends and people younger than you. Until someone invites it, stay with -요 endings.",
+   "related": [
+    1,
+    2,
+    22,
+    96,
+    97
+   ]
+  },
+  {
+   "id": "greeting-culture",
+   "kind": "Culture",
+   "topic": "Greetings",
+   "title": "안녕하세요 works almost anywhere",
+   "explanation": "안녕하세요 is a polite hello for most situations. 안녕 is casual, so save it for close friends.",
+   "exampleKo": "안녕! 잘 지내?",
+   "exampleEn": "Hi! How are you doing?",
+   "learn": "With elders or people in service jobs, a slight bow with a polite greeting is a good default. A smile helps too.",
+   "related": [
+    1,
+    2,
+    6,
+    7
+   ]
+  },
+  {
+   "id": "syllable-blocks",
+   "kind": "Pronunciation",
+   "topic": "Syllables",
+   "title": "Each block is one syllable",
+   "explanation": "Hangul groups letters into square blocks, and each block is one syllable. Korean has no stress marks, so keep the rhythm even.",
+   "exampleKo": "한국어",
+   "exampleEn": "Korean (the language)",
+   "learn": "Count the blocks before you speak: 한-국-어 has three. The hyphens in the pronunciation guide mark them.",
+   "related": [
+    3,
+    11,
+    60
+   ]
+  }
+ ],
+ "scenario": {
+  "id": "meeting-someone",
+  "title": "Meeting someone",
+  "turns": [
+   {
+    "tutor": "안녕하세요! 저는 민지예요. 이름이 뭐예요?",
+    "english": "Hello! I'm Minji. What is your name?",
+    "prompt": "Say your name.",
+    "accept": [
+     "제 이름은",
+     "내 이름은",
+     "저는"
+    ],
+    "hint": "Start with «제 이름은…예요» or «저는…예요»."
+   },
+   {
+    "tutor": "만나서 반가워요! 어디에서 왔어요?",
+    "english": "Nice to meet you! Where are you from?",
+    "prompt": "Say where you are from.",
+    "accept": [
+     "에서 왔",
+     "에 살아요",
+     "에서 살아요"
+    ],
+    "hint": "Try «저는 … 에서 왔어요» or «저는 … 에 살아요»."
+   },
+   {
+    "tutor": "만나서 반가웠어요. 안녕히 가세요!",
+    "english": "It was nice to meet you. Goodbye!",
+    "prompt": "",
+    "accept": [],
+    "hint": ""
+   }
+  ]
+ },
+ "story": {
+  "id": "alex-morning",
+  "title": "알렉스의 아침",
+  "lines": [
+   {
+    "ko": "좋은 아침이에요! 알렉스는 집에 있어요.",
+    "en": "Good morning! Alex is at home."
+   },
+   {
+    "ko": "그는 차를 마셔요.",
+    "en": "He drinks tea."
+   },
+   {
+    "ko": "오늘은 집에서 일해요.",
+    "en": "Today he works at home."
+   }
+  ],
+  "vocab": [
+   {
+    "id": 3,
+    "word": "좋은 아침이에요",
+    "en": "good morning"
+   },
+   {
+    "id": 66,
+    "word": "집",
+    "en": "home"
+   },
+   {
+    "id": 79,
+    "word": "차",
+    "en": "tea"
+   },
+   {
+    "id": 44,
+    "word": "마셔요",
+    "en": "drinks"
+   },
+   {
+    "id": 54,
+    "word": "일해요",
+    "en": "works"
+   },
+   {
+    "id": 57,
+    "word": "오늘",
+    "en": "today"
+   }
+  ],
+  "questions": [
+   {
+    "q": "알렉스는 어디에 있어요?",
+    "options": [
+     "집에",
+     "카페에",
+     "학교에"
+    ],
+    "answer": "집에"
+   },
+   {
+    "q": "알렉스는 무엇을 마셔요?",
+    "options": [
+     "차",
+     "커피",
+     "물"
+    ],
+    "answer": "차"
+   },
+   {
+    "q": "알렉스는 언제 일해요?",
+    "options": [
+     "오늘",
+     "내일",
+     "저녁"
+    ],
+    "answer": "오늘"
+   }
+  ],
+  "cloze": {
+   "before": "알렉스는 ",
+   "after": " 마셔요.",
+   "options": [
+    "차를",
+    "커피를",
+    "주스를"
+   ],
+   "answer": "차를"
+  }
+ }
 }
